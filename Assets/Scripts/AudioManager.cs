@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] musicClips;
 
     public const int SFX_BUTTON = 0;
+    public const int SFX_CLAPS = 1;
     public const int MUSIC_DEFAULT = 0;
 
     void Awake()

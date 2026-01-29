@@ -46,4 +46,10 @@ public class ButtonBoard : MonoBehaviour
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_BUTTON]);
     }
 
+    public void PlayClaps()
+    {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_CLAPS]);
+        Dionysus.Instance.MakeHappy();
+    }
+
 }

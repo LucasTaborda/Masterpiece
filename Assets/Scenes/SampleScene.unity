@@ -1660,6 +1660,7 @@ MonoBehaviour:
   - {fileID: 0}
   sfxClips:
   - {fileID: 8300000, guid: 086faaf3012f44053a5dd63bbff09b06, type: 3}
+  - {fileID: 8300000, guid: f385c965342094cc4893dc1c00bab5f1, type: 3}
   musicClips:
   - {fileID: 8300000, guid: c3b7512047fb445aab6adcadd2866ca2, type: 3}
   musicFadeDuration: 1

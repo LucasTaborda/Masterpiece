@@ -10,16 +10,23 @@ public class Dionysus : MonoBehaviour
     public Dictionary<string, string> dialogs = new Dictionary<string, string>();
     public DialogBox dialogBox;
     public float talkingSpeed = 0.05f;
+    public static Dionysus Instance { get; private set; }
+
+    void Awake()
+    {
+        if(Instance == null)
+            Instance = this;
+        else
+            throw new System.Exception("Only one Dionysus is allowed");
+        
+        InitializeDialogs();
+    }
 
     private void InitializeDialogs()
     {
         dialogs.Add("HELLO", "Antes pensaba que la vida era una tragedia. Finalmente me di cuenta que es una comedia.");
     }
 
-    void Awake()
-    {
-        InitializeDialogs();
-    }
 
     void Start()
     {
