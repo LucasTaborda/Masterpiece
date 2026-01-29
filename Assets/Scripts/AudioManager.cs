@@ -49,7 +49,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public float musicFadeDuration = 0.3f;
+    public float musicFadeDuration = 1f;
     
     public void CrossFadeMusic(AudioClip clip, float volume = 0.5f) {
         AudioSource oldMusic;
