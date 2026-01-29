@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 12438928}
   - component: {fileID: 12438929}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: HorizontalLayout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +531,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 238958022}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1500903654}
+        m_TargetAssemblyTypeName: ButtonBoard, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &238958022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,7 +1204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 892441775}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1500903654}
+        m_TargetAssemblyTypeName: ButtonBoard, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892441775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1318,6 +1342,60 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.83, z: -1}
   m_LocalScale: {x: 3.62, y: 2.12, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1358352099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1358352101}
+  - component: {fileID: 1358352100}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1358352100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358352099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e37ea9f4b91684e568bb4660f9e75862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  channelCount: 5
+  sfxChannels: []
+  musicChannels:
+  - {fileID: 0}
+  - {fileID: 0}
+  sfxClips:
+  - {fileID: 8300000, guid: 086faaf3012f44053a5dd63bbff09b06, type: 3}
+  musicClips:
+  - {fileID: 8300000, guid: c3b7512047fb445aab6adcadd2866ca2, type: 3}
+  musicFadeDuration: 0.3
+--- !u!4 &1358352101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358352099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.66001, y: 3.63922, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1519,6 +1597,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBoard
   scenographyController: {fileID: 0}
+  buttons:
+  - {fileID: 1533798765}
+  - {fileID: 1664570592}
+  - {fileID: 892441774}
+  - {fileID: 238958021}
 --- !u!1 &1529608872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1815,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1500903654}
         m_TargetAssemblyTypeName: ButtonBoard, Assembly-CSharp
-        m_MethodName: BringTreeIn
+        m_MethodName: PlayButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2002,7 +2085,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1500903654}
         m_TargetAssemblyTypeName: ButtonBoard, Assembly-CSharp
-        m_MethodName: BringSunIn
+        m_MethodName: PlayButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2411,3 +2494,4 @@ SceneRoots:
   - {fileID: 1942910236}
   - {fileID: 1466859794}
   - {fileID: 187653202}
+  - {fileID: 1358352101}
