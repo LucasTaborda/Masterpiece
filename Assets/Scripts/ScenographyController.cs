@@ -7,14 +7,14 @@ public class ScenographyController : MonoBehaviour
     public const int SUN = 0;
     public const int TREE = 1;
 
-    public void MoveObject(int index)
-    {
-        print("object: " + scenographyObjects[index]);
-        scenographyObjects[index].MoveToFinalPos();
-    }
+    // public void MoveObject(int index)
+    // {
+    //     print("object: " + scenographyObjects[index]);
+    //     scenographyObjects[index].MoveToFinalPos();
+    // }
 
-    public void ResetObject(int index)
-    {
-        scenographyObjects[index].MoveToInitialPos();
-    }
+    // public void ResetObject(int index)
+    // {
+    //     scenographyObjects[index].MoveToInitialPos();
+    // }
 }
