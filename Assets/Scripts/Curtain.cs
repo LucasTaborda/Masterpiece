@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Curtain : MonoBehaviour
 {
     public Animator animator;
 
     public static Curtain Instance { get; private set; }
+    private UnityAction downCallback;
 
     private void Awake()
     {
@@ -21,11 +23,19 @@ public class Curtain : MonoBehaviour
 
     public void Up()
     {
+        Debug.Log("Curtain up");
         animator.SetTrigger("Up");
     }
 
-    public void Down()
+    public void Down(UnityAction callback = null)
     {
+        if(callback != null) downCallback = callback;
         animator.SetTrigger("Down");
+    }
+
+    public void OnCurtainDown()
+    {
+        downCallback?.Invoke();
+        downCallback = null;
     }
 }

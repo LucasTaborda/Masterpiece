@@ -9,26 +9,31 @@ public class ActManager : MonoBehaviour
     public ButtonBoard buttonBoard;
     public float minDistanceScenography = 3f;
     public ScenographyObject[] scenographyObjects = new ScenographyObject[5];
+    public static ActManager Instance { get; private set; }
 
-    void Start()
+    void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+        else
+            throw new System.Exception("Only one ActManager is allowed");
+    }
+
+    // void Start()
+    // {
+    //     StartAct();
+    // }
+
+    public void StartMasterPiece()
+    {
+        Curtain.Instance.Up();
         StartAct();
     }
 
     public void StartAct()
     {
-        ScenographyObject[] previousScenography;
-        if(currentAct != 0) previousScenography = acts[currentAct - 1].scenographyObjects;
-        else previousScenography = null;
-        var currentScenography = acts[currentAct].scenographyObjects;
-        for(int i = 0; i < currentScenography.Length; i++) {
-            if(currentScenography[i] != null){
-                currentScenography[i].gameObject.SetActive(true);
-                buttonBoard.scenographyObjects[i] = currentScenography[i];
-            }
-            if (previousScenography != null) previousScenography[i].gameObject.SetActive(false);
-        }
-        
+        ChangeScenography();
+        Curtain.Instance.Up();
         StartScene();
     }
 
@@ -58,7 +63,7 @@ public class ActManager : MonoBehaviour
     {
         buttonBoard.SetInputActive(false);
         Cronometer.Instance.Stop();
-        if(currentScene == acts[currentAct].scenes.Length - 1) EndAct();
+        if(currentScene == acts[currentAct].scenes.Length - 1) NextAct();
         else{
             currentScene++;
             StartScene();
@@ -73,12 +78,45 @@ public class ActManager : MonoBehaviour
 
     private void EndAct()
     {
-        Curtain.Instance.DownUp();
+        var dialogKey = acts[currentAct].lastActDialogKey;
+        if(!string.IsNullOrEmpty(dialogKey))
+            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[dialogKey], Dionysus.Instance.talkingSpeed, SetNextActOrEndGame);
+        else SetNextActOrEndGame();
+    }
+
+    private void SetNextActOrEndGame()
+    {
         if(currentAct == acts.Length - 1) EndGame();
         else{
             currentAct++;
             currentScene = 0;
             StartAct();
+        }
+    }
+
+    private void NextAct()
+    {
+        Curtain.Instance.Down(EndAct);
+    }
+
+    private void ChangeScenography()
+    {
+        ScenographyObject[] previousScenography;
+        if(currentAct != 0) previousScenography = acts[currentAct - 1].scenographyObjects;
+        else previousScenography = null;
+        var currentScenography = acts[currentAct].scenographyObjects;
+        for(int i = 0; i < currentScenography.Length; i++) {
+            if(currentScenography[i] != null){
+                currentScenography[i].gameObject.SetActive(true);
+                buttonBoard.scenographyObjects[i] = currentScenography[i];
+            }
+        }
+        if(previousScenography != null){
+            for(int i = 0; i < previousScenography.Length; i++) {
+                if(previousScenography[i] != null){
+                    previousScenography[i].gameObject.SetActive(false);
+                }
+            }
         }
     }
 

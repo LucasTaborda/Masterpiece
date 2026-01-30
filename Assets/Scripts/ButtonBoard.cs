@@ -11,9 +11,15 @@ public class ButtonBoard : MonoBehaviour
 
     public Button[] buttons;
     public Target target;
+    public static ButtonBoard Instance { get; private set; }
 
     private void Awake()
     {
+        if(Instance == null)
+            Instance = this;
+        else
+            throw new System.Exception("Only one ButtonBoard is allowed");
+            
         scenographyController = FindFirstObjectByType<ScenographyController>();
     }
 
