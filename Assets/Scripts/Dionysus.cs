@@ -25,16 +25,19 @@ public class Dionysus : MonoBehaviour
     private void InitializeDialogs()
     {
         dialogs.Add("HELLO", "Antes pensaba que la vida era una tragedia. Finalmente me di cuenta que es una comedia.");
+        dialogs.Add("TEST_1", "Luna al medio, árbol a la derecha");
+        dialogs.Add("TEST_2", "Sol a la izquierda");
     }
 
 
     void Start()
     {
-        dialogBox.WriteMessage(dialogs["HELLO"], talkingSpeed);
+        // dialogBox.WriteMessage(dialogs["HELLO"], talkingSpeed);
     }
 
     public void MakeHappy()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_SUCCESS]);
         happyEye.Open();
         if(currentHappiness < maxHappiness)
             currentHappiness++;
@@ -42,6 +45,7 @@ public class Dionysus : MonoBehaviour
 
     public void MakeSad()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_FAIL]);
         sadEye.Open();
         if (currentHappiness > 0)
             currentHappiness--;

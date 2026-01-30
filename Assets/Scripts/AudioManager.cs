@@ -11,6 +11,9 @@ public class AudioManager : MonoBehaviour
 
     public const int SFX_BUTTON = 0;
     public const int SFX_CLAPS = 1;
+    public const int SFX_SUCCESS = 2;
+    public const int SFX_FAIL = 3;
+
     public const int MUSIC_DEFAULT = 0;
 
     void Awake()
