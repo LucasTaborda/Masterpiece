@@ -8,6 +8,7 @@ public class ButtonBoard : MonoBehaviour
     public ScenographyObject currentScenographyObject { get { return scenographyObjects[currentObject]; } }
     private int currentObject = 0;
     private bool isActive = false;
+    public SpriteRenderer targetSpriteRenderer { get; private set; }
 
     public Button[] buttons;
     public Target target;
@@ -19,21 +20,24 @@ public class ButtonBoard : MonoBehaviour
             Instance = this;
         else
             throw new System.Exception("Only one ButtonBoard is allowed");
-            
+
         scenographyController = FindFirstObjectByType<ScenographyController>();
     }
 
-    private void Start()
-    {
-        // SetActOneButtons();
-    }
 
     public void ChangeScenographyObjectSelected()
     {
         if(currentObject == scenographyObjects.Length - 1)
             currentObject = 0;
-        else
+        else{
             currentObject++;
+            while(scenographyObjects[currentObject] == null){
+                if(currentObject == scenographyObjects.Length - 1)
+                    currentObject = 0;
+                else currentObject++;
+            }
+        }
+        targetSpriteRenderer = scenographyObjects[currentObject].GetComponent<SpriteRenderer>();
     }
 
     public void MoveHorizontal()
@@ -63,33 +67,10 @@ public class ButtonBoard : MonoBehaviour
     public void SetInputActive(bool active)
     {
         isActive = active;
+        if(active)ChangeScenographyObjectSelected();
         target.gameObject.SetActive(active);
     }
 
-    // public void BringTreeIn()
-    // {
-    //     scenographyController.MoveObject(ScenographyController.TREE);
-    // }
-
-    // public void BringSunIn()
-    // {
-    //     scenographyController.MoveObject(ScenographyController.SUN);
-    // }
-
-    // public void SetActOneButtons()
-    // {
-    //     UnsetButtons();
-    //     buttons[0].onClick.AddListener(BringTreeIn);
-    //     buttons[1].onClick.AddListener(BringSunIn);
-    // }
-
-    // public void UnsetButtons()
-    // {
-    //     foreach(Button button in buttons)
-    //     {
-    //         button.onClick.RemoveAllListeners();
-    //     }
-    // }
 
     public void PlayButtonSound()
     {

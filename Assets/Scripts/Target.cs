@@ -14,7 +14,8 @@ public class Target : MonoBehaviour
 
     void LateUpdate()
     {
-        rectTransform.position = cam.WorldToScreenPoint(buttonBoard.currentScenographyObject.transform.position);
+        var centerPosition = buttonBoard.targetSpriteRenderer.bounds.center;
+        rectTransform.position = cam.WorldToScreenPoint(centerPosition);
     }
 
 }
