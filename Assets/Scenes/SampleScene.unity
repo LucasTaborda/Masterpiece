@@ -1239,6 +1239,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1942910236}
+  - {fileID: 942592842}
   - {fileID: 90297593}
   - {fileID: 2119212160}
   m_Father: {fileID: 0}
@@ -1258,6 +1260,12 @@ MonoBehaviour:
   scenes:
   - {fileID: 90297594}
   - {fileID: 2119212161}
+  scenographyObjects:
+  - {fileID: 1942910237}
+  - {fileID: 942592840}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1697,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669710783}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2245,7 +2253,7 @@ Transform:
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 508576002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &972082309
 GameObject:
@@ -2865,7 +2873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1351312678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2997,6 +3005,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f385c965342094cc4893dc1c00bab5f1, type: 3}
   - {fileID: 8300000, guid: 536b45c2e4dc44166b7bf5f4d0ba23eb, type: 3}
   - {fileID: 8300000, guid: 8ee09e28da2a543b88cca43fd131d868, type: 3}
+  - {fileID: 8300000, guid: 9ab85fde12ff64a78a54b014657eaa09, type: 3}
   musicClips:
   - {fileID: 8300000, guid: c3b7512047fb445aab6adcadd2866ca2, type: 3}
   musicFadeDuration: 1
@@ -3185,6 +3194,12 @@ MonoBehaviour:
   - {fileID: 508576003}
   buttonBoard: {fileID: 1500903654}
   minDistanceScenography: 3
+  scenographyObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1470497251
 Transform:
   m_ObjectHideFlags: 0
@@ -3298,6 +3313,7 @@ MonoBehaviour:
   - {fileID: 1664570592}
   - {fileID: 892441774}
   - {fileID: 238958021}
+  target: {fileID: 1351312681}
 --- !u!1 &1516689714
 GameObject:
   m_ObjectHideFlags: 0
@@ -4327,7 +4343,7 @@ MonoBehaviour:
   m_text: '"..."'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4525,7 +4541,7 @@ Transform:
   m_LocalScale: {x: 0.41, y: 0.41, z: 0.41}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 508576002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1942910237
 MonoBehaviour:
@@ -5080,8 +5096,6 @@ SceneRoots:
   - {fileID: 1529608874}
   - {fileID: 1768769402}
   - {fileID: 2023529517}
-  - {fileID: 1942910236}
-  - {fileID: 942592842}
   - {fileID: 187653202}
   - {fileID: 1358352101}
   - {fileID: 508576002}

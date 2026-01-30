@@ -8,6 +8,7 @@ public class ActManager : MonoBehaviour
     private int currentScene = 0;
     public ButtonBoard buttonBoard;
     public float minDistanceScenography = 3f;
+    public ScenographyObject[] scenographyObjects = new ScenographyObject[5];
 
     void Start()
     {
@@ -16,13 +17,33 @@ public class ActManager : MonoBehaviour
 
     public void StartAct()
     {
+        ScenographyObject[] previousScenography;
+        if(currentAct != 0) previousScenography = acts[currentAct - 1].scenographyObjects;
+        else previousScenography = null;
+        var currentScenography = acts[currentAct].scenographyObjects;
+        for(int i = 0; i < currentScenography.Length; i++) {
+            if(currentScenography[i] != null){
+                currentScenography[i].gameObject.SetActive(true);
+                buttonBoard.scenographyObjects[i] = currentScenography[i];
+            }
+            if (previousScenography != null) previousScenography[i].gameObject.SetActive(false);
+        }
+        
         StartScene();
     }
 
     private void StartCronometer()
     {
         Debug.Log("Cronometer Start?");
-        Cronometer.Instance.SetAndStart(acts[currentAct].scenes[currentScene].time, LoseScene);
+        var time = acts[currentAct].scenes[currentScene].time;
+        if(time < 0) return;
+        Cronometer.Instance.SetAndStart(time, LoseScene);
+    }
+
+    private void StartDecision()
+    {
+        StartCronometer();
+        buttonBoard.SetInputActive(true);
     }
 
     private void StartScene()
@@ -30,15 +51,18 @@ public class ActManager : MonoBehaviour
         Debug.Log("Act:" + currentAct + " Scene:" + currentScene);
         var key = acts[currentAct].scenes[currentScene].dialogKey;
         var message = Dionysus.Instance.dialogs[key];
-        DialogBox.Instance.WriteMessage(message, Dionysus.Instance.talkingSpeed, StartCronometer);
+        DialogBox.Instance.WriteMessage(message, Dionysus.Instance.talkingSpeed, StartDecision);
     }
 
     public void NextScene()
     {
-        if(currentScene == acts[currentAct].scenes.Length - 1) EndAct();
-        currentScene++;
+        buttonBoard.SetInputActive(false);
         Cronometer.Instance.Stop();
-        StartScene();
+        if(currentScene == acts[currentAct].scenes.Length - 1) EndAct();
+        else{
+            currentScene++;
+            StartScene();
+        }
     }
 
     private void LoseScene()
@@ -50,9 +74,12 @@ public class ActManager : MonoBehaviour
     private void EndAct()
     {
         Curtain.Instance.DownUp();
-        currentAct++;
-        currentScene = 0;
-        StartAct();
+        if(currentAct == acts.Length - 1) EndGame();
+        else{
+            currentAct++;
+            currentScene = 0;
+            StartAct();
+        }
     }
 
     public void AnalyzePhotography()
@@ -72,7 +99,7 @@ public class ActManager : MonoBehaviour
                 Debug.Log("photo.transforms[" + i + "] is null");
                 continue;
             }
-            if(i >= buttonBoard.scenographyObjects.Length) {
+            if(i >= buttonBoard.scenographyObjects.Length || buttonBoard.scenographyObjects[i] == null) {
                 Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
                 continue;
             }
@@ -88,7 +115,7 @@ public class ActManager : MonoBehaviour
                 Debug.Log("photo.keys[" + i + "] is null");
                 continue;
             }
-            if(i >= buttonBoard.scenographyObjects.Length) {
+            if(i >= buttonBoard.scenographyObjects.Length || buttonBoard.scenographyObjects[i] == null) {
                 Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
                 continue;
             }
@@ -106,4 +133,9 @@ public class ActManager : MonoBehaviour
     // {
     //     AnalyzePhotography();
     // }
+
+    private void EndGame()
+    {
+        Debug.Log("Game Over");
+    }
 }

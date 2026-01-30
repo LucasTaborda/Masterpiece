@@ -20,6 +20,7 @@ public class Cronometer : MonoBehaviour
     {
         currentTime = time;
         timeText.text = currentTime.ToString("0");
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_TIMER_START]);
         StartCoroutine(CountDown(onFinish));
     }
 

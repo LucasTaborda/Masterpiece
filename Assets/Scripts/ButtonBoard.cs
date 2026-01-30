@@ -7,8 +7,10 @@ public class ButtonBoard : MonoBehaviour
     public ScenographyObject[] scenographyObjects;
     public ScenographyObject currentScenographyObject { get { return scenographyObjects[currentObject]; } }
     private int currentObject = 0;
+    private bool isActive = false;
 
     public Button[] buttons;
+    public Target target;
 
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class ButtonBoard : MonoBehaviour
 
     public void MoveHorizontal()
     {
+        if(!isActive) return;
         scenographyObjects[currentObject].moveHorizontal = true;
     }
 
@@ -41,12 +44,20 @@ public class ButtonBoard : MonoBehaviour
 
     public void MoveVertical()
     {
+        if(!isActive) return;
         scenographyObjects[currentObject].moveVertical = true;
     }
 
     public void ChangeSkin()
     {
+        if(!isActive) return;
         scenographyObjects[currentObject].ChangeSkin();
+    }
+
+    public void SetInputActive(bool active)
+    {
+        isActive = active;
+        target.gameObject.SetActive(active);
     }
 
     // public void BringTreeIn()
