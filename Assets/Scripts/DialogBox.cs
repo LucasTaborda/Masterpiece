@@ -10,7 +10,7 @@ public class DialogBox : MonoBehaviour
     public int cpsReadingTime = 12;
     public bool subtitleBehaviour = false;
     public static DialogBox Instance { get; private set; }
-
+    public bool hidePanelAfterMessage = false;
     private void Awake()
     {
         if (Instance == null)
@@ -30,7 +30,8 @@ public class DialogBox : MonoBehaviour
         else{
             StartCoroutine(TypeMessage(message, timeInterval, onMessageFinish));
         }
-        Invoke("HidePanel", readingTime);
+        if (hidePanelAfterMessage)
+            Invoke("HidePanel", readingTime);
     }
 
     private IEnumerator TypeMessage(string text, float timeInterval, UnityAction onMessageFinish = null) {

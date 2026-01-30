@@ -21,4 +21,9 @@ public class Eye : MonoBehaviour
     {
         animator.SetTrigger("Close");
     }
+
+    public void Shine()
+    {
+        animator.SetTrigger("Shine");
+    }
 }

@@ -38,7 +38,7 @@ public class Dionysus : MonoBehaviour
     public void MakeHappy()
     {
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_SUCCESS]);
-        happyEye.Open();
+        happyEye.Shine();
         if(currentHappiness < maxHappiness)
             currentHappiness++;
     }
@@ -46,7 +46,7 @@ public class Dionysus : MonoBehaviour
     public void MakeSad()
     {
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_FAIL]);
-        sadEye.Open();
+        sadEye.Shine();
         if (currentHappiness > 0)
             currentHappiness--;
         else
