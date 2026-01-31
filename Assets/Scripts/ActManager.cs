@@ -194,6 +194,7 @@ public class ActManager : MonoBehaviour
         Dionysus.Instance.HideTV();
         lastScene.SetActive(true);
         Curtain.Instance.Up(SayEndMasterpiece);
+        AudioManager.Instance.CrossFadeMusic(AudioManager.Instance.musicClips[AudioManager.MUSIC_CLIMAX]);
     }
 
     private void SayEndMasterpiece()
@@ -210,12 +211,14 @@ public class ActManager : MonoBehaviour
 
     private void EndWithExplosion()
     {
+        AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_EXPLOSION]);
         ShowEndGameScreen();
     }
 
     private void EndWithKnife()
     {
+        AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_STAB], 1f);
         Invoke("ShowEndGameScreen", 3f);
     }

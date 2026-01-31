@@ -20,8 +20,10 @@ public class AudioManager : MonoBehaviour
     public const int SFX_TV_SWITCH = 8;
     public const int SFX_STAB = 9;
     public const int SFX_CURTAIN = 10;
-    
+    public const int SFX_START = 11;
+
     public const int MUSIC_DEFAULT = 0;
+    public const int MUSIC_CLIMAX = 1;
 
     void Awake()
     {
@@ -96,9 +98,14 @@ public class AudioManager : MonoBehaviour
             });
         
         // Fade in de la nueva música
-        LeanTween.value(gameObject, 0f, 1f, musicFadeDuration)
+        LeanTween.value(gameObject, 0f, volume, musicFadeDuration)
             .setOnUpdate((float val) => {
                 newMusic.volume = val;
             });
+    }
+
+    public void StopMusic(){
+        musicChannels[0].Stop();
+        musicChannels[1].Stop();
     }
 }

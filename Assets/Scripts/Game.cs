@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour
 {
     public static Game Instance { get; private set; }
-    public static bool isActorLiberated = true;
+    public static bool isActorLiberated = false;
     public static bool actorHasKnife = false;
 
     void Awake()
@@ -22,6 +22,7 @@ public class Game : MonoBehaviour
 
     public void Initialize()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_START], 1f);
         InitialScreen.Instance.Hide();
         Invoke("TurnOnLights", 2f);
         Invoke("SpawnTV", 3.5f);
