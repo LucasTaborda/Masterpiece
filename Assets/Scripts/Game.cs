@@ -5,7 +5,7 @@ public class Game : MonoBehaviour
 {
     public static Game Instance { get; private set; }
     public static bool isActorLiberated = true;
-    public static bool actorHasKnife = true;
+    public static bool actorHasKnife = false;
 
     void Awake()
     {

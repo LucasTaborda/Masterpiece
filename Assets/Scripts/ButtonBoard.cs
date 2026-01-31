@@ -91,6 +91,6 @@ public class ButtonBoard : MonoBehaviour
     public void Spawn()
     {
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_BOARD_SPAWN]);
-        LeanTween.moveY(rectTransform, originalPosition.y, 2f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.moveY(rectTransform, originalPosition.y, 1f).setEase(LeanTweenType.easeOutBounce);
     }
 }

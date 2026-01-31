@@ -12,6 +12,7 @@ public class ActManager : MonoBehaviour
     public static ActManager Instance { get; private set; }
     public GameObject lastScene;
     private bool interrupted = false;
+    public GameObject endGameScreen;
 
     void Awake()
     {
@@ -209,11 +210,18 @@ public class ActManager : MonoBehaviour
 
     private void EndWithExplosion()
     {
-        Dionysus.Instance.Explode();
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_EXPLOSION]);
+        ShowEndGameScreen();
     }
 
     private void EndWithKnife()
     {
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_STAB], 1f);
+        Invoke("ShowEndGameScreen", 3f);
+    }
+
+    private void ShowEndGameScreen()
+    {
+        endGameScreen.SetActive(true);
     }
 }

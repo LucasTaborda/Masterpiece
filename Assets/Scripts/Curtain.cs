@@ -25,13 +25,14 @@ public class Curtain : MonoBehaviour
 
     public void Up(UnityAction callback = null)
     {
-        Debug.Log("Curtain up");
-        animator.SetTrigger("Up");
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_CURTAIN]);
         if(callback != null) upCallback = callback;
+        animator.SetTrigger("Up");
     }
 
     public void Down(UnityAction callback = null)
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_CURTAIN]);
         if(callback != null) downCallback = callback;
         animator.SetTrigger("Down");
     }
