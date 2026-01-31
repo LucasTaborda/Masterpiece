@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -11,5 +12,10 @@ public class Game : MonoBehaviour
     {
         InitialScreen.Instance.Hide();
         Dionysus.Instance.SpawnTV();
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

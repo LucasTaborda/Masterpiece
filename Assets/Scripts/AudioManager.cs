@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     public const int SFX_SUCCESS = 2;
     public const int SFX_FAIL = 3;
     public const int SFX_TIMER_START = 4;
+    public const int SFX_EXPLOSION = 5;
     
     public const int MUSIC_DEFAULT = 0;
 

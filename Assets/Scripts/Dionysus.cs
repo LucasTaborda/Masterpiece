@@ -14,6 +14,7 @@ public class Dionysus : MonoBehaviour
     public RectTransform rectTransform;
     private Vector3 originalPosition;
     public bool runIntro = false;
+    public GameObject gameOverScreen;
 
     void Awake()
     {
@@ -38,6 +39,20 @@ public class Dionysus : MonoBehaviour
         dialogs.Add("TUTORIAL_2", "Bien, se te da natural. Utiliza el último botón para que el sol cambie a luna.");
         dialogs.Add("TUTORIAL_3", "Excelente. Ahora intenta mover el árbol hasta la posición de la derecha. El primer botón sirve para intercambiar entre los rieles disponibles en escena.");
         dialogs.Add("TUTORIAL_4", "Ya eres todo un experto. Comencemos con la obra entonces. Trabaja rápido y hazme caso. No me hagas enfadar o pagarás las consecuencias.");
+        dialogs.Add("ACT_1_SCENE_1", "Acto 1, escena 1");
+        dialogs.Add("ACT_1_SCENE_2", "Acto 1, escena 2");
+        dialogs.Add("ACT_1_SCENE_3", "Acto 1, escena 3");
+        dialogs.Add("ACT_2_SCENE_1", "Acto 2, escena 1");
+        dialogs.Add("ACT_2_SCENE_2", "Acto 2, escena 2");
+        dialogs.Add("ACT_2_SCENE_3", "Acto 2, escena 3");
+        dialogs.Add("ACT_3_SCENE_1", "Acto 3, escena 1");
+        dialogs.Add("ACT_3_SCENE_2", "Acto 3, escena 2");
+        dialogs.Add("ACT_3_SCENE_3", "Acto 3, escena 3");
+        dialogs.Add("ACT_4_SCENE_1", "Acto 4, escena 1");
+        dialogs.Add("ACT_4_SCENE_2", "Acto 4, escena 2");
+        dialogs.Add("ACT_4_SCENE_3", "Acto 4, escena 3");
+        dialogs.Add("GAME_OVER", "Me has fastidiado a mí y a mi perfecta obra. ¡Muere, muere, muere!");
+
     }
 
 
@@ -61,7 +76,7 @@ public class Dionysus : MonoBehaviour
         if (currentHappiness > 0)
             currentHappiness--;
         else
-            Debug.Log("You Lose");
+            ActManager.Instance.Interrupt();
     }
 
     void OnGUI(){
@@ -75,7 +90,6 @@ public class Dionysus : MonoBehaviour
         else{
             StartMasterpiece();
         }
-        //
     }
 
     public void MakePresentation()
@@ -91,5 +105,16 @@ public class Dionysus : MonoBehaviour
     private void StartMasterpiece()
     {
         ActManager.Instance.StartMasterPiece();
+    }
+
+    public void SayGameOver()
+    {
+        dialogBox.WriteMessage(dialogs["GAME_OVER"], talkingSpeed, Explode);
+    }
+
+    private void Explode()
+    {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_EXPLOSION]);
+        gameOverScreen.SetActive(true);
     }
 }

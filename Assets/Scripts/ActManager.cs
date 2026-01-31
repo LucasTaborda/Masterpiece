@@ -10,6 +10,7 @@ public class ActManager : MonoBehaviour
     public float minDistanceScenography = 3f;
     public ScenographyObject[] scenographyObjects = new ScenographyObject[5];
     public static ActManager Instance { get; private set; }
+    private bool interrupted = false;
 
     void Awake()
     {
@@ -73,7 +74,7 @@ public class ActManager : MonoBehaviour
     private void LoseScene()
     {
         Dionysus.Instance.MakeSad();
-        NextScene();
+        if(!interrupted) NextScene();
     }
 
     private void EndAct()
@@ -171,6 +172,18 @@ public class ActManager : MonoBehaviour
     // {
     //     AnalyzePhotography();
     // }
+
+    public void Interrupt()
+    {
+        interrupted = true;
+        buttonBoard.SetInputActive(false);
+        Curtain.Instance.Down(GameOverLine);
+    }
+
+    private void GameOverLine()
+    {
+        Dionysus.Instance.SayGameOver();
+    }
 
     private void EndGame()
     {
