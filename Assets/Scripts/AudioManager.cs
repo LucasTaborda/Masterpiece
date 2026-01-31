@@ -15,6 +15,9 @@ public class AudioManager : MonoBehaviour
     public const int SFX_FAIL = 3;
     public const int SFX_TIMER_START = 4;
     public const int SFX_EXPLOSION = 5;
+    public const int SFX_SPOTLIGHT = 6;
+    public const int SFX_BOARD_SPAWN = 7;
+    public const int SFX_TV_SWITCH = 8;
     
     public const int MUSIC_DEFAULT = 0;
 
@@ -71,11 +74,14 @@ public class AudioManager : MonoBehaviour
             newMusic = musicChannels[0];
             newMusic.clip = clip;
             newMusic.volume = volume;
+            newMusic.loop = true;
             newMusic.Play();
             return;
         }
         newMusic.clip = clip;
+        newMusic.loop = true;
         newMusic.volume = 0f;
+        newMusic.loop = true;
         newMusic.Play();
         
         // Fade out la vieille musique

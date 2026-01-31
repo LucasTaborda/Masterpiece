@@ -7,7 +7,8 @@ public class Curtain : MonoBehaviour
 
     public static Curtain Instance { get; private set; }
     private UnityAction downCallback;
-
+    public GameObject shadow;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -37,5 +38,10 @@ public class Curtain : MonoBehaviour
     {
         downCallback?.Invoke();
         downCallback = null;
+    }
+
+    public void TurnOnLights()
+    {
+        shadow.SetActive(false);
     }
 }

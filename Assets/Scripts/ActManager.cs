@@ -28,6 +28,7 @@ public class ActManager : MonoBehaviour
     public void StartMasterPiece()
     {
         Curtain.Instance.Up();
+        ButtonBoard.Instance.Spawn();
         StartAct();
     }
 
@@ -81,8 +82,13 @@ public class ActManager : MonoBehaviour
     {
         var dialogKey = acts[currentAct].lastActDialogKey;
         if(!string.IsNullOrEmpty(dialogKey))
-            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[dialogKey], Dionysus.Instance.talkingSpeed, SetNextActOrEndGame);
+            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[dialogKey], Dionysus.Instance.talkingSpeed, SetNextActOrEndGameRetarded);
         else SetNextActOrEndGame();
+    }
+
+    private void SetNextActOrEndGameRetarded()
+    {
+        Invoke("SetNextActOrEndGame", 3f);
     }
 
     private void SetNextActOrEndGame()
@@ -168,10 +174,6 @@ public class ActManager : MonoBehaviour
         NextScene();
 
     }
-    // void Update()
-    // {
-    //     AnalyzePhotography();
-    // }
 
     public void Interrupt()
     {
@@ -187,6 +189,6 @@ public class ActManager : MonoBehaviour
 
     private void EndGame()
     {
-        Debug.Log("Game Over");
+        
     }
 }

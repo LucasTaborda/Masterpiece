@@ -51,6 +51,7 @@ public class Dionysus : MonoBehaviour
         dialogs.Add("ACT_4_SCENE_1", "Acto 4, escena 1");
         dialogs.Add("ACT_4_SCENE_2", "Acto 4, escena 2");
         dialogs.Add("ACT_4_SCENE_3", "Acto 4, escena 3");
+        dialogs.Add("LAST_SCENE", "Has tenido el honor de presenciar mi obra maestra. Ahora es hora de que toda esta basura vuele en pedazos. ¡Muchas gracias!");
         dialogs.Add("GAME_OVER", "Me has fastidiado a mí y a mi perfecta obra. ¡Muere, muere, muere!");
 
     }
@@ -85,7 +86,7 @@ public class Dionysus : MonoBehaviour
 
     public void SpawnTV()
     {
-        LeanTween.moveY(rectTransform, originalPosition.y, 1f).setEase(LeanTweenType.easeOutBounce);
+        LeanTween.moveY(rectTransform, originalPosition.y, 1f).setEase(LeanTweenType.easeOutCubic);
         if(runIntro) Invoke("MakePresentation", 2f);
         else{
             StartMasterpiece();

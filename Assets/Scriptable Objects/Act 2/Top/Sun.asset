@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Sun
   m_EditorClassIdentifier: Assembly-CSharp::ScenographySkin
   key: SUN
-  image: {fileID: 1400907642024373404, guid: 31f5aa8259cac438183961782a5c177d, type: 3}
+  image: {fileID: -3816004992152039795, guid: 7ec3daec859594b4b9ac7847b8b10f0d, type: 3}

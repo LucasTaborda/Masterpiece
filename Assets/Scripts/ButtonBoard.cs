@@ -8,6 +8,8 @@ public class ButtonBoard : MonoBehaviour
     public ScenographyObject currentScenographyObject { get { return scenographyObjects[currentObject]; } }
     private int currentObject = 0;
     private bool isActive = false;
+    private RectTransform rectTransform;
+    private Vector3 originalPosition;
     public SpriteRenderer targetSpriteRenderer { get; private set; }
 
     public Button[] buttons;
@@ -22,6 +24,9 @@ public class ButtonBoard : MonoBehaviour
             throw new System.Exception("Only one ButtonBoard is allowed");
 
         scenographyController = FindFirstObjectByType<ScenographyController>();
+        rectTransform = GetComponent<RectTransform>();
+        originalPosition = rectTransform.anchoredPosition;
+        rectTransform.anchoredPosition = new Vector2(originalPosition.x, -300f);
     }
 
 
@@ -83,4 +88,9 @@ public class ButtonBoard : MonoBehaviour
         Dionysus.Instance.MakeHappy();
     }
 
+    public void Spawn()
+    {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_BOARD_SPAWN]);
+        LeanTween.moveY(rectTransform, originalPosition.y, 2f).setEase(LeanTweenType.easeOutElastic);
+    }
 }
