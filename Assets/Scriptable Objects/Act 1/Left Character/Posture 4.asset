@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Posture 4
   m_EditorClassIdentifier: Assembly-CSharp::ScenographySkin
   key: POSTURE_4
-  image: {fileID: -4632493966690491460, guid: 13ec3c3b97f9a476cb32ad0205aacdb7, type: 3}
+  image: {fileID: -2855402849170120947, guid: f71a87f2f7e4a4be0981c798a9014f11, type: 3}
+  damagedImage: {fileID: 0}

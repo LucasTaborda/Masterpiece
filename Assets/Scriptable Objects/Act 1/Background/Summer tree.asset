@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Summer tree
   m_EditorClassIdentifier: Assembly-CSharp::ScenographySkin
   key: SUMMER_TREE
-  image: {fileID: 4446974700602959683, guid: b26c3e8d32d4a4dc2a3066eebf488376, type: 3}
+  image: {fileID: -603989586284366352, guid: 4733e7fb9cc2f4834b7fae18fcfff245, type: 3}
+  damagedImage: {fileID: 0}

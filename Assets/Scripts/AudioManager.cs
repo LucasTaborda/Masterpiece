@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
     public const int SFX_STAB = 9;
     public const int SFX_CURTAIN = 10;
     public const int SFX_START = 11;
+    public const int SFX_ROPE_RIPPING = 12;
 
     public const int MUSIC_DEFAULT = 0;
     public const int MUSIC_CLIMAX = 1;

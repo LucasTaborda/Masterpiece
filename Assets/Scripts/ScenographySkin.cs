@@ -5,4 +5,5 @@ public class ScenographySkin : ScriptableObject
 {
     public string key;
     public Sprite image;
+    public Sprite damagedImage;
 }

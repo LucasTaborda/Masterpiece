@@ -75,16 +75,22 @@ public class ScenographyObject : MonoBehaviour
     public void ChangeSkin()
     {
         if(currentSkinIndex == skins.Length -1 ) currentSkinIndex = 0;
-        else{
-            currentSkinIndex++;
-        }
+        else currentSkinIndex++;
 
-        spriteRenderer.sprite = skins[currentSkinIndex].image;
+        if(Game.IsKeyInBrokenScenography(skins[currentSkinIndex].key))
+            spriteRenderer.sprite = skins[currentSkinIndex].damagedImage;
+        else
+            spriteRenderer.sprite = skins[currentSkinIndex].image;
     }
 
     public string GetKey()
     {
         return skins[currentSkinIndex].key;
+    }
+
+    public void SwitchImageToDamaged()
+    {
+        spriteRenderer.sprite = skins[currentSkinIndex].damagedImage;
     }
 
 }

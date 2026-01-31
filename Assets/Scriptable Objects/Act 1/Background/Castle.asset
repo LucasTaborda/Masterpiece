@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Castle
   m_EditorClassIdentifier: Assembly-CSharp::ScenographySkin
   key: CASTLE
-  image: {fileID: 1400907642024373404, guid: 31f5aa8259cac438183961782a5c177d, type: 3}
+  image: {fileID: -7112458395338814165, guid: 7a4990706394a4eda8bc56e3a8996376, type: 3}
+  damagedImage: {fileID: 0}

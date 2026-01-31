@@ -13,13 +13,17 @@ public class ActManager : MonoBehaviour
     public GameObject lastScene;
     private bool interrupted = false;
     public GameObject endGameScreen;
-
+    public int initialAct = 0;
+    public bool runIntro = true;
+    
     void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
             throw new System.Exception("Only one ActManager is allowed");
+
+        currentAct = initialAct;
     }
 
     // void Start()

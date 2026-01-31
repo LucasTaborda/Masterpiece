@@ -50,5 +50,8 @@ TagManager:
   - name: Front
     uniqueID: 2260073673
     locked: 0
+  - name: Curtain
+    uniqueID: 4239566597
+    locked: 0
   m_RenderingLayers:
   - Default

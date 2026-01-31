@@ -13,7 +13,6 @@ public class Dionysus : MonoBehaviour
     public static Dionysus Instance { get; private set; }
     public RectTransform rectTransform;
     private Vector3 originalPosition;
-    public bool runIntro = false;
     public GameObject gameOverScreen;
 
     void Awake()
@@ -87,7 +86,7 @@ public class Dionysus : MonoBehaviour
     public void SpawnTV()
     {
         LeanTween.moveY(rectTransform, originalPosition.y, 1f).setEase(LeanTweenType.easeOutCubic);
-        if(runIntro) Invoke("MakePresentation", 2f);
+        if(ActManager.Instance.runIntro) Invoke("MakePresentation", 2f);
         else{
             StartMasterpiece();
         }
