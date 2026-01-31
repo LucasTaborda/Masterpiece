@@ -3,6 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
+    public static Game Instance { get; private set; }
+    public static bool isActorLiberated = true;
+    public static bool actorHasKnife = true;
+
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            throw new System.Exception("Only one Game is allowed");
+    }
+
     void Start()
     {
         ButtonBoard.Instance.SetInputActive(false);
@@ -19,11 +31,6 @@ public class Game : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    // private void HideInitialScreen()
-    // {
-
-    // }
 
     private void TurnOnLights()
     {

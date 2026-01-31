@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
     public const int SFX_SPOTLIGHT = 6;
     public const int SFX_BOARD_SPAWN = 7;
     public const int SFX_TV_SWITCH = 8;
-    
+    public const int SFX_STAB = 9;
     public const int MUSIC_DEFAULT = 0;
 
     void Awake()

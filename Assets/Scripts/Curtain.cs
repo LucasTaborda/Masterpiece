@@ -7,6 +7,7 @@ public class Curtain : MonoBehaviour
 
     public static Curtain Instance { get; private set; }
     private UnityAction downCallback;
+    private UnityAction upCallback;
     public GameObject shadow;
     
     private void Awake()
@@ -22,10 +23,11 @@ public class Curtain : MonoBehaviour
         animator.SetTrigger("DownUp");
     }
 
-    public void Up()
+    public void Up(UnityAction callback = null)
     {
         Debug.Log("Curtain up");
         animator.SetTrigger("Up");
+        if(callback != null) upCallback = callback;
     }
 
     public void Down(UnityAction callback = null)
@@ -38,6 +40,12 @@ public class Curtain : MonoBehaviour
     {
         downCallback?.Invoke();
         downCallback = null;
+    }
+
+    public void OnCurtainUp()
+    {
+        upCallback?.Invoke();
+        upCallback = null;
     }
 
     public void TurnOnLights()

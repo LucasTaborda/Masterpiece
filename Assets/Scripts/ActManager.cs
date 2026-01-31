@@ -10,6 +10,7 @@ public class ActManager : MonoBehaviour
     public float minDistanceScenography = 3f;
     public ScenographyObject[] scenographyObjects = new ScenographyObject[5];
     public static ActManager Instance { get; private set; }
+    public GameObject lastScene;
     private bool interrupted = false;
 
     void Awake()
@@ -189,6 +190,30 @@ public class ActManager : MonoBehaviour
 
     private void EndGame()
     {
-        
+        Dionysus.Instance.HideTV();
+        lastScene.SetActive(true);
+        Curtain.Instance.Up(SayEndMasterpiece);
+    }
+
+    private void SayEndMasterpiece()
+    {
+        Dionysus.Instance.SayEndMasterpiece();
+    }
+
+    public void ChooseEnd()
+    {
+        if(Game.isActorLiberated && !Game.actorHasKnife) Curtain.Instance.Down(EndWithExplosion);
+        else if(Game.isActorLiberated && Game.actorHasKnife) Curtain.Instance.Down(EndWithKnife);
+        else Curtain.Instance.Down(EndWithExplosion);
+    }
+
+    private void EndWithExplosion()
+    {
+        Dionysus.Instance.Explode();
+    }
+
+    private void EndWithKnife()
+    {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_STAB], 1f);
     }
 }

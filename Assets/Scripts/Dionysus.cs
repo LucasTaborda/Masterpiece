@@ -93,6 +93,11 @@ public class Dionysus : MonoBehaviour
         }
     }
 
+    public void HideTV()
+    {
+        LeanTween.moveY(rectTransform, 1000f, 1f).setEase(LeanTweenType.easeOutCubic);
+    }
+
     public void MakePresentation()
     {
         dialogBox.WriteMessage(dialogs["PRESENTATION_1"], talkingSpeed, StartMasterpieceRetarded);
@@ -113,9 +118,19 @@ public class Dionysus : MonoBehaviour
         dialogBox.WriteMessage(dialogs["GAME_OVER"], talkingSpeed, Explode);
     }
 
-    private void Explode()
+    public void SayEndMasterpiece()
+    {
+        dialogBox.WriteMessage(dialogs["LAST_SCENE"], talkingSpeed, EndGame);
+    }
+
+    public void Explode()
     {
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_EXPLOSION]);
         gameOverScreen.SetActive(true);
+    }
+
+    private void EndGame()
+    {
+        ActManager.Instance.ChooseEnd();
     }
 }

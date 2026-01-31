@@ -2212,6 +2212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 307933936}
+  - component: {fileID: 307933937}
   m_Layer: 0
   m_Name: Last Scene
   m_TagString: Untagged
@@ -2239,6 +2240,19 @@ Transform:
   - {fileID: 1197428661}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &307933937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307933935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e43b588871444acfba57297b8fd72c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LastScene
+  liberableActor: {fileID: 904341129}
 --- !u!1 &311035995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,7 +2393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &377981588
 SpriteRenderer:
   serializedVersion: 2
@@ -7075,7 +7089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1200214099
 SpriteRenderer:
   serializedVersion: 2
@@ -8045,6 +8059,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 58820287604c14dae9a0b2ea6f489ef0, type: 3}
   - {fileID: 8300000, guid: 61e3e837ea45346b583aec2577b57e10, type: 3}
   - {fileID: 8300000, guid: 7e1b140f6b3ad4807902c3ab2426e478, type: 3}
+  - {fileID: 8300000, guid: 03c93cbb13a724a9eb8628772a0802b4, type: 3}
   musicClips:
   - {fileID: 8300000, guid: ad7fc7c81d7fc4d67ad17ea7beb7e2b9, type: 3}
   musicFadeDuration: 1
@@ -8824,11 +8839,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActManager
   acts:
   - {fileID: 508576003}
-  - {fileID: 1039887701}
-  - {fileID: 2095516709}
-  - {fileID: 643494320}
-  - {fileID: 1398736967}
-  - {fileID: 565865800}
   buttonBoard: {fileID: 1500903654}
   minDistanceScenography: 3
   scenographyObjects:
@@ -8837,6 +8847,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  lastScene: {fileID: 307933935}
 --- !u!4 &1470497251
 Transform:
   m_ObjectHideFlags: 0
@@ -12559,7 +12570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1976433577
 SpriteRenderer:
   serializedVersion: 2
