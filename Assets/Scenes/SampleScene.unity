@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 11298019}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.23, y: -2.02, z: 0}
+  m_LocalPosition: {x: 3.82, y: -2.02, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3372,7 +3372,7 @@ Transform:
   m_GameObject: {fileID: 409665146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.36, y: -1.99, z: 0}
+  m_LocalPosition: {x: -6.84, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3896,16 +3896,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - MOON
+  - SUN
   - 
   - 
-  - 
+  - KILLER_1
   - 
   transforms:
+  - {fileID: 1098754716}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1461828139}
   - {fileID: 0}
   closeTop: 0000000000
   closeBottom: 0000000000
@@ -5630,7 +5630,7 @@ Transform:
   m_GameObject: {fileID: 660547937}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.59, y: -0.76, z: 0}
+  m_LocalPosition: {x: -3.59, y: -1.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5875,7 +5875,7 @@ Transform:
   m_GameObject: {fileID: 717407351}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 2.67, z: 0}
+  m_LocalPosition: {x: 4.48, y: 2.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7902,7 +7902,7 @@ Transform:
   m_GameObject: {fileID: 991808992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.69, y: 2.67, z: 0}
+  m_LocalPosition: {x: -0.01, y: 2.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8310,7 +8310,7 @@ Transform:
   m_GameObject: {fileID: 1098754715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.69, y: 2.67, z: 0}
+  m_LocalPosition: {x: -4.05, y: 2.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8504,7 +8504,7 @@ Transform:
   m_GameObject: {fileID: 1112906590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.76, y: -2.78, z: 0}
+  m_LocalPosition: {x: 0.01, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9648,7 +9648,7 @@ Transform:
   m_GameObject: {fileID: 1298429575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.67, y: 4, z: 0}
+  m_LocalPosition: {x: -3.66, y: 2.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9834,8 +9834,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
   - {fileID: 11400000, guid: e5fecc814337f402eb49ae928b82e970, type: 2}
+  - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
   - {fileID: 11400000, guid: 4c8eadff16c14489caf6b553653c5152, type: 2}
   railLimit: {fileID: 1768769401}
   moveHorizontal: 0
@@ -9953,14 +9953,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - MOON
-  - 
+  - SUN
+  - TOWER
   - 
   - 
   - 
   transforms:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 717407352}
+  - {fileID: 660547938}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -10864,7 +10864,7 @@ Transform:
   m_GameObject: {fileID: 1461828138}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.25, y: -1.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11022,7 +11022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActManager
   acts:
-  - {fileID: 557107864}
+  - {fileID: 2120827096}
   buttonBoard: {fileID: 1500903654}
   minDistanceScenography: 3
   lastScene: {fileID: 307933935}
@@ -12107,16 +12107,16 @@ MonoBehaviour:
   - SUN
   - 
   - 
-  - 
+  - KILLER_2
   - 
   transforms:
+  - {fileID: 991808993}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  closeTop: 0000000000
-  closeBottom: 0000000000
+  closeTop: 0000010000
+  closeBottom: 0000000100
 --- !u!1 &1565874201
 GameObject:
   m_ObjectHideFlags: 0
@@ -16554,7 +16554,7 @@ MonoBehaviour:
   - {fileID: 1112906593}
   - {fileID: 409665150}
   - {fileID: 11298023}
-  - {fileID: 1910626102}
+  - {fileID: 0}
   lastActDialogKey: 
 --- !u!4 &2120827097
 Transform:
