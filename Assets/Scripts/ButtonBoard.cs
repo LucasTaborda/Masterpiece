@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class ButtonBoard : MonoBehaviour
 {
-    public ScenographyController scenographyController;
     public ScenographyObject[] scenographyObjects;
     public ScenographyObject currentScenographyObject { get { return scenographyObjects[currentObject]; } }
     private int currentObject = 0;
@@ -23,7 +22,6 @@ public class ButtonBoard : MonoBehaviour
         else
             throw new System.Exception("Only one ButtonBoard is allowed");
 
-        scenographyController = FindFirstObjectByType<ScenographyController>();
         rectTransform = GetComponent<RectTransform>();
         originalPosition = rectTransform.anchoredPosition;
         rectTransform.anchoredPosition = new Vector2(originalPosition.x, -300f);

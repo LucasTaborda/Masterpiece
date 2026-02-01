@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -81,13 +80,13 @@ public class Game : MonoBehaviour
         else return false;
     }
 
-    void OnGUI()
-    {
-        GUILayout.Label("Rope Damage Level: " + RopeDamageLevel);
-        GUILayout.Label("Sun Broken: " + IsSunBroken);
-        GUILayout.Label("Crown Broken: " + IsCrownBroken);
-        GUILayout.Label("Knife Hooked: " + IsKnifeHooked);
-        GUILayout.Label("Actor Has Knife: " + actorHasKnife);
-        GUILayout.Label("Actor Liberated: " + isActorLiberated);
-    }
+    // void OnGUI()
+    // {
+    //     GUILayout.Label("Rope Damage Level: " + RopeDamageLevel);
+    //     GUILayout.Label("Sun Broken: " + IsSunBroken);
+    //     GUILayout.Label("Crown Broken: " + IsCrownBroken);
+    //     GUILayout.Label("Knife Hooked: " + IsKnifeHooked);
+    //     GUILayout.Label("Actor Has Knife: " + actorHasKnife);
+    //     GUILayout.Label("Actor Liberated: " + isActorLiberated);
+    // }
 }

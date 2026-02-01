@@ -1486,54 +1486,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180646025}
   m_CullTransparentMesh: 1
---- !u!1 &187653200
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 187653202}
-  - component: {fileID: 187653201}
-  m_Layer: 0
-  m_Name: Scenography
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &187653201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187653200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f387f9bdf4cee44f1a7b619e99a044f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScenographyController
-  scenographyObjects:
-  - {fileID: 1942910237}
-  - {fileID: 0}
-  moveSpeed: 0.5
---- !u!4 &187653202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187653200}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.63971, y: 1.10494, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195975159
 GameObject:
   m_ObjectHideFlags: 0
@@ -11548,7 +11500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea50185103d954e1baa319861ec8ee1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBoard
-  scenographyController: {fileID: 0}
   scenographyObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -17049,7 +17000,6 @@ SceneRoots:
   - {fileID: 1650984986}
   - {fileID: 457597440}
   - {fileID: 1525012509}
-  - {fileID: 187653202}
   - {fileID: 1358352101}
   - {fileID: 508576002}
   - {fileID: 1039887702}
