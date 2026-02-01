@@ -9,7 +9,8 @@ public class Curtain : MonoBehaviour
     private UnityAction downCallback;
     private UnityAction upCallback;
     public GameObject shadow;
-    
+    public GameObject killAnimation;
+
     private void Awake()
     {
         if (Instance == null)
@@ -52,5 +53,10 @@ public class Curtain : MonoBehaviour
     public void TurnOnLights()
     {
         shadow.SetActive(false);
+    }
+
+    public void PlayKillAnimation()
+    {
+        killAnimation.SetActive(true);
     }
 }

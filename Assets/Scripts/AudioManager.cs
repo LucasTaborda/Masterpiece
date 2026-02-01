@@ -22,7 +22,9 @@ public class AudioManager : MonoBehaviour
     public const int SFX_CURTAIN = 10;
     public const int SFX_START = 11;
     public const int SFX_ROPE_RIPPING = 12;
-
+    public const int SFX_SWORD_TAKE = 13;
+    public const int SFX_SWORD_GIVE = 14;
+    
     public const int MUSIC_DEFAULT = 0;
     public const int MUSIC_CLIMAX = 1;
 

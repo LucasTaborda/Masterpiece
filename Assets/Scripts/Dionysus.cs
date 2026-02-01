@@ -14,6 +14,7 @@ public class Dionysus : MonoBehaviour
     public RectTransform rectTransform;
     private Vector3 originalPosition;
     public GameObject gameOverScreen;
+    public Animator dionysusAnimator;
 
     void Awake()
     {
@@ -50,7 +51,7 @@ public class Dionysus : MonoBehaviour
         dialogs.Add("ACT_4_SCENE_1", "Acto 4, escena 1");
         dialogs.Add("ACT_4_SCENE_2", "Acto 4, escena 2");
         dialogs.Add("ACT_4_SCENE_3", "Acto 4, escena 3");
-        dialogs.Add("LAST_SCENE", "Has tenido el honor de presenciar mi obra maestra. Ahora es hora de que toda esta basura vuele en pedazos. ¡Muchas gracias!");
+        dialogs.Add("LAST_SCENE", "Has tenido el honor de presenciar mi obra maestra. Es hora de que toda esta basura vuele en pedazos. ¡Muchas gracias!");
         dialogs.Add("GAME_OVER", "Me has fastidiado a mí y a mi perfecta obra. ¡Muere, muere, muere!");
 
     }
@@ -119,7 +120,12 @@ public class Dionysus : MonoBehaviour
 
     public void SayEndMasterpiece()
     {
-        dialogBox.WriteMessage(dialogs["LAST_SCENE"], talkingSpeed, EndGame);
+        dialogBox.WriteMessage(dialogs["LAST_SCENE"], talkingSpeed, MakeReverence);
+    }
+
+    private void MakeReverence()
+    {
+        dionysusAnimator.SetTrigger("Reverence");
     }
 
     public void Explode()
@@ -131,5 +137,10 @@ public class Dionysus : MonoBehaviour
     private void EndGame()
     {
         ActManager.Instance.ChooseEnd();
+    }
+
+    public void OnReverenceFinished()
+    {
+
     }
 }

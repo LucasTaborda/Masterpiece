@@ -13,7 +13,8 @@ public class ScenographyObject : MonoBehaviour
     private bool isMovingDown = true;
     public bool moveHorizontal = false;
     public bool moveVertical = false;
-    
+    public Sword sword;
+
     void Awake()
     {
         // initialPos = gameObject.transform.position;
@@ -65,7 +66,6 @@ public class ScenographyObject : MonoBehaviour
         }
     }
 
-
     void Update()
     {
         MoveHorizontal();
@@ -81,6 +81,9 @@ public class ScenographyObject : MonoBehaviour
             spriteRenderer.sprite = skins[currentSkinIndex].damagedImage;
         else
             spriteRenderer.sprite = skins[currentSkinIndex].image;
+        
+        if(sword != null && sword.isHooked && skins[currentSkinIndex].key == "MOON") sword.gameObject.SetActive(true);
+        else if (sword != null) sword.gameObject.SetActive(false);
     }
 
     public string GetKey()
@@ -92,5 +95,4 @@ public class ScenographyObject : MonoBehaviour
     {
         spriteRenderer.sprite = skins[currentSkinIndex].damagedImage;
     }
-
 }

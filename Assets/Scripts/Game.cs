@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour
 {
     public static Game Instance { get; private set; }
-    public static bool isActorLiberated = false;
-    public static bool actorHasKnife = false;
+    public static bool isActorLiberated = true;
+    public static bool actorHasKnife = true;
     public static bool IsCrownBroken  { get; private set; }
     public static bool IsSunBroken    { get; private set; }    
-    public static bool IsKnifeTaken   { get; private set; }
+    public static bool IsKnifeTaken;
+    public static bool IsKnifeHooked;
     public static int RopeDamageLevel { get; private set; }
 
     public enum RopeDamager { Knife, Sun, Crown }
@@ -70,6 +71,8 @@ public class Game : MonoBehaviour
     {
         if(key == "CROWN" && IsCrownBroken) return true;
         else if(key == "SUN" && IsSunBroken) return true;
+        else if((key == "SWORD_1" || key == "SWORD_2" || key == "SWORD_3" || key == "SWORD_4") && IsKnifeHooked) return true;
+        else if((key == "KILLER_1" || key == "KILLER_2" || key == "KILLER_3" || key == "KILLER_4") && IsKnifeTaken) return true;
         else return false;
     }
 }

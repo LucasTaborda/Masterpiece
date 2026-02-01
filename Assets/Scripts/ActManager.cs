@@ -15,7 +15,7 @@ public class ActManager : MonoBehaviour
     public GameObject endGameScreen;
     public int initialAct = 0;
     public bool runIntro = true;
-    
+
     void Awake()
     {
         if (Instance == null)
@@ -220,10 +220,11 @@ public class ActManager : MonoBehaviour
         ShowEndGameScreen();
     }
 
-    private void EndWithKnife()
+    public void EndWithKnife()
     {
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_STAB], 1f);
+        Curtain.Instance.PlayKillAnimation();
         Invoke("ShowEndGameScreen", 3f);
     }
 

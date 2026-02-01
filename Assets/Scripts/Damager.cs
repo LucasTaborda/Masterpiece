@@ -16,7 +16,7 @@ public class Damager : MonoBehaviour
         if(collider.gameObject == target.gameObject && self.GetKey() == selfSkinKey && target.GetKey() == targetSkinKey){
             Game.DamageRope(type);
             isTriggered = true;
-            self.SwitchImageToDamaged();
+            if(type != Game.RopeDamager.Knife) self.SwitchImageToDamaged();
             AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_ROPE_RIPPING], 1f);
         }
     }
