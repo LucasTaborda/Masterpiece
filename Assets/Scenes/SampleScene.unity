@@ -160,6 +160,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &628426
 Transform:
   m_ObjectHideFlags: 0
@@ -1734,17 +1736,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - MOON
   - 
   - 
+  - POSTURE_2
   - 
   - 
   transforms:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 945922627}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!1 &213702554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3903,6 +3907,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!1 &470300613
 GameObject:
   m_ObjectHideFlags: 0
@@ -3930,10 +3936,11 @@ Transform:
   m_GameObject: {fileID: 470300613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.23, y: -2.02, z: 0}
+  m_LocalPosition: {x: 2.54, y: -2.02, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 854656381}
   m_Father: {fileID: 2095516710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &470300615
@@ -4525,6 +4532,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0100000000
 --- !u!4 &563343029
 Transform:
   m_ObjectHideFlags: 0
@@ -4586,6 +4595,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &563860624
 Transform:
   m_ObjectHideFlags: 0
@@ -6632,12 +6643,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854656380}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.02, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1614763347}
+  m_Father: {fileID: 470300614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862698812
 GameObject:
@@ -6833,6 +6844,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &887540815
 Transform:
   m_ObjectHideFlags: 0
@@ -7350,7 +7363,7 @@ Transform:
   m_GameObject: {fileID: 945922626}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.22, y: -1.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8833,6 +8846,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &1187268383
 Transform:
   m_ObjectHideFlags: 0
@@ -8878,7 +8893,7 @@ Transform:
   m_GameObject: {fileID: 1199201115}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.55, y: 2.43, z: 0}
+  m_LocalPosition: {x: 7.55, y: 3.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9016,6 +9031,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &1209215354
 Transform:
   m_ObjectHideFlags: 0
@@ -9139,6 +9156,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &1232993419
 Transform:
   m_ObjectHideFlags: 0
@@ -9945,6 +9964,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!1 &1337965020
 GameObject:
   m_ObjectHideFlags: 0
@@ -10548,7 +10569,7 @@ Transform:
   m_GameObject: {fileID: 1431009473}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.36, y: -1.99, z: 0}
+  m_LocalPosition: {x: -2.19, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11001,7 +11022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActManager
   acts:
-  - {fileID: 557107864}
+  - {fileID: 2095516709}
   buttonBoard: {fileID: 1500903654}
   minDistanceScenography: 3
   lastScene: {fileID: 307933935}
@@ -12094,6 +12115,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!1 &1565874201
 GameObject:
   m_ObjectHideFlags: 0
@@ -12566,17 +12589,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - SUN
   - 
   - 
   - 
   - 
+  - CROWN
   transforms:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 854656381}
+  closeTop: 0000000100
+  closeBottom: 0000010000
 --- !u!4 &1614763347
 Transform:
   m_ObjectHideFlags: 0
@@ -12594,7 +12619,6 @@ Transform:
   - {fileID: 195975160}
   - {fileID: 160520202}
   - {fileID: 1991485739}
-  - {fileID: 854656381}
   m_Father: {fileID: 1668094033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1645510578
@@ -13071,6 +13095,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &1660167981
 Transform:
   m_ObjectHideFlags: 0
@@ -14242,6 +14268,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &1832577946
 Transform:
   m_ObjectHideFlags: 0
@@ -14471,6 +14499,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  closeTop: 0000000000
+  closeBottom: 0000000000
 --- !u!4 &1848566525
 Transform:
   m_ObjectHideFlags: 0
@@ -14578,7 +14608,7 @@ Transform:
   m_GameObject: {fileID: 1863801095}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 7.8, z: 0}
+  m_LocalPosition: {x: 0.42, y: 10.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16160,7 +16190,7 @@ Transform:
   m_GameObject: {fileID: 2057192084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.36, y: 2.43, z: 0}
+  m_LocalPosition: {x: -6.36, y: 3.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16427,7 +16457,7 @@ MonoBehaviour:
   - {fileID: 964037565}
   scenographyObjects:
   - {fileID: 233222205}
-  - {fileID: 51350088}
+  - {fileID: 0}
   - {fileID: 1431009475}
   - {fileID: 470300615}
   - {fileID: 13401614}

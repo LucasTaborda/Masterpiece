@@ -171,6 +171,18 @@ public class ActManager : MonoBehaviour
                 return;
             }
         }
+        for(var i = 0; i < photo.closeTop.Length; i++){
+            if(photo.closeTop[i] == false) continue;
+            float margin = 0.5f;
+            var obj = buttonBoard.scenographyObjects[i];
+            if (Mathf.Abs(obj.transform.position.y - obj.railLimit.topLimitTransform.position.y) > margin) return;
+        }
+        for(var i = 0; i < photo.closeBottom.Length; i++){
+            if(photo.closeBottom[i] == false) continue;
+            float margin = 0.5f;
+            var obj = buttonBoard.scenographyObjects[i];
+            if (Mathf.Abs(obj.transform.position.y - obj.railLimit.bottomLimitTransform.position.y) > margin) return;
+        }
         Dionysus.Instance.MakeHappy();
         NextScene();
 
