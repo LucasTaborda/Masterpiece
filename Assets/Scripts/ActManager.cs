@@ -52,6 +52,7 @@ public class ActManager : MonoBehaviour
     {
         StartCronometer();
         buttonBoard.SetInputActive(true);
+        buttonBoard.SetButtonsEnabled(true);
     }
 
     private void StartScene()
@@ -65,6 +66,7 @@ public class ActManager : MonoBehaviour
     public void NextScene()
     {
         buttonBoard.SetInputActive(false);
+        buttonBoard.SetButtonsEnabled(false);
         Cronometer.Instance.Stop();
         if(currentScene == acts[currentAct].scenes.Length - 1) NextAct();
         else{

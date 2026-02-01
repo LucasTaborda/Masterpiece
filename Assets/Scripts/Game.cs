@@ -43,6 +43,7 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        ButtonBoard.Instance.SetButtonsEnabled(false);
         ButtonBoard.Instance.SetInputActive(false);
     }
 

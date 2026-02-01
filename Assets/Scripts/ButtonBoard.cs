@@ -27,6 +27,11 @@ public class ButtonBoard : MonoBehaviour
         rectTransform.anchoredPosition = new Vector2(originalPosition.x, -300f);
     }
 
+    public void SetButtonsEnabled(bool enabled) {
+        foreach(Button button in buttons){
+            button.interactable = enabled;
+        }
+    }
 
     public void ChangeScenographyObjectSelected()
     {
