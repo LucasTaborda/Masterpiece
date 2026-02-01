@@ -422,6 +422,8 @@ GameObject:
   - component: {fileID: 13401615}
   - component: {fileID: 13401614}
   - component: {fileID: 13401616}
+  - component: {fileID: 13401618}
+  - component: {fileID: 13401617}
   m_Layer: 0
   m_Name: FrontRail
   m_TagString: Untagged
@@ -540,6 +542,79 @@ MonoBehaviour:
   type: 2
   selfSkinKey: CROWN
   targetSkinKey: POSTURE_3
+--- !u!61 &13401617
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13401612}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &13401618
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13401612}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &34300105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,9 +1890,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
-  - {fileID: 11400000, guid: e5fecc814337f402eb49ae928b82e970, type: 2}
   - {fileID: 11400000, guid: 4c8eadff16c14489caf6b553653c5152, type: 2}
+  - {fileID: 11400000, guid: e5fecc814337f402eb49ae928b82e970, type: 2}
   railLimit: {fileID: 1768769401}
   moveHorizontal: 0
   moveVertical: 0
@@ -2214,7 +2288,7 @@ SpriteMask:
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 2
   m_BackSortingLayer: 0
-  m_FrontSortingOrder: 0
+  m_FrontSortingOrder: 2
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
@@ -5215,7 +5289,6 @@ GameObject:
   - component: {fileID: 606684772}
   - component: {fileID: 606684770}
   - component: {fileID: 606684771}
-  - component: {fileID: 606684774}
   - component: {fileID: 606684775}
   m_Layer: 0
   m_Name: LeftCharacterRail
@@ -5366,23 +5439,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 557107865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &606684774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606684769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed74ea33166ed46d783a0f47e6e89876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damager
-  self: {fileID: 606684770}
-  target: {fileID: 975480376}
-  type: 0
-  selfSkinKey: SWORD_3
-  targetSkinKey: POSTURE_3
 --- !u!50 &606684775
 Rigidbody2D:
   serializedVersion: 5
@@ -7516,7 +7572,6 @@ MonoBehaviour:
   moveSpeed: 5
   skins:
   - {fileID: 11400000, guid: 55de61436750b44a08631db65d5aeb7d, type: 2}
-  - {fileID: 11400000, guid: e7fb381ee41ec4e20a62340815f874b3, type: 2}
   railLimit: {fileID: 1525012508}
   moveHorizontal: 0
   moveVertical: 0
@@ -8117,7 +8172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1057808265
 SpriteRenderer:
   serializedVersion: 2
@@ -8165,7 +8220,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1373835539
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 2
   m_Sprite: {fileID: 21300000, guid: f38a1cb0b1bc1468fb61a7a78f86e861, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10690,17 +10745,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.24, y: 4.09}
+  m_Offset: {x: 1.36, y: 2.86}
   m_SpriteTilingProperty:
-    border: {x: 1.1999999, y: 1.1999999, z: 1.1999999, w: 1.1999999}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.49, y: 4.62}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5196473, y: 0.26945046}
+    oldSize: {x: 2.27, y: 5.61}
+    newSize: {x: 2.27, y: 5.61}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &1446201090
 GameObject:
@@ -11022,12 +11077,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActManager
   acts:
+  - {fileID: 508576003}
+  - {fileID: 1039887701}
+  - {fileID: 2095516709}
+  - {fileID: 969033690}
+  - {fileID: 557107864}
   - {fileID: 2120827096}
   buttonBoard: {fileID: 1500903654}
   minDistanceScenography: 3
   lastScene: {fileID: 307933935}
   endGameScreen: {fileID: 821844468}
-  initialAct: 0
+  initialAct: 5
   runIntro: 0
 --- !u!4 &1470497251
 Transform:
@@ -15999,7 +16059,7 @@ MonoBehaviour:
   target: {fileID: 1107049918}
   type: 1
   selfSkinKey: SUN
-  targetSkinKey: POSTURE_3
+  targetSkinKey: POSTURE_4
 --- !u!212 &2047767570
 SpriteRenderer:
   serializedVersion: 2

@@ -51,9 +51,8 @@ public class Dionysus : MonoBehaviour
         dialogs.Add("ACT_4_SCENE_1", "Al alba, tras la torre oeste, el príncipe comenzó a pintar su obra.");
         dialogs.Add("ACT_4_SCENE_2", "Al dar las doce, la presentó. Desde poltronas de jueces llovieron críticas afiladas y el ánimo del príncipe al suelo cayó.");
         dialogs.Add("ACT_4_SCENE_3", "Bajo sus máscaras virtuosas anidaban la envidia y la torpeza. El príncipe juró venganza y, en el ocaso, se alzó y partió al este a desenmascarar y destruir.");
-        dialogs.Add("LAST_SCENE", "Y como el príncipe habría deseado, reuní a mis monstruos enmascarados para poner fin a su patética existencia.");
+        dialogs.Add("LAST_SCENE", "Todos los monstruos llevamos una máscara. Y como el príncipe habría deseado, reuní a mis monstruos enmascarados para poner fin a su patética existencia. ¡Por el arte y la justicia!");
         dialogs.Add("GAME_OVER", "Me has fastidiado a mí y a mi perfecta obra. ¡Muere, muere, muere!");
-
     }
 
 

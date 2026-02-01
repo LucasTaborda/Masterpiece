@@ -16,4 +16,9 @@ public class DionysusBody : MonoBehaviour
         else
             killerAnimator.SetTrigger("Show");
     }
+
+    public void OnBombShowFinished()
+    {
+        Curtain.Instance.Down(ActManager.Instance.EndWithExplosion);
+    }
 }

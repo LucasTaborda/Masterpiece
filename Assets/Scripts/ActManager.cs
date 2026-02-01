@@ -130,7 +130,8 @@ public class ActManager : MonoBehaviour
 
     public void AnalyzePhotography()
     {
-        Invoke("AnalyzeRetarded", 1f);
+        AnalyzeRetarded();
+        // Invoke("AnalyzeRetarded", 1f);
     }
 
     private void AnalyzeRetarded()
@@ -221,7 +222,7 @@ public class ActManager : MonoBehaviour
         else Curtain.Instance.Down(EndWithExplosion);
     }
 
-    private void EndWithExplosion()
+    public void EndWithExplosion()
     {
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_EXPLOSION]);
