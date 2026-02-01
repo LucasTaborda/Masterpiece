@@ -149,10 +149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - SUN
   - 
   - 
-  - 
+  - SWORD_4
+  - POSTURE_2
   - 
   transforms:
   - {fileID: 0}
@@ -438,7 +438,7 @@ Transform:
   m_GameObject: {fileID: 13401612}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.87, y: -2.86, z: 0}
+  m_LocalPosition: {x: 0.25, y: -2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -458,8 +458,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: 55de61436750b44a08631db65d5aeb7d, type: 2}
   - {fileID: 11400000, guid: e7fb381ee41ec4e20a62340815f874b3, type: 2}
+  - {fileID: 11400000, guid: 55de61436750b44a08631db65d5aeb7d, type: 2}
   railLimit: {fileID: 1525012508}
   moveHorizontal: 0
   moveVertical: 0
@@ -2841,7 +2841,7 @@ Transform:
   m_GameObject: {fileID: 327838684}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.67, y: 4, z: 0}
+  m_LocalPosition: {x: -0, y: 2.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4466,7 +4466,7 @@ MonoBehaviour:
   - {fileID: 600719362}
   - {fileID: 606684770}
   - {fileID: 975480376}
-  - {fileID: 1240408960}
+  - {fileID: 0}
   lastActDialogKey: 
 --- !u!4 &557107865
 Transform:
@@ -4584,8 +4584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - MOON
-  - 
+  - CLOUD
+  - TREE
   - 
   - 
   - 
@@ -5074,9 +5074,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
+  - {fileID: 11400000, guid: 37881a131b32840f89280c42c2c41093, type: 2}
   - {fileID: 11400000, guid: 317857ec737ac49f18b1c41b0849d343, type: 2}
   - {fileID: 11400000, guid: ff2cddb8bfded4b4a994a5052c99f857, type: 2}
-  - {fileID: 11400000, guid: 37881a131b32840f89280c42c2c41093, type: 2}
   railLimit: {fileID: 2023529516}
   moveHorizontal: 0
   moveVertical: 0
@@ -5149,7 +5149,7 @@ Transform:
   m_GameObject: {fileID: 600719361}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.76, y: -2.78, z: 0}
+  m_LocalPosition: {x: -3.18, y: -1.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5360,7 +5360,7 @@ Transform:
   m_GameObject: {fileID: 606684769}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.36, y: -1.99, z: 0}
+  m_LocalPosition: {x: -5.09, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6833,18 +6833,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - MOON
-  - 
+  - SUN
+  - BRIDGE
   - 
   - 
   - 
   transforms:
+  - {fileID: 280900759}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  closeTop: 0000000000
+  closeTop: 0001000000
   closeBottom: 0000000000
 --- !u!4 &887540815
 Transform:
@@ -7606,7 +7606,7 @@ Transform:
   m_GameObject: {fileID: 971319830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.87, y: -2.86, z: 0}
+  m_LocalPosition: {x: 0.11, y: -2.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7794,7 +7794,7 @@ Transform:
   m_GameObject: {fileID: 975480375}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.23, y: -2.02, z: 0}
+  m_LocalPosition: {x: 5.11, y: -2.02, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8471,7 +8471,7 @@ Transform:
   m_GameObject: {fileID: 1107049917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.36, y: -1.99, z: 0}
+  m_LocalPosition: {x: -4.17, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9865,12 +9865,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319058262}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05, y: 0.11, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1848566525}
+  m_Father: {fileID: 1935469837}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1331185940
 GameObject:
@@ -11022,7 +11022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActManager
   acts:
-  - {fileID: 2095516709}
+  - {fileID: 557107864}
   buttonBoard: {fileID: 1500903654}
   minDistanceScenography: 3
   lastScene: {fileID: 307933935}
@@ -11180,7 +11180,7 @@ Transform:
   m_GameObject: {fileID: 1481128200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.95, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12646,7 +12646,7 @@ Transform:
   m_GameObject: {fileID: 1645510578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.64, y: -0.76, z: 0}
+  m_LocalPosition: {x: -4.98, y: -1.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13084,9 +13084,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - MOON
   - 
   - 
+  - SWORD_2
   - 
   - 
   transforms:
@@ -13972,7 +13972,7 @@ Transform:
   m_GameObject: {fileID: 1789609684}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.76, y: -2.78, z: 0}
+  m_LocalPosition: {x: 3.67, y: -4.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -14257,18 +14257,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - SUN
   - 
-  - 
-  - 
+  - BRIDGE
+  - POSTURE_4
+  - POSTURE_2
   - 
   transforms:
   - {fileID: 0}
+  - {fileID: 1645510579}
+  - {fileID: 1481128201}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  closeTop: 0000000000
+  closeTop: 0000010000
   closeBottom: 0000000000
 --- !u!4 &1832577946
 Transform:
@@ -14488,9 +14488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - MOON
   - 
   - 
+  - POSTURE_3
   - 
   - 
   transforms:
@@ -14498,7 +14498,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1319058263}
   closeTop: 0000000000
   closeBottom: 0000000000
 --- !u!4 &1848566525
@@ -14518,7 +14518,6 @@ Transform:
   - {fileID: 1849026884}
   - {fileID: 2006312049}
   - {fileID: 2125613496}
-  - {fileID: 1319058263}
   m_Father: {fileID: 894713640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1849026883
@@ -15040,7 +15039,8 @@ Transform:
   m_LocalPosition: {x: 7.23, y: -2.02, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1319058263}
   m_Father: {fileID: 969033691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1935469838
@@ -15903,8 +15903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
   - {fileID: 11400000, guid: e5fecc814337f402eb49ae928b82e970, type: 2}
+  - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
   - {fileID: 11400000, guid: 4c8eadff16c14489caf6b553653c5152, type: 2}
   railLimit: {fileID: 1768769401}
   moveHorizontal: 0
@@ -16068,7 +16068,7 @@ Transform:
   m_GameObject: {fileID: 2047767565}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.67, y: 4, z: 0}
+  m_LocalPosition: {x: 3.67, y: 2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
