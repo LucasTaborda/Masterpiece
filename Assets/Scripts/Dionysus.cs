@@ -95,7 +95,7 @@ public class Dionysus : MonoBehaviour
 
     public void HideTV()
     {
-        LeanTween.moveY(rectTransform, 1000f, 1f).setEase(LeanTweenType.easeOutCubic);
+        LeanTween.moveY(rectTransform, 300f, 2f).setEase(LeanTweenType.easeInBounce);
     }
 
     public void MakePresentation()

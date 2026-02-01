@@ -9,14 +9,15 @@ public class Game : MonoBehaviour
     public static bool actorHasKnife = true;
     public static bool IsCrownBroken  { get; private set; }
     public static bool IsSunBroken    { get; private set; }    
-    public static bool IsKnifeTaken;
     public static bool IsKnifeHooked;
     public static int RopeDamageLevel { get; private set; }
+    private static int maxDamageLvl = 3;
 
     public enum RopeDamager { Knife, Sun, Crown }
 
     public static void DamageRope(RopeDamager damager)
     {
+        if(isActorLiberated) return;
         if (damager == RopeDamager.Sun)
         {
             IsSunBroken = true;
@@ -26,6 +27,8 @@ public class Game : MonoBehaviour
         }
         RopeDamageLevel++;
 
+        if(RopeDamageLevel >= maxDamageLvl)
+            isActorLiberated = true;
         //AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_ROPE], 1f);
     }
 
@@ -35,6 +38,8 @@ public class Game : MonoBehaviour
             Instance = this;
         else
             throw new System.Exception("Only one Game is allowed");
+        
+        RopeDamageLevel = 0;
     }
 
     void Start()
@@ -72,7 +77,7 @@ public class Game : MonoBehaviour
         if(key == "CROWN" && IsCrownBroken) return true;
         else if(key == "SUN" && IsSunBroken) return true;
         else if((key == "SWORD_1" || key == "SWORD_2" || key == "SWORD_3" || key == "SWORD_4") && IsKnifeHooked) return true;
-        else if((key == "KILLER_1" || key == "KILLER_2" || key == "KILLER_3" || key == "KILLER_4") && IsKnifeTaken) return true;
+        else if((key == "KILLER_1" || key == "KILLER_2" || key == "KILLER_3" || key == "KILLER_4") && actorHasKnife) return true;
         else return false;
     }
 }

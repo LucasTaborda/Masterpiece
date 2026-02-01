@@ -37,13 +37,13 @@ public class Hook : MonoBehaviour
         // Debug.Log("GameObject es igual al receiver: " + (collider.gameObject == receiverTarget.gameObject));
         // Debug.Log("Receiver key: " + receiverTarget.GetKey());
         // Debug.Log("Self key: " + self.GetKey());
-        if(collider.gameObject == receiverTarget.gameObject && receiverTarget.GetKey() == "KILLER_3" && self.GetKey() == "MOON"){
+        if(collider.gameObject == receiverTarget.gameObject && receiverTarget.GetKey() == "KILLER_3" && self.GetKey() == "MOON" && Game.isActorLiberated){
             delivered = true;
             sword.isHooked = false;
             hooked = false;
             sword.gameObject.SetActive(false);
             receiverTarget.SwitchImageToDamaged();
-            Game.IsKnifeTaken = true;
+            Game.actorHasKnife = true;
             AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_SWORD_GIVE]);
         }
     }

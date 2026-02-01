@@ -8,7 +8,7 @@ public class ActManager : MonoBehaviour
     private int currentScene = 0;
     public ButtonBoard buttonBoard;
     public float minDistanceScenography = 3f;
-    public ScenographyObject[] scenographyObjects = new ScenographyObject[5];
+    // public ScenographyObject[] scenographyObjects = new ScenographyObject[5];
     public static ActManager Instance { get; private set; }
     public GameObject lastScene;
     private bool interrupted = false;
@@ -25,11 +25,6 @@ public class ActManager : MonoBehaviour
 
         currentAct = initialAct;
     }
-
-    // void Start()
-    // {
-    //     StartAct();
-    // }
 
     public void StartMasterPiece()
     {
@@ -195,6 +190,7 @@ public class ActManager : MonoBehaviour
 
     private void EndGame()
     {
+        RemoveScenography();
         Dionysus.Instance.HideTV();
         lastScene.SetActive(true);
         Curtain.Instance.Up(SayEndMasterpiece);
@@ -231,5 +227,15 @@ public class ActManager : MonoBehaviour
     private void ShowEndGameScreen()
     {
         endGameScreen.SetActive(true);
+    }
+
+    private void RemoveScenography()
+    {
+        var scenography = acts[currentAct].scenographyObjects;
+
+        foreach(var obj in scenography) {
+            if(obj != null)
+                obj.gameObject.SetActive(false);
+        } 
     }
 }

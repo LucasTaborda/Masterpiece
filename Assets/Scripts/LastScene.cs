@@ -9,7 +9,7 @@ public class LastScene : MonoBehaviour
     void Start()
     {
         if(Game.isActorLiberated) liberableActor.SetActive(false);
-        if(Game.IsKnifeTaken){
+        if(Game.actorHasKnife){
             killer.SetActive(true);
             for(int i = 0; i < otherObjects.Length; i++){
                 otherObjects[i].SetActive(false);
