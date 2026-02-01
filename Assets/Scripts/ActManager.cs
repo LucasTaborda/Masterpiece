@@ -36,6 +36,7 @@ public class ActManager : MonoBehaviour
     public void StartAct()
     {
         ChangeScenography();
+        ButtonBoard.Instance.ResetCurrentObject();
         Curtain.Instance.Up();
         StartScene();
     }
@@ -119,6 +120,9 @@ public class ActManager : MonoBehaviour
             if(currentScenography[i] != null){
                 currentScenography[i].gameObject.SetActive(true);
                 buttonBoard.scenographyObjects[i] = currentScenography[i];
+            }
+            else{
+                buttonBoard.scenographyObjects[i] = null;
             }
         }
         if(previousScenography != null){

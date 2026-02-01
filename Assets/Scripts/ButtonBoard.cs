@@ -48,6 +48,12 @@ public class ButtonBoard : MonoBehaviour
         targetSpriteRenderer = scenographyObjects[currentObject].GetComponent<SpriteRenderer>();
     }
 
+    public void ResetCurrentObject()
+    {
+        currentObject = 0;
+        // targetSpriteRenderer = scenographyObjects[currentObject].GetComponent<SpriteRenderer>();
+    }
+
     public void MoveHorizontal()
     {
         if(!isActive) return;
@@ -75,7 +81,8 @@ public class ButtonBoard : MonoBehaviour
     public void SetInputActive(bool active)
     {
         isActive = active;
-        if(active)ChangeScenographyObjectSelected();
+        //if(active)ChangeScenographyObjectSelected();
+        if(active) targetSpriteRenderer = scenographyObjects[currentObject].GetComponent<SpriteRenderer>();
         target.gameObject.SetActive(active);
     }
 
