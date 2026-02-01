@@ -39,19 +39,19 @@ public class Dionysus : MonoBehaviour
         dialogs.Add("TUTORIAL_2", "Bien, se te da natural. Utiliza el último botón para que el sol cambie a luna.");
         dialogs.Add("TUTORIAL_3", "Excelente. Ahora intenta mover el árbol hasta la posición de la derecha. El primer botón sirve para intercambiar entre los rieles disponibles en escena.");
         dialogs.Add("TUTORIAL_4", "Ya eres todo un experto. Comencemos con la obra entonces. Trabaja rápido y hazme caso. No me hagas enfadar o pagarás las consecuencias.");
-        dialogs.Add("ACT_1_SCENE_1", "Acto 1, escena 1");
-        dialogs.Add("ACT_1_SCENE_2", "Acto 1, escena 2");
-        dialogs.Add("ACT_1_SCENE_3", "Acto 1, escena 3");
-        dialogs.Add("ACT_2_SCENE_1", "Acto 2, escena 1");
-        dialogs.Add("ACT_2_SCENE_2", "Acto 2, escena 2");
-        dialogs.Add("ACT_2_SCENE_3", "Acto 2, escena 3");
-        dialogs.Add("ACT_3_SCENE_1", "Acto 3, escena 1");
-        dialogs.Add("ACT_3_SCENE_2", "Acto 3, escena 2");
-        dialogs.Add("ACT_3_SCENE_3", "Acto 3, escena 3");
-        dialogs.Add("ACT_4_SCENE_1", "Acto 4, escena 1");
-        dialogs.Add("ACT_4_SCENE_2", "Acto 4, escena 2");
-        dialogs.Add("ACT_4_SCENE_3", "Acto 4, escena 3");
-        dialogs.Add("LAST_SCENE", "Has tenido el honor de presenciar mi obra maestra. Es hora de que toda esta basura vuele en pedazos. ¡Muchas gracias!");
+        dialogs.Add("ACT_1_SCENE_1", "La noche yacía en penumbra y frío.");
+        dialogs.Add("ACT_1_SCENE_2", "El Rey se alzaba enorme ante todos; el príncipe no se creía digno de esa estatura.");
+        dialogs.Add("ACT_1_SCENE_3", "Con él, el Rey no fingía. El príncipe se apartaba, quebrado, y de rodillas lloraba al descubrir la máscara de amor y el monstruo que ocultaba.");
+        dialogs.Add("ACT_2_SCENE_1", "Bajo el ardiente sol del mediodía, el príncipe vagaba a la vera del río.");
+        dialogs.Add("ACT_2_SCENE_2", "Cruzó el puente y halló a su prometida al otro lado. Subió a una roca para saludarla. Ella recogía, distraída, las rosas caídas.");
+        dialogs.Add("ACT_2_SCENE_3", "Rosas ajenas encendieron su furia. El príncipe ante todos señaló la traición y supo otra vez que no una mujer, sino una máscara amó. Y fue una hoguera la que la mentira consumió.");
+        dialogs.Add("ACT_3_SCENE_1", "Bajo el cielo ceniciento, en un intento de redención artística, el príncipe a las musas buscó en el bosque.");
+        dialogs.Add("ACT_3_SCENE_2", "El bosque le negó ninfas y le dio ladrones: acero en alto, rodillas temblando, una súplica.");
+        dialogs.Add("ACT_3_SCENE_3", "Pero al reconocer al príncipe, arrepentido y temblando de rodillas cayó. Tras la máscara del bravo león vivía un cobarde ratón.");
+        dialogs.Add("ACT_4_SCENE_1", "Al alba, tras la torre oeste, el príncipe comenzó a pintar su obra.");
+        dialogs.Add("ACT_4_SCENE_2", "Al dar las doce, la presentó. Desde poltronas de jueces llovieron críticas afiladas y el ánimo del príncipe al suelo cayó.");
+        dialogs.Add("ACT_4_SCENE_3", "Bajo sus máscaras virtuosas anidaban la envidia y la torpeza. El príncipe juró venganza y, en el ocaso, se alzó y partió al este a desenmascarar y destruir.");
+        dialogs.Add("LAST_SCENE", "Y como el príncipe habría deseado, reuní a mis monstruos enmascarados para poner fin a su patética existencia.");
         dialogs.Add("GAME_OVER", "Me has fastidiado a mí y a mi perfecta obra. ¡Muere, muere, muere!");
 
     }

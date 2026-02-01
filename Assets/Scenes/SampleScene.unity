@@ -567,9 +567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_2
+  dialogKey: ACT_3_SCENE_2
   scenographyPosition: {fileID: 628425}
-  time: -1
+  time: 100
 --- !u!4 &34300107
 Transform:
   m_ObjectHideFlags: 0
@@ -1161,9 +1161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_2
+  dialogKey: ACT_4_SCENE_2
   scenographyPosition: {fileID: 1547860306}
-  time: -1
+  time: 100
 --- !u!1 &153184173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,7 +4432,7 @@ GameObject:
   - component: {fileID: 557107865}
   - component: {fileID: 557107864}
   m_Layer: 0
-  m_Name: Act (2)
+  m_Name: Act (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5189,9 +5189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_3
+  dialogKey: ACT_4_SCENE_3
   scenographyPosition: {fileID: 458733686}
-  time: -1
+  time: 100
 --- !u!1 &606684769
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,7 +5654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_1
+  dialogKey: ACT_2_SCENE_1
   scenographyPosition: {fileID: 887540814}
   time: 100
 --- !u!4 &662410709
@@ -6124,9 +6124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_2
+  dialogKey: ACT_2_SCENE_2
   scenographyPosition: {fileID: 1832577945}
-  time: -1
+  time: 100
 --- !u!4 &763306133
 Transform:
   m_ObjectHideFlags: 0
@@ -6527,7 +6527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_1
+  dialogKey: ACT_3_SCENE_1
   scenographyPosition: {fileID: 563860623}
   time: 100
 --- !u!4 &839987327
@@ -7041,9 +7041,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_3
+  dialogKey: ACT_2_SCENE_3
   scenographyPosition: {fileID: 1848566524}
-  time: -1
+  time: 100
 --- !u!4 &894713640
 Transform:
   m_ObjectHideFlags: 0
@@ -7403,7 +7403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_1_SCENE_3
   scenographyPosition: {fileID: 212913119}
-  time: -1
+  time: 100
 --- !u!1 &969033689
 GameObject:
   m_ObjectHideFlags: 0
@@ -7415,7 +7415,7 @@ GameObject:
   - component: {fileID: 969033691}
   - component: {fileID: 969033690}
   m_Layer: 0
-  m_Name: Act (3)
+  m_Name: Act (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12123,9 +12123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_3
+  dialogKey: ACT_3_SCENE_3
   scenographyPosition: {fileID: 1660167980}
-  time: -1
+  time: 100
 --- !u!4 &1565874203
 Transform:
   m_ObjectHideFlags: 0
@@ -12442,7 +12442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d4775cef3884fffb026e0ed4296804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
-  dialogKey: ACT_1_SCENE_1
+  dialogKey: ACT_4_SCENE_1
   scenographyPosition: {fileID: 1336291220}
   time: 100
 --- !u!1 &1605644767
@@ -13449,7 +13449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_1_SCENE_2
   scenographyPosition: {fileID: 1614763346}
-  time: -1
+  time: 100
 --- !u!4 &1668094033
 Transform:
   m_ObjectHideFlags: 0
@@ -16964,8 +16964,8 @@ SceneRoots:
   - {fileID: 508576002}
   - {fileID: 1039887702}
   - {fileID: 2095516710}
-  - {fileID: 557107865}
   - {fileID: 969033691}
+  - {fileID: 557107865}
   - {fileID: 2120827097}
   - {fileID: 307933936}
   - {fileID: 1470497251}
