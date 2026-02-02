@@ -20,6 +20,7 @@ public class DialogBox : MonoBehaviour
     }
     
 
+    bool endWriteFlag = false;
     public void WriteMessage(string message, float timeInterval, UnityAction onMessageFinish = null) {
         panel.SetActive(true);
         var caracterCount = message.Length;
@@ -34,17 +35,33 @@ public class DialogBox : MonoBehaviour
             Invoke("HidePanel", readingTime);
     }
 
+    bool isWriting = false;
     private IEnumerator TypeMessage(string text, float timeInterval, UnityAction onMessageFinish = null) {
+        isWriting = true;
         message.text = "";
         foreach (char c in text.ToCharArray()) {
+            if(endWriteFlag){
+                endWriteFlag = false;
+                message.text = text;
+                break;
+            }
             message.text += c;
             yield return new WaitForSeconds(timeInterval);
         }
+        isWriting = false;
         onMessageFinish?.Invoke();
     }
 
     public void HidePanel()
     {
         panel.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) {
+            if (isWriting)
+                endWriteFlag = true;
+        }
     }
 }

@@ -8,7 +8,7 @@ public class EndGameScreen : MonoBehaviour
     public TMP_Text buttonText;
     public string badEndingLabel = "No lograste liberar a nadie";
     public string incompleteEndingLabel = "Podrías haberte salvado";
-    public string goodEndingLabel = "El Director ha sido asesinado";
+    public string goodEndingLabel = "¡Felicitaciones! Te has salvado a ti y a los actores";
     public Color badEndingColor;
     public Color incompleteEndingColor;
     public Color goodEndingColor;

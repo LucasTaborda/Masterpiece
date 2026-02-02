@@ -230,6 +230,7 @@ public class ActManager : MonoBehaviour
 
     public void EndWithExplosion()
     {
+        Debug.Log("EXPLOSION");
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_EXPLOSION]);
         ShowEndGameScreen();
@@ -237,6 +238,7 @@ public class ActManager : MonoBehaviour
 
     public void EndWithKnife()
     {
+        Debug.Log("KNIFE");
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_STAB], 1f);
         Curtain.Instance.PlayKillAnimation();
