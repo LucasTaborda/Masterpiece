@@ -49,7 +49,7 @@ public class Game : MonoBehaviour
 
     public void Initialize()
     {
-        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_START], 1f);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_START]);
         InitialScreen.Instance.Hide();
         Invoke("TurnOnLights", 2f);
         Invoke("SpawnTV", 3.5f);

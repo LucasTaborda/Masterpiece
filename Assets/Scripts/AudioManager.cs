@@ -67,7 +67,7 @@ public class AudioManager : MonoBehaviour
 
     public float musicFadeDuration = 1f;
     
-    public void CrossFadeMusic(AudioClip clip, float volume = 0.1f) {
+    public void CrossFadeMusic(AudioClip clip, float volume = 0.3f) {
         AudioSource oldMusic;
         AudioSource newMusic;
         if(musicChannels[0].isPlaying){
