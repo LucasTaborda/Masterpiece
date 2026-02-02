@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6fb524a06f69b4565be27e1c711b9fc6
+guid: e2f92069741604b5a81fe4c951163389
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8586151390770262571
-    second: cortina central_0
+      213: -436199919384930547
+    second: 2BrKF+_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cortina central_0
+      name: 2BrKF+_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 191
-        width: 1920
-        height: 889
+        y: 0
+        width: 315
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5dd896d2dccd7d880800000000000000
-      internalID: -8586151390770262571
+      spriteID: d07d1020c7e42f9f0800000000000000
+      internalID: -436199919384930547
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cortina central_0: -8586151390770262571
+      2BrKF+_0: -436199919384930547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
