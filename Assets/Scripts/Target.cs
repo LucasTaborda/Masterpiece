@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Target : MonoBehaviour
@@ -14,6 +15,16 @@ public class Target : MonoBehaviour
         cam = Camera.main;
     }
 
+    void OnEnable()
+    {
+        buttonBoard.SetTargetIlluminated(true);
+    }
+
+    void OnDisable()
+    {
+        buttonBoard.SetTargetIlluminated(false);
+    }
+
     void LateUpdate()
     {
         var centerPosition = buttonBoard.targetSpriteRenderer.bounds.center;
@@ -21,15 +32,13 @@ public class Target : MonoBehaviour
         var screenPoint = cam.WorldToScreenPoint(centerPosition);
             Vector2 localPoint;
     
-        // Convertir el punto de pantalla a coordenadas locales del canvas
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             canvasRect, 
             screenPoint, 
-            canvas.worldCamera, // Usa la cámara del canvas
+            canvas.worldCamera,
             out localPoint
         );
         
-        // Aplicar la posición
         rectTransform.anchoredPosition = localPoint;
     }
 

@@ -10,10 +10,12 @@ public class ButtonBoard : MonoBehaviour
     private RectTransform rectTransform;
     private Vector3 originalPosition;
     public SpriteRenderer targetSpriteRenderer { get; private set; }
-
+    public Color selectedColor = new Color(1f, 1f, 1f, 1f);
+    public Color defaultColor = new Color(1f, 1f, 1f, 1f);
     public Button[] buttons;
     public Target target;
     public static ButtonBoard Instance { get; private set; }
+
 
     private void Awake()
     {
@@ -33,8 +35,16 @@ public class ButtonBoard : MonoBehaviour
         }
     }
 
+    public void SetTargetIlluminated(bool illuminate){
+        if(illuminate)
+            targetSpriteRenderer.material.color = selectedColor;
+        else
+            targetSpriteRenderer.material.color = defaultColor;
+    }
+
     public void ChangeScenographyObjectSelected()
     {
+        scenographyObjects[currentObject].spriteRenderer.material.color = defaultColor;
         if(currentObject == scenographyObjects.Length - 1)
             currentObject = 0;
         else{
@@ -45,7 +55,8 @@ public class ButtonBoard : MonoBehaviour
                 else currentObject++;
             }
         }
-        targetSpriteRenderer = scenographyObjects[currentObject].GetComponent<SpriteRenderer>();
+        targetSpriteRenderer = scenographyObjects[currentObject].spriteRenderer;
+        targetSpriteRenderer.material.color = selectedColor;
     }
 
     public void ResetCurrentObject()

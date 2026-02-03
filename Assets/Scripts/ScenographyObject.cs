@@ -7,7 +7,7 @@ public class ScenographyObject : MonoBehaviour
     public float moveSpeed = 10f;
     public ScenographySkin[] skins;
     public ScenographyRailLimit railLimit;
-    private SpriteRenderer spriteRenderer;
+    [HideInInspector] public SpriteRenderer spriteRenderer;
     private int currentSkinIndex = 0;
     private bool isMovingRight = true;
     private bool isMovingDown = true;
@@ -17,7 +17,6 @@ public class ScenographyObject : MonoBehaviour
 
     void Awake()
     {
-        // initialPos = gameObject.transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = skins[0].image;
     

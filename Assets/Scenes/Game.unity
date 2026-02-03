@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 11298023}
   - component: {fileID: 11298021}
   m_Layer: 0
-  m_Name: RightCharacterRail
+  m_Name: '- RightCharacterRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,7 +288,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -340,6 +340,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: beab0abc14b3042c7b6a2363b0e8cc67, type: 2}
   - {fileID: 11400000, guid: 8cfb44fbb669142b79e3ce9ce07f4352, type: 2}
   railLimit: {fileID: 457597439}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -425,7 +426,7 @@ GameObject:
   - component: {fileID: 13401618}
   - component: {fileID: 13401617}
   m_Layer: 0
-  m_Name: FrontRail
+  m_Name: '- FrontRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,6 +465,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e7fb381ee41ec4e20a62340815f874b3, type: 2}
   - {fileID: 11400000, guid: 55de61436750b44a08631db65d5aeb7d, type: 2}
   railLimit: {fileID: 1525012508}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -493,7 +495,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1118,7 +1120,7 @@ GameObject:
   - component: {fileID: 51350089}
   - component: {fileID: 51350088}
   m_Layer: 0
-  m_Name: BackgroundRail
+  m_Name: '- BackgroundRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1142,6 +1144,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff2cddb8bfded4b4a994a5052c99f857, type: 2}
   - {fileID: 11400000, guid: 37881a131b32840f89280c42c2c41093, type: 2}
   railLimit: {fileID: 2023529516}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -1171,7 +1174,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2462,7 +2465,7 @@ GameObject:
   - component: {fileID: 233222210}
   - component: {fileID: 233222209}
   m_Layer: 0
-  m_Name: TopRail
+  m_Name: '- TopRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2485,6 +2488,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c8eadff16c14489caf6b553653c5152, type: 2}
   - {fileID: 11400000, guid: e5fecc814337f402eb49ae928b82e970, type: 2}
   railLimit: {fileID: 1768769401}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -2514,7 +2518,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3718,7 +3722,7 @@ GameObject:
   - component: {fileID: 327838687}
   - component: {fileID: 327838686}
   m_Layer: 0
-  m_Name: TopRail
+  m_Name: '- TopRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3742,6 +3746,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e5fecc814337f402eb49ae928b82e970, type: 2}
   - {fileID: 11400000, guid: 4c8eadff16c14489caf6b553653c5152, type: 2}
   railLimit: {fileID: 1768769401}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 201355911}
@@ -3877,7 +3882,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4436,7 +4441,7 @@ GameObject:
   - component: {fileID: 409665150}
   - component: {fileID: 409665148}
   m_Layer: 0
-  m_Name: LeftCharacterRail (1)
+  m_Name: '- LeftCharacterRail (1)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4529,7 +4534,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4581,6 +4586,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78047c93f4ec245828c9a7db7704b677, type: 2}
   - {fileID: 11400000, guid: 8d3046ba91a734ac89b5ca3f75ec23a7, type: 2}
   railLimit: {fileID: 1650984985}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -5000,7 +5006,7 @@ GameObject:
   - component: {fileID: 470300616}
   - component: {fileID: 470300615}
   m_Layer: 0
-  m_Name: RightCharacterRail
+  m_Name: '- RightCharacterRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5041,6 +5047,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78047c93f4ec245828c9a7db7704b677, type: 2}
   - {fileID: 11400000, guid: 8d3046ba91a734ac89b5ca3f75ec23a7, type: 2}
   railLimit: {fileID: 457597439}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -5070,7 +5077,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6397,6 +6404,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9893f1fcbb71d4683ad43246d9dc389a, type: 2}
   - {fileID: 11400000, guid: a808fcd45456b43478db6cc8b240645a, type: 2}
   railLimit: {fileID: 1768769401}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -6714,7 +6722,7 @@ GameObject:
   - component: {fileID: 600719363}
   - component: {fileID: 600719362}
   m_Layer: 0
-  m_Name: BackgroundRail
+  m_Name: '- BackgroundRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6738,6 +6746,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 317857ec737ac49f18b1c41b0849d343, type: 2}
   - {fileID: 11400000, guid: ff2cddb8bfded4b4a994a5052c99f857, type: 2}
   railLimit: {fileID: 2023529516}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -6767,7 +6776,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6877,7 +6886,7 @@ GameObject:
   - component: {fileID: 606684771}
   - component: {fileID: 606684775}
   m_Layer: 0
-  m_Name: LeftCharacterRail
+  m_Name: '- LeftCharacterRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6902,6 +6911,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c0647e7d4a9c44c86bd4e1b68da4c7bf, type: 2}
   - {fileID: 11400000, guid: 3050094e276854308af820137f4ff547, type: 2}
   railLimit: {fileID: 1650984985}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -6977,7 +6987,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9928,6 +9938,7 @@ MonoBehaviour:
   skins:
   - {fileID: 11400000, guid: 55de61436750b44a08631db65d5aeb7d, type: 2}
   railLimit: {fileID: 1525012508}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -9974,7 +9985,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10109,7 +10120,7 @@ GameObject:
   - component: {fileID: 975480376}
   - component: {fileID: 975480379}
   m_Layer: 0
-  m_Name: RightCharacterRail
+  m_Name: '- RightCharacterRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10134,6 +10145,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78047c93f4ec245828c9a7db7704b677, type: 2}
   - {fileID: 11400000, guid: 8d3046ba91a734ac89b5ca3f75ec23a7, type: 2}
   railLimit: {fileID: 457597439}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -10163,7 +10175,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10868,7 +10880,7 @@ GameObject:
   - component: {fileID: 1107049918}
   - component: {fileID: 1107049919}
   m_Layer: 0
-  m_Name: LeftCharacterRail
+  m_Name: '- LeftCharacterRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10893,6 +10905,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78047c93f4ec245828c9a7db7704b677, type: 2}
   - {fileID: 11400000, guid: 8d3046ba91a734ac89b5ca3f75ec23a7, type: 2}
   railLimit: {fileID: 1650984985}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -10968,7 +10981,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11165,7 +11178,7 @@ GameObject:
   - component: {fileID: 1112906592}
   - component: {fileID: 1112906593}
   m_Layer: 0
-  m_Name: BackgroundRail
+  m_Name: '- BackgroundRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11212,7 +11225,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11263,6 +11276,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff2cddb8bfded4b4a994a5052c99f857, type: 2}
   - {fileID: 11400000, guid: 37881a131b32840f89280c42c2c41093, type: 2}
   railLimit: {fileID: 2023529516}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -12205,7 +12219,7 @@ GameObject:
   - component: {fileID: 1240408960}
   - component: {fileID: 1240408963}
   m_Layer: 0
-  m_Name: FrontRail
+  m_Name: '- FrontRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12228,6 +12242,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 55de61436750b44a08631db65d5aeb7d, type: 2}
   - {fileID: 11400000, guid: e7fb381ee41ec4e20a62340815f874b3, type: 2}
   railLimit: {fileID: 1525012508}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -12257,7 +12272,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12786,7 +12801,7 @@ GameObject:
   - component: {fileID: 1298429578}
   - component: {fileID: 1298429577}
   m_Layer: 0
-  m_Name: TopRail
+  m_Name: '- TopRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12941,7 +12956,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12992,6 +13007,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
   - {fileID: 11400000, guid: 4c8eadff16c14489caf6b553653c5152, type: 2}
   railLimit: {fileID: 1768769401}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 772576475}
@@ -13188,7 +13204,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351312679
 MonoBehaviour:
@@ -13203,14 +13219,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.98390293, g: 1, b: 0.3160377, a: 1}
+  m_Color: {r: 1, g: 0.93333334, b: 0.6, a: 0.03529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3561148701943319872, guid: 2faca69f2ae054ea1bd48a8fcbfe13a3, type: 3}
+  m_Sprite: {fileID: 2530564911472380330, guid: 7173ac66a54fe43a39e684485f0c9834, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13251,7 +13267,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351312677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e972728cdd2544e17b9f6f09e09be92d, type: 2}
   m_CullingMode: 0
@@ -13710,7 +13726,7 @@ GameObject:
   - component: {fileID: 1431009475}
   - component: {fileID: 1431009477}
   m_Layer: 0
-  m_Name: LeftCharacterRail
+  m_Name: '- LeftCharacterRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13750,6 +13766,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78047c93f4ec245828c9a7db7704b677, type: 2}
   - {fileID: 11400000, guid: 8d3046ba91a734ac89b5ca3f75ec23a7, type: 2}
   railLimit: {fileID: 1650984985}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -13779,7 +13796,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13803,11 +13820,11 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.49, y: 4.62}
+  m_Size: {x: 2.27, y: 5.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -14159,7 +14176,7 @@ GameObject:
   - component: {fileID: 1470497251}
   - component: {fileID: 1470497250}
   m_Layer: 0
-  m_Name: ActManager
+  m_Name: === ACT MANAGER ===
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14188,8 +14205,8 @@ MonoBehaviour:
   minDistanceScenography: 3
   lastScene: {fileID: 307933935}
   endGameScreen: {fileID: 821844468}
-  initialAct: 0
-  runIntro: 1
+  initialAct: 3
+  runIntro: 0
 --- !u!4 &1470497251
 Transform:
   m_ObjectHideFlags: 0
@@ -14239,6 +14256,7 @@ MonoBehaviour:
   skins:
   - {fileID: 11400000, guid: fa1ec942cc46b40eea6116954a1b7951, type: 2}
   railLimit: {fileID: 2023529516}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -14655,6 +14673,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  selectedColor: {r: 0.6117647, g: 0.5803922, b: 0.43529412, a: 1}
+  defaultColor: {r: 0, g: 0, b: 0, a: 1}
   buttons:
   - {fileID: 1533798765}
   - {fileID: 1664570592}
@@ -17852,7 +17872,7 @@ GameObject:
   - component: {fileID: 1789609686}
   - component: {fileID: 1789609685}
   m_Layer: 0
-  m_Name: BackgroundRail
+  m_Name: '- BackgroundRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17876,6 +17896,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff2cddb8bfded4b4a994a5052c99f857, type: 2}
   - {fileID: 11400000, guid: 37881a131b32840f89280c42c2c41093, type: 2}
   railLimit: {fileID: 2023529516}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -17905,7 +17926,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19094,7 +19115,7 @@ GameObject:
   - component: {fileID: 1910626102}
   - component: {fileID: 1910626105}
   m_Layer: 0
-  m_Name: FrontRail
+  m_Name: '- FrontRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19117,6 +19138,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 55de61436750b44a08631db65d5aeb7d, type: 2}
   - {fileID: 11400000, guid: e7fb381ee41ec4e20a62340815f874b3, type: 2}
   railLimit: {fileID: 1525012508}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -19146,7 +19168,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19255,7 +19277,7 @@ GameObject:
   - component: {fileID: 1935469835}
   - component: {fileID: 1935469838}
   m_Layer: 0
-  m_Name: RightCharacterRail
+  m_Name: '- RightCharacterRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19280,6 +19302,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78047c93f4ec245828c9a7db7704b677, type: 2}
   - {fileID: 11400000, guid: 8d3046ba91a734ac89b5ca3f75ec23a7, type: 2}
   railLimit: {fileID: 457597439}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -19309,7 +19332,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19544,6 +19567,7 @@ MonoBehaviour:
   skins:
   - {fileID: 11400000, guid: 9893f1fcbb71d4683ad43246d9dc389a, type: 2}
   railLimit: {fileID: 1768769401}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -20199,7 +20223,7 @@ GameObject:
   - component: {fileID: 2047767568}
   - component: {fileID: 2047767567}
   m_Layer: 0
-  m_Name: TopRail
+  m_Name: '- TopRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20223,6 +20247,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
   - {fileID: 11400000, guid: 4c8eadff16c14489caf6b553653c5152, type: 2}
   railLimit: {fileID: 1768769401}
+  spriteRenderer: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
@@ -20342,7 +20367,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21496,8 +21521,8 @@ SceneRoots:
   - {fileID: 557107865}
   - {fileID: 2120827097}
   - {fileID: 307933936}
-  - {fileID: 1470497251}
   - {fileID: 548619993}
   - {fileID: 73314774}
   - {fileID: 1529608874}
   - {fileID: 153508725}
+  - {fileID: 1470497251}
