@@ -6616,8 +6616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: 9893f1fcbb71d4683ad43246d9dc389a, type: 2}
-  - {fileID: 11400000, guid: a808fcd45456b43478db6cc8b240645a, type: 2}
+  - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
+  - {fileID: 11400000, guid: e5fecc814337f402eb49ae928b82e970, type: 2}
   railLimit: {fileID: 1768769401}
   spriteRenderer: {fileID: 0}
   moveHorizontal: 0
@@ -6649,7 +6649,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13430,13 +13430,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351312677}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.93333334, b: 0.6, a: 0.03529412}
+  m_Color: {r: 0.9529412, g: 0.9098039, b: 0.7058824, a: 0.03529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13483,7 +13483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351312677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -14066,15 +14066,15 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 2
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1990341252915298404, guid: 36ffee6e838e74260b3c75c5a2a9be77, type: 3}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.27, y: 5.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!61 &1431009477
 BoxCollider2D:
@@ -14503,7 +14503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: fa1ec942cc46b40eea6116954a1b7951, type: 2}
+  - {fileID: 11400000, guid: 317857ec737ac49f18b1c41b0849d343, type: 2}
   railLimit: {fileID: 2023529516}
   spriteRenderer: {fileID: 0}
   moveHorizontal: 0
@@ -14535,7 +14535,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14836,9 +14836,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1500903651}
+  - component: {fileID: 1500903654}
   - component: {fileID: 1500903653}
   - component: {fileID: 1500903652}
-  - component: {fileID: 1500903654}
   m_Layer: 5
   m_Name: ButtonBoard
   m_TagString: Untagged
@@ -14922,8 +14922,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  selectedColor: {r: 0.6117647, g: 0.5803922, b: 0.43529412, a: 1}
-  defaultColor: {r: 0, g: 0, b: 0, a: 1}
+  selectedColor: {r: 0.5764706, g: 0.49411765, b: 0.33333334, a: 1}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0.5019608}
   buttons:
   - {fileID: 1533798765}
   - {fileID: 1664570592}
@@ -19752,7 +19752,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ba5a2fe96e034e4c978a058816e125e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
