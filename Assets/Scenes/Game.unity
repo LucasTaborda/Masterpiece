@@ -1776,6 +1776,157 @@ Transform:
   m_Children: []
   m_Father: {fileID: 628426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &148501105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 148501108}
+  - component: {fileID: 148501107}
+  - component: {fileID: 148501106}
+  - component: {fileID: 148501109}
+  m_Layer: 5
+  m_Name: Act Title (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &148501106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148501105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Acto 1\nLa m\xE1scara del buen gobernante"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 182e187cf1697476bbd2995e0c54590b, type: 2}
+  m_sharedMaterial: {fileID: 8333936882463098947, guid: 182e187cf1697476bbd2995e0c54590b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &148501107
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148501105}
+  m_CullTransparentMesh: 1
+--- !u!224 &148501108
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148501105}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1806969367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &148501109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148501105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d666a89d9cc8b4be98563c3fd6b0d748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActTitle
+  title: {fileID: 148501106}
 --- !u!1 &152003417
 GameObject:
   m_ObjectHideFlags: 0
@@ -5638,6 +5789,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   lastActDialogKey: 
+  title: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6042,6 +6194,7 @@ MonoBehaviour:
   - {fileID: 975480376}
   - {fileID: 0}
   lastActDialogKey: 
+  title: "La M\xE1scara del Valor"
 --- !u!4 &557107865
 Transform:
   m_ObjectHideFlags: 0
@@ -9940,6 +10093,7 @@ MonoBehaviour:
   - {fileID: 1935469835}
   - {fileID: 971319831}
   lastActDialogKey: 
+  title: "La M\xE1scara del Amor"
 --- !u!4 &969033691
 Transform:
   m_ObjectHideFlags: 0
@@ -10536,6 +10690,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   lastActDialogKey: TUTORIAL_4
+  title: 
 --- !u!4 &1039887702
 Transform:
   m_ObjectHideFlags: 0
@@ -13241,6 +13396,7 @@ GameObject:
   - component: {fileID: 1351312680}
   - component: {fileID: 1351312679}
   - component: {fileID: 1351312681}
+  - component: {fileID: 1351312682}
   m_Layer: 5
   m_Name: Target
   m_TagString: Untagged
@@ -13274,7 +13430,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351312677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -13320,6 +13476,58 @@ MonoBehaviour:
   buttonBoard: {fileID: 1500903654}
   canvas: {fileID: 1806969366}
   canvasRect: {fileID: 1806969367}
+--- !u!114 &1351312682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351312677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.556
+  m_Color: {r: 1, g: 0.9469963, b: 0.4292453, a: 1}
+  m_Intensity: 4.65
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000d7bf5ccbedee1caec9fcb58605a7b2fc7fa03439
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 1.64
+  m_PointLightOuterRadius: 1.83
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &1358352099
 GameObject:
   m_ObjectHideFlags: 0
@@ -14235,8 +14443,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActManager
   acts:
   - {fileID: 508576003}
-  - {fileID: 1039887701}
   - {fileID: 2095516709}
+  - {fileID: 1039887701}
   - {fileID: 969033690}
   - {fileID: 557107864}
   - {fileID: 2120827096}
@@ -14244,8 +14452,10 @@ MonoBehaviour:
   minDistanceScenography: 3
   lastScene: {fileID: 307933935}
   endGameScreen: {fileID: 821844468}
-  initialAct: 3
+  initialAct: 0
   runIntro: 0
+  actTitle: {fileID: 148501109}
+  actOffset: 0
 --- !u!4 &1470497251
 Transform:
   m_ObjectHideFlags: 0
@@ -18169,6 +18379,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 148501108}
   - {fileID: 1500903651}
   - {fileID: 1351312678}
   - {fileID: 711822510}
@@ -19604,7 +19815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: 9893f1fcbb71d4683ad43246d9dc389a, type: 2}
+  - {fileID: 11400000, guid: d195c722101924938b8149312af8f5fd, type: 2}
   railLimit: {fileID: 1768769401}
   spriteRenderer: {fileID: 0}
   moveHorizontal: 0
@@ -21027,6 +21238,7 @@ MonoBehaviour:
   - {fileID: 470300615}
   - {fileID: 13401614}
   lastActDialogKey: 
+  title: "La M\xE1scara del Buen Gobernante"
 --- !u!4 &2095516710
 Transform:
   m_ObjectHideFlags: 0
@@ -21212,6 +21424,7 @@ MonoBehaviour:
   - {fileID: 11298023}
   - {fileID: 0}
   lastActDialogKey: 
+  title: "La M\xE1scara de la Virtud"
 --- !u!4 &2120827097
 Transform:
   m_ObjectHideFlags: 0

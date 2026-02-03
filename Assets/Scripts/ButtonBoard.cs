@@ -36,6 +36,7 @@ public class ButtonBoard : MonoBehaviour
     }
 
     public void SetTargetIlluminated(bool illuminate){
+        if(targetSpriteRenderer == null) return;
         if(illuminate)
             targetSpriteRenderer.material.color = selectedColor;
         else

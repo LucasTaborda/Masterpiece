@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,6 +16,8 @@ public class ActManager : MonoBehaviour
     public GameObject endGameScreen;
     public int initialAct = 0;
     public bool runIntro = true;
+    public ActTitle actTitle;
+    public int actOffset;
 
     void Awake()
     {
@@ -38,7 +41,31 @@ public class ActManager : MonoBehaviour
         ChangeScenography();
         ButtonBoard.Instance.ResetCurrentObject();
         Curtain.Instance.Up();
+        actTitle.gameObject.SetActive(false);
         StartScene();
+    }
+
+    private void SetActTitle()
+    {
+        if(string.IsNullOrEmpty(acts[currentAct].title)) {
+            StartAct();
+            return;
+        }
+
+        var act = "Acto " + (currentAct + actOffset);
+        actTitle.title.text = act + "\n" + acts[currentAct].title;
+        actTitle.gameObject.SetActive(true);
+        actTitle.Show(WaitAndHideTitle);
+    }
+
+    private void WaitAndHideTitle()
+    {
+        Invoke("HideActTitle", 3f);
+    }
+
+    private void HideActTitle()
+    {
+        actTitle.Hide(StartAct);
     }
 
     private void StartCronometer()
@@ -101,7 +128,8 @@ public class ActManager : MonoBehaviour
         else{
             currentAct++;
             currentScene = 0;
-            StartAct();
+            SetActTitle();
+            // StartAct();
         }
     }
 
