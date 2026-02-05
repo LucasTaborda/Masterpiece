@@ -11,6 +11,7 @@ public class Game : MonoBehaviour
     public static bool IsKnifeHooked;
     public static int RopeDamageLevel { get; private set; }
     private static int maxDamageLvl = 2;
+    public CreditScreen creditScreen;
 
     public enum RopeDamager { Knife, Sun, Crown }
 
@@ -79,6 +80,11 @@ public class Game : MonoBehaviour
         else if((key == "SWORD_1" || key == "SWORD_2" || key == "SWORD_3" || key == "SWORD_4") && IsKnifeHooked) return true;
         else if((key == "KILLER_1" || key == "KILLER_2" || key == "KILLER_3" || key == "KILLER_4") && actorHasKnife) return true;
         else return false;
+    }
+
+    public void ShowCredits()
+    {
+        creditScreen.gameObject.SetActive(true);
     }
 
     // void OnGUI()

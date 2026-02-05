@@ -270,7 +270,12 @@ public class ActManager : MonoBehaviour
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_STAB], 1f);
         Curtain.Instance.PlayKillAnimation();
-        Invoke("ShowEndGameScreen", 3f);
+        Invoke("ShowCredits", 3f);
+    }
+
+    private void ShowCredits()
+    {
+        Game.Instance.ShowCredits();
     }
 
     private void ShowEndGameScreen()
