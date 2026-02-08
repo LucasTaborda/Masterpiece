@@ -79,7 +79,7 @@ public class ButtonBoard : MonoBehaviour
 
     public void PressVerticalButton()
     {
-
+        CurrentRail.TweenVerticalToNextLevel();
     }
 
     public void StopMoving()

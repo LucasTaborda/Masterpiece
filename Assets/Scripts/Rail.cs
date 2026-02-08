@@ -7,7 +7,7 @@ public class Rail : MonoBehaviour
     public bool isMovingRight = true;
     public bool isMovingUp = true;
     public float tweenTimeX = 0.5f;
-
+    public float tweenTimeY = 0.3f;
     public Transform currentWaypoint;
     public RailWaypointLevel currentWaypointLevel;
     public ScenographyObject scenographyObject;
@@ -42,21 +42,20 @@ public class Rail : MonoBehaviour
         {
             for(int j = 0; j < waypointLevels[i].waypoints.Length; j++)
             {
-                if (waypointLevels[i].waypoints[j] == currentWaypoint)
-                {
-                    if( isGoingRight){
-                        if(j != waypointLevels[i].waypoints.Length - 1) {
-                            nextWaypoint = waypointLevels[i].waypoints[j + 1];
-                        }
-                        return nextWaypoint;
-                    } 
-                    else{
-                        if(j != 0){
-                            nextWaypoint = waypointLevels[i].waypoints[j - 1];
-                        }   
-                        return nextWaypoint;
-                   }
-                }
+                if (waypointLevels[i].waypoints[j] != currentWaypoint) 
+                    continue; 
+                if( isGoingRight ){
+                    if(j != waypointLevels[i].waypoints.Length - 1) {
+                        nextWaypoint = waypointLevels[i].waypoints[j + 1];
+                    }
+                    return nextWaypoint;
+                } 
+                else {
+                    if(j != 0){
+                        nextWaypoint = waypointLevels[i].waypoints[j - 1];
+                    }   
+                    return nextWaypoint;
+                }   
             }
         }
         return nextWaypoint;
@@ -88,10 +87,6 @@ public class Rail : MonoBehaviour
         return false;
     }
 
-    public void GetNextWaypointLevel(bool isGoingUp, RailWaypointLevel currentWaypointLevel)
-    {
-        RailWaypointLevel railWaypointLevel = currentWaypointLevel;
-    }
 
     public RailWaypointLevel GetClosesWaypointLevel()
     {
@@ -130,4 +125,58 @@ public class Rail : MonoBehaviour
         });
     }
 
+    public RailWaypointLevel GetNextLevel()
+    {
+        for(int i = 0; i < waypointLevels.Length; i++){
+            if(waypointLevels[i] != currentWaypointLevel) continue;
+            if(isMovingUp){
+                if(i != waypointLevels.Length - 1){
+                    currentWaypointLevel = waypointLevels[i + 1];
+                }
+                return currentWaypointLevel;
+            }
+            else{
+                if(i != 0){
+                    currentWaypointLevel = waypointLevels[i - 1];
+                }
+                return currentWaypointLevel;
+            }
+        }
+        return currentWaypointLevel;
+    }
+    
+
+    public int GetWaypointIndex()
+    {
+        Transform closest = waypointLevels[0].waypoints[0];
+        int closestIndex = 0;
+
+        for(int i = 0; i < waypointLevels.Length; i++){
+            for(int j = 0; j < waypointLevels[i].waypoints.Length; j++){
+                if(Vector3.Distance(scenographyObject.transform.position, waypointLevels[i].waypoints[j].position) < Vector3.Distance(scenographyObject.transform.position, closest.position)){
+                    closest = waypointLevels[i].waypoints[j];
+                    closestIndex = j;
+                }
+            }
+        }
+
+        return closestIndex;
+    }
+
+    public void TweenVerticalToNextLevel()
+    {
+        var nextWaypointLevel = GetNextLevel();
+
+        LeanTween.moveY(scenographyObject.gameObject, nextWaypointLevel.waypoints[0].position.y, tweenTimeX)
+        .setOnComplete(() => {
+            currentWaypointLevel = nextWaypointLevel;
+            currentWaypoint = GetClosestWaypoint();
+            if(currentWaypointLevel == waypointLevels[waypointLevels.Length - 1]){
+                isMovingUp = false;
+            }
+            else if(currentWaypointLevel == waypointLevels[0]){
+                isMovingUp = true;
+            }
+        });
+    }
 }

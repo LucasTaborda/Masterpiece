@@ -344,7 +344,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 125309484}
 --- !u!1 &12438927
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 449361488}
 --- !u!212 &13401615
 SpriteRenderer:
   serializedVersion: 2
@@ -830,15 +830,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38537932}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.021052625, y: 2.0305252, z: 0}
+  m_LocalScale: {x: 1.0526313, y: 1.0526313, z: 1.0526313}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1847144314}
   - {fileID: 893182231}
   - {fileID: 628306272}
-  m_Father: {fileID: 1577680938}
+  m_Father: {fileID: 1874113876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &38537934
 MonoBehaviour:
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1577680939}
 --- !u!212 &51350089
 SpriteRenderer:
   serializedVersion: 2
@@ -1687,8 +1687,9 @@ GameObject:
   m_Component:
   - component: {fileID: 125309483}
   - component: {fileID: 125309482}
+  - component: {fileID: 125309484}
   m_Layer: 0
-  m_Name: rail raight character_1
+  m_Name: Right Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1762,12 +1763,36 @@ Transform:
   m_GameObject: {fileID: 125309481}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.610526, y: -1.77, z: 0}
-  m_LocalScale: {x: 1.0526315, y: 1.0526315, z: 1.0526315}
+  m_LocalPosition: {x: 4.6105256, y: -1.7699999, z: 0}
+  m_LocalScale: {x: 1.0526314, y: 1.0526314, z: 1.0526314}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 153508725}
+  m_Children:
+  - {fileID: 255314755}
+  - {fileID: 608065002}
+  m_Father: {fileID: 1764150110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &125309484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125309481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea5ffe1824fb4df2a9abd5fd4b6c69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rail
+  waypointLevels:
+  - {fileID: 255314756}
+  - {fileID: 608065001}
+  isMovingRight: 1
+  isMovingUp: 1
+  tweenTimeX: 0.5
+  tweenTimeY: 0.3
+  currentWaypoint: {fileID: 0}
+  currentWaypointLevel: {fileID: 0}
+  scenographyObject: {fileID: 0}
 --- !u!1 &133399888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,7 +2095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 153508725}
   m_Layer: 0
-  m_Name: Scene
+  m_Name: Scene Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2092,11 +2117,6 @@ Transform:
   - {fileID: 407948519}
   - {fileID: 1482725999}
   - {fileID: 1972026492}
-  - {fileID: 1874113876}
-  - {fileID: 1577680938}
-  - {fileID: 1248274652}
-  - {fileID: 125309483}
-  - {fileID: 449361487}
   - {fileID: 868965450}
   - {fileID: 253254287}
   - {fileID: 2054719262}
@@ -2105,6 +2125,7 @@ Transform:
   - {fileID: 1200214100}
   - {fileID: 1645790894}
   - {fileID: 377981589}
+  - {fileID: 1764150110}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160520201
@@ -2729,7 +2750,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1874113877}
 --- !u!212 &233222206
 SpriteRenderer:
   serializedVersion: 2
@@ -3143,6 +3164,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 153508725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &255314754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255314755}
+  - component: {fileID: 255314756}
+  m_Layer: 0
+  m_Name: Level (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &255314755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255314754}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.36, y: -0.031399716, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 989199775}
+  - {fileID: 532668171}
+  m_Father: {fileID: 125309483}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &255314756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255314754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1ed2d6f4ba34b0a9bf744d36205d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RailWaypointLevel
+  waypoints:
+  - {fileID: 989199775}
+  - {fileID: 532668171}
 --- !u!1 &257226843
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,7 +4058,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 201355911}
-  rail: {fileID: 0}
+  rail: {fileID: 1874113877}
 --- !u!114 &327838686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4860,7 +4930,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1248274653}
 --- !u!1 &415431831
 GameObject:
   m_ObjectHideFlags: 0
@@ -5029,6 +5099,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 563860624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &434792317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434792318}
+  m_Layer: 0
+  m_Name: W (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434792318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434792317}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1705399004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &444596178
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,15 +5186,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448118963}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.95, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.021052627, y: -0.022105455, z: 0}
+  m_LocalScale: {x: 1.0526314, y: 1.0526314, z: 1.0526314}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1030767236}
   - {fileID: 1863723559}
   - {fileID: 1857443965}
-  m_Father: {fileID: 1577680938}
+  m_Father: {fileID: 1874113876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &448118965
 MonoBehaviour:
@@ -5121,8 +5222,9 @@ GameObject:
   m_Component:
   - component: {fileID: 449361487}
   - component: {fileID: 449361486}
+  - component: {fileID: 449361488}
   m_Layer: 0
-  m_Name: rail front_0
+  m_Name: Front Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5196,12 +5298,36 @@ Transform:
   m_GameObject: {fileID: 449361485}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.063157886, y: -2.63, z: 0}
-  m_LocalScale: {x: 1.0526315, y: 1.0526315, z: 1.0526315}
+  m_LocalPosition: {x: 0.06315788, y: -2.6299999, z: 0}
+  m_LocalScale: {x: 1.0526314, y: 1.0526314, z: 1.0526314}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 153508725}
+  m_Children:
+  - {fileID: 1767117855}
+  - {fileID: 970856333}
+  m_Father: {fileID: 1764150110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &449361488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449361485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea5ffe1824fb4df2a9abd5fd4b6c69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rail
+  waypointLevels:
+  - {fileID: 1767117856}
+  - {fileID: 970856334}
+  isMovingRight: 1
+  isMovingUp: 1
+  tweenTimeX: 0.5
+  tweenTimeY: 0.3
+  currentWaypoint: {fileID: 0}
+  currentWaypointLevel: {fileID: 0}
+  scenographyObject: {fileID: 0}
 --- !u!1 &457597438
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,7 +5499,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 125309484}
 --- !u!212 &470300616
 SpriteRenderer:
   serializedVersion: 2
@@ -6083,6 +6209,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 457597440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &532668170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532668171}
+  m_Layer: 0
+  m_Name: W (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &532668171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532668170}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 255314755}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545197263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545197264}
+  m_Layer: 0
+  m_Name: W (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545197264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545197263}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1705399004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548619991
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,7 +6922,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1874113877}
 --- !u!212 &577801553
 SpriteRenderer:
   serializedVersion: 2
@@ -6916,7 +7104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &591474892
 SpriteRenderer:
   serializedVersion: 2
@@ -7168,7 +7356,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1577680939}
 --- !u!212 &600719363
 SpriteRenderer:
   serializedVersion: 2
@@ -7334,7 +7522,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1248274653}
 --- !u!61 &606684771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7482,6 +7670,86 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &608065000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 608065002}
+  - component: {fileID: 608065001}
+  m_Layer: 0
+  m_Name: Level (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &608065001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608065000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1ed2d6f4ba34b0a9bf744d36205d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RailWaypointLevel
+  waypoints:
+  - {fileID: 833767246}
+  - {fileID: 1351910875}
+--- !u!4 &608065002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608065000}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.36, y: 1.4486002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 833767246}
+  - {fileID: 1351910875}
+  m_Father: {fileID: 125309483}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &615756798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 615756799}
+  m_Layer: 0
+  m_Name: W (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &615756799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615756798}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1767117855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -8346,6 +8614,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &748375701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748375702}
+  m_Layer: 0
+  m_Name: W (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748375702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748375701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1044473541}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763306131
 GameObject:
   m_ObjectHideFlags: 0
@@ -8876,7 +9175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &790620072
 SpriteRenderer:
   serializedVersion: 2
@@ -9444,6 +9743,37 @@ MonoBehaviour:
   goodEndingColor: {r: 0.6784314, g: 0, b: 0, a: 0}
   backgroundImage: {fileID: 821844471}
   buttonImage: {fileID: 1511134848}
+--- !u!1 &833767245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833767246}
+  m_Layer: 0
+  m_Name: W (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833767246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833767245}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 608065002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &835616343
 GameObject:
   m_ObjectHideFlags: 0
@@ -9940,6 +10270,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1500903654}
+        m_TargetAssemblyTypeName: ButtonBoard, Assembly-CSharp
+        m_MethodName: PressVerticalButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892441775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9985,7 +10327,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892441772}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b8afe6368a4e44cf95d569a1f15145c, type: 3}
   m_Name: 
@@ -10663,13 +11005,13 @@ Transform:
   m_GameObject: {fileID: 962344267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.021052625, y: -7.6852617, z: 0}
-  m_LocalScale: {x: 1.0526314, y: 1.0526314, z: 1.0526314}
+  m_LocalPosition: {x: 0, y: -3.3299985, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2050592293}
   - {fileID: 970963057}
-  m_Father: {fileID: 1874113876}
+  m_Father: {fileID: 1577680938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &962344269
 MonoBehaviour:
@@ -10798,6 +11140,55 @@ Transform:
   - {fileID: 894713640}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &970856332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 970856333}
+  - component: {fileID: 970856334}
+  m_Layer: 0
+  m_Name: Level (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &970856333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970856332}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0399998, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1662923529}
+  - {fileID: 2080662785}
+  m_Father: {fileID: 449361487}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &970856334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970856332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1ed2d6f4ba34b0a9bf744d36205d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RailWaypointLevel
+  waypoints:
+  - {fileID: 1662923529}
+  - {fileID: 2080662785}
 --- !u!1 &970963056
 GameObject:
   m_ObjectHideFlags: 0
@@ -10844,7 +11235,7 @@ GameObject:
   - component: {fileID: 971319836}
   - component: {fileID: 971319835}
   m_Layer: 0
-  m_Name: FrontRail
+  m_Name: '- FrontRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10870,7 +11261,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 449361488}
 --- !u!114 &971319832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11078,7 +11469,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 125309484}
 --- !u!212 &975480377
 SpriteRenderer:
   serializedVersion: 2
@@ -11229,6 +11620,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1768769402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &989199774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989199775}
+  m_Layer: 0
+  m_Name: W (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &989199775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989199774}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 255314755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &991808992
 GameObject:
@@ -11523,6 +11945,55 @@ Transform:
   - {fileID: 1822703934}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1044473540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044473541}
+  - component: {fileID: 1044473542}
+  m_Layer: 0
+  m_Name: Level (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044473541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044473540}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.8899999, y: -0.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1952069310}
+  - {fileID: 748375702}
+  m_Father: {fileID: 1248274652}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044473542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044473540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1ed2d6f4ba34b0a9bf744d36205d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RailWaypointLevel
+  waypoints:
+  - {fileID: 1952069310}
+  - {fileID: 748375702}
 --- !u!1 &1056171142
 GameObject:
   m_ObjectHideFlags: 0
@@ -12170,7 +12641,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1248274653}
 --- !u!61 &1107049919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12542,7 +13013,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1577680939}
 --- !u!1 &1123309322
 GameObject:
   m_ObjectHideFlags: 0
@@ -13646,7 +14117,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 449361488}
 --- !u!212 &1240408961
 SpriteRenderer:
   serializedVersion: 2
@@ -13748,8 +14219,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1248274652}
   - component: {fileID: 1248274651}
+  - component: {fileID: 1248274653}
   m_Layer: 0
-  m_Name: rail left character_1
+  m_Name: Left Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13823,12 +14295,36 @@ Transform:
   m_GameObject: {fileID: 1248274650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0736837, y: -1.782, z: 0}
-  m_LocalScale: {x: 1.0526315, y: 1.0526315, z: 1.0526315}
+  m_LocalPosition: {x: -4.0736833, y: -1.7819998, z: 0}
+  m_LocalScale: {x: 1.0526314, y: 1.0526314, z: 1.0526314}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 153508725}
+  m_Children:
+  - {fileID: 1044473541}
+  - {fileID: 1705399004}
+  m_Father: {fileID: 1764150110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248274653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248274650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea5ffe1824fb4df2a9abd5fd4b6c69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rail
+  waypointLevels:
+  - {fileID: 1044473542}
+  - {fileID: 1705399005}
+  isMovingRight: 1
+  isMovingUp: 1
+  tweenTimeX: 0.5
+  tweenTimeY: 0.3
+  currentWaypoint: {fileID: 0}
+  currentWaypointLevel: {fileID: 0}
+  scenographyObject: {fileID: 0}
 --- !u!1 &1250543910
 GameObject:
   m_ObjectHideFlags: 0
@@ -14412,7 +14908,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 772576475}
-  rail: {fileID: 0}
+  rail: {fileID: 1874113877}
 --- !u!1 &1319058262
 GameObject:
   m_ObjectHideFlags: 0
@@ -14713,6 +15209,37 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1351910874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1351910875}
+  m_Layer: 0
+  m_Name: W (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1351910875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351910874}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 608065002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358352099
 GameObject:
   m_ObjectHideFlags: 0
@@ -15202,7 +15729,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1248274653}
 --- !u!212 &1431009476
 SpriteRenderer:
   serializedVersion: 2
@@ -15639,7 +16166,7 @@ MonoBehaviour:
   lastScene: {fileID: 307933935}
   endGameScreen: {fileID: 821844468}
   initialAct: 0
-  runIntro: 1
+  runIntro: 0
   actTitle: {fileID: 148501109}
   actOffset: -1
 --- !u!4 &1470497251
@@ -15669,7 +16196,7 @@ GameObject:
   - component: {fileID: 1479393832}
   - component: {fileID: 1479393831}
   m_Layer: 0
-  m_Name: BackgroundRail
+  m_Name: '- BackgroundRail'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15695,7 +16222,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1577680939}
 --- !u!212 &1479393832
 SpriteRenderer:
   serializedVersion: 2
@@ -17127,7 +17654,7 @@ GameObject:
   - component: {fileID: 1577680937}
   - component: {fileID: 1577680939}
   m_Layer: 0
-  m_Name: rail background_0
+  m_Name: Backgorund Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17201,13 +17728,13 @@ Transform:
   m_GameObject: {fileID: 1577680936}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.021052629, y: -1.1999999, z: 0}
-  m_LocalScale: {x: 1.0526315, y: 1.0526315, z: 1.0526315}
+  m_LocalPosition: {x: 0.021052627, y: -1.1999998, z: 0}
+  m_LocalScale: {x: 1.0526314, y: 1.0526314, z: 1.0526314}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 448118964}
-  - {fileID: 38537933}
-  m_Father: {fileID: 153508725}
+  - {fileID: 962344268}
+  - {fileID: 1710647563}
+  m_Father: {fileID: 1764150110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1577680939
 MonoBehaviour:
@@ -17221,10 +17748,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea5ffe1824fb4df2a9abd5fd4b6c69a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rail
-  waypointLevels: []
+  waypointLevels:
+  - {fileID: 962344269}
+  - {fileID: 1710647564}
   isMovingRight: 1
   isMovingUp: 1
-  moveSpeed: 10
+  tweenTimeX: 0.5
+  tweenTimeY: 0.3
   currentWaypoint: {fileID: 0}
   currentWaypointLevel: {fileID: 0}
   scenographyObject: {fileID: 0}
@@ -18367,6 +18897,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1209215354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1662923528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1662923529}
+  m_Layer: 0
+  m_Name: W (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1662923529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662923528}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 970856333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664570590
 GameObject:
   m_ObjectHideFlags: 0
@@ -18754,6 +19315,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1187268383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1705399003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705399004}
+  - component: {fileID: 1705399005}
+  m_Layer: 0
+  m_Name: Level (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1705399004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705399003}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.8899999, y: 1.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 434792318}
+  - {fileID: 545197264}
+  m_Father: {fileID: 1248274652}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705399005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705399003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1ed2d6f4ba34b0a9bf744d36205d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RailWaypointLevel
+  waypoints:
+  - {fileID: 434792318}
+  - {fileID: 545197264}
 --- !u!1 &1707918041
 GameObject:
   m_ObjectHideFlags: 0
@@ -18907,13 +19517,13 @@ Transform:
   m_GameObject: {fileID: 1710647562}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.021052625, y: -4.18, z: 0}
-  m_LocalScale: {x: 1.0526314, y: 1.0526314, z: 1.0526314}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1496531643}
   - {fileID: 1908825196}
-  m_Father: {fileID: 1874113876}
+  m_Father: {fileID: 1577680938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1710647564
 MonoBehaviour:
@@ -19222,6 +19832,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756589942}
   m_CullTransparentMesh: 1
+--- !u!1 &1764150109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764150110}
+  m_Layer: 0
+  m_Name: Rails
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1764150110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764150109}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1874113876}
+  - {fileID: 1577680938}
+  - {fileID: 1248274652}
+  - {fileID: 125309483}
+  - {fileID: 449361487}
+  m_Father: {fileID: 153508725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1767117854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767117855}
+  - component: {fileID: 1767117856}
+  m_Layer: 0
+  m_Name: Level (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767117855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767117854}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0399998, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2067856910}
+  - {fileID: 615756799}
+  m_Father: {fileID: 449361487}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767117856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767117854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1ed2d6f4ba34b0a9bf744d36205d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RailWaypointLevel
+  waypoints:
+  - {fileID: 2067856910}
+  - {fileID: 615756799}
 --- !u!1 &1768769400
 GameObject:
   m_ObjectHideFlags: 0
@@ -19450,7 +20145,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1577680939}
 --- !u!212 &1789609686
 SpriteRenderer:
   serializedVersion: 2
@@ -20726,6 +21421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1874113876}
+  - component: {fileID: 1874113877}
   m_Layer: 0
   m_Name: TopRail
   m_TagString: Untagged
@@ -20741,15 +21437,37 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874113875}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.98, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.9799998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 962344268}
-  - {fileID: 1710647563}
-  m_Father: {fileID: 153508725}
+  - {fileID: 448118964}
+  - {fileID: 38537933}
+  m_Father: {fileID: 1764150110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874113877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874113875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea5ffe1824fb4df2a9abd5fd4b6c69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rail
+  waypointLevels:
+  - {fileID: 448118965}
+  - {fileID: 38537934}
+  isMovingRight: 0
+  isMovingUp: 1
+  tweenTimeX: 0.5
+  tweenTimeY: 0.3
+  currentWaypoint: {fileID: 0}
+  currentWaypointLevel: {fileID: 0}
+  scenographyObject: {fileID: 0}
 --- !u!1 &1882123496
 GameObject:
   m_ObjectHideFlags: 0
@@ -20989,7 +21707,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 449361488}
 --- !u!212 &1910626103
 SpriteRenderer:
   serializedVersion: 2
@@ -21154,7 +21872,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 125309484}
 --- !u!212 &1935469836
 SpriteRenderer:
   serializedVersion: 2
@@ -21393,7 +22111,7 @@ Transform:
   m_GameObject: {fileID: 1942910234}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.17, y: 4.24, z: 0}
+  m_LocalPosition: {x: -5.02, y: 2.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -21420,7 +22138,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1874113877}
 --- !u!1 &1950251845
 GameObject:
   m_ObjectHideFlags: 0
@@ -21451,6 +22169,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1952069309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952069310}
+  m_Layer: 0
+  m_Name: W (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1952069310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952069309}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1044473541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969981558
 GameObject:
@@ -22300,7 +23049,7 @@ MonoBehaviour:
   moveHorizontal: 0
   moveVertical: 0
   sword: {fileID: 0}
-  rail: {fileID: 0}
+  rail: {fileID: 1874113877}
 --- !u!50 &2047767567
 Rigidbody2D:
   serializedVersion: 5
@@ -22681,6 +23430,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1650984986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2067856909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067856910}
+  m_Layer: 0
+  m_Name: W (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067856910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067856909}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1767117855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071106300
 GameObject:
   m_ObjectHideFlags: 0
@@ -22772,6 +23552,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &2080662784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080662785}
+  m_Layer: 0
+  m_Name: W (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2080662785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080662784}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 970856333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082592297
 GameObject:
   m_ObjectHideFlags: 0
