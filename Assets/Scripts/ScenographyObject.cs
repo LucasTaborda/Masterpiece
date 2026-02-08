@@ -14,12 +14,21 @@ public class ScenographyObject : MonoBehaviour
     public bool moveHorizontal = false;
     public bool moveVertical = false;
     public Sword sword;
+    public Rail rail;
+    private Transform currentWaypoint;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = skins[0].image;
-    
+    }
+
+    void OnEnable()
+    {
+        if(rail != null) 
+            rail.SetScenographyObject(this);
+        else
+            Debug.LogWarning("Rail is null at " + name);
     }
 
     // public void MoveToFinalPos()
@@ -81,7 +90,7 @@ public class ScenographyObject : MonoBehaviour
         else
             spriteRenderer.sprite = skins[currentSkinIndex].image;
         
-        if(sword != null && sword.isHooked && skins[currentSkinIndex].key == "MOON") sword.gameObject.SetActive(true);
+        if(sword != null && Game.IsKnifeHooked && skins[currentSkinIndex].key == "MOON") sword.gameObject.SetActive(true);
         else if (sword != null) sword.gameObject.SetActive(false);
     }
 
@@ -93,5 +102,15 @@ public class ScenographyObject : MonoBehaviour
     public void SwitchImageToDamaged()
     {
         spriteRenderer.sprite = skins[currentSkinIndex].damagedImage;
+    }
+
+
+    public void TweenVerticalToNextLevel(bool moveUp)
+    {
+        // var nextWaypoint = rail.GetNextLevelWaypoint(moveDown);
+        // LeanTween.move(gameObject, currentWaypoint.position, moveSpeed)
+        // .setOnComplete(() => {
+        //     currentWaypoint = nextWaypoint;
+        // });
     }
 }

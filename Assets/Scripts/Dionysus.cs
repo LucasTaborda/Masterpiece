@@ -38,7 +38,7 @@ public class Dionysus : MonoBehaviour
         dialogs.Add("TUTORIAL_1", "Veamos si puedes usar los botones con símbolos de flechas de tu panel para mover el sol a la cruz que está arriba en el medio.");
         dialogs.Add("TUTORIAL_2", "Bien, se te da natural. Utiliza el último botón para que el sol cambie a luna.");
         dialogs.Add("TUTORIAL_3", "Excelente. Ahora intenta mover el árbol hasta la posición de la derecha. El primer botón sirve para intercambiar entre los rieles disponibles en escena.");
-        dialogs.Add("TUTORIAL_4", "Ya eres todo un experto. Comencemos con la obra entonces. Trabaja rápido y hazme caso. No me hagas enfadar o pagarás las consecuencias.");
+        dialogs.Add("TUTORIAL_4", "Ya eres todo un experto. Comencemos con la obra entonces. Trabaja rápido y hazme caso. No me hagas enfadar o pagarás las consecuencias. Puedes consultar qué actor es cada personaje en el folleto que te di. No te preocupes por que los actores se liberen, están bien amarrados.");
         dialogs.Add("ACT_1_SCENE_1", "La noche yacía en penumbra y frío.");
         dialogs.Add("ACT_1_SCENE_2", "El Rey se alzaba enorme ante todos; el príncipe no se creía digno de esa estatura.");
         dialogs.Add("ACT_1_SCENE_3", "Con él, el Rey no fingía. El príncipe se apartaba, quebrado, y de rodillas lloraba al descubrir la máscara de amor y el monstruo que ocultaba.");
@@ -51,7 +51,7 @@ public class Dionysus : MonoBehaviour
         dialogs.Add("ACT_4_SCENE_1", "Al alba, tras la torre oeste, el príncipe comenzó a pintar su obra.");
         dialogs.Add("ACT_4_SCENE_2", "Al dar las doce, la presentó. Desde poltronas de jueces llovieron críticas afiladas y el ánimo del príncipe al suelo cayó.");
         dialogs.Add("ACT_4_SCENE_3", "Bajo sus máscaras virtuosas anidaban la envidia y la torpeza. El príncipe juró venganza y, en el ocaso, se alzó y partió al este a desenmascarar y destruir.");
-        dialogs.Add("LAST_SCENE", "Todos los monstruos llevamos una máscara. Y como el príncipe habría deseado, reuní a mis monstruos enmascarados para poner fin a su patética existencia. ¡Por el arte y la justicia!");
+        dialogs.Add("LAST_SCENE", "Todos los monstruos llevan una máscara. Y como el príncipe habría deseado, reuní a mis monstruos enmascarados para poner fin a su patética existencia. ¡Por el arte y la justicia!");
         dialogs.Add("GAME_OVER", "Me has fastidiado a mí y a mi perfecta obra. ¡Muere, muere, muere!");
     }
 

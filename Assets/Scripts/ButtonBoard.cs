@@ -15,7 +15,7 @@ public class ButtonBoard : MonoBehaviour
     public Button[] buttons;
     public Target target;
     public static ButtonBoard Instance { get; private set; }
-
+    private Rail CurrentRail { get { return currentScenographyObject.rail; } }
 
     private void Awake()
     {
@@ -70,6 +70,16 @@ public class ButtonBoard : MonoBehaviour
     {
         if(!isActive) return;
         scenographyObjects[currentObject].moveHorizontal = true;
+    }
+
+    public void PressHorizontalButton()
+    {
+        CurrentRail.TweenHorizontalToNextWaypoint();
+    }
+
+    public void PressVerticalButton()
+    {
+
     }
 
     public void StopMoving()
