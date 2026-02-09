@@ -16,7 +16,8 @@ public class ScenographyObject : MonoBehaviour
     public Sword sword;
     public Rail rail;
     private Transform currentWaypoint;
-
+    public bool isHuman = false;
+    
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

@@ -39,6 +39,7 @@ public class ActManager : MonoBehaviour
     public void StartAct()
     {
         ChangeScenography();
+        ChangeNotPlayableScenography();
         ButtonBoard.Instance.ResetCurrentObject();
         Curtain.Instance.Up();
         actTitle.gameObject.SetActive(false);
@@ -160,6 +161,23 @@ public class ActManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void ChangeNotPlayableScenography()
+    {
+        GameObject[] previousScenography;
+        if(currentAct != 0) previousScenography = acts[currentAct - 1].notPlayableScenography;
+        else previousScenography = null;
+        var currentScenography = acts[currentAct].notPlayableScenography;
+        for(int i = 0; i < currentScenography.Length; i++) {
+            currentScenography[i].gameObject.SetActive(true);
+        }
+        if(previousScenography != null){
+            for(int i = 0; i < previousScenography.Length; i++) {
+                previousScenography[i].gameObject.SetActive(false);
+            }
+        }
+
     }
 
     public void AnalyzePhotography()

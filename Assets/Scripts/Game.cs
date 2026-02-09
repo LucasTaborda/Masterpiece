@@ -58,6 +58,11 @@ public class Game : MonoBehaviour
 
     public void Restart()
     {
+        isActorLiberated = false;
+        actorHasKnife = false;
+        IsCrownBroken = false;
+        IsSunBroken = false;
+        IsKnifeHooked = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

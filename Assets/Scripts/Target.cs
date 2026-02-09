@@ -8,6 +8,7 @@ public class Target : MonoBehaviour
     private Camera cam;
     public Canvas canvas;
     public RectTransform canvasRect;
+    public float speed = 5f;
 
     void Awake()
     {
@@ -39,7 +40,15 @@ public class Target : MonoBehaviour
             out localPoint
         );
         
-        rectTransform.anchoredPosition = localPoint;
+        //rectTransform.anchoredPosition = localPoint;
+        rectTransform.localPosition = Vector3.Lerp(
+            rectTransform.localPosition,
+            localPoint,
+            speed * Time.deltaTime
+        );
+        ///
+
+
     }
 
 }

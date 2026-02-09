@@ -120,9 +120,29 @@ public class ButtonBoard : MonoBehaviour
         Dionysus.Instance.MakeHappy();
     }
 
+    public void PlayRailSound()
+    {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_RAIL]);
+    }
+
+    public void PlayRailUpSound()
+    {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_RAIL_UP]);
+    }
+
+    public void PlayChangeSound()
+    {
+        if(currentScenographyObject.isHuman) 
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_GRUNT]);
+        else
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_CARDBOARD],1);
+    }
+
     public void Spawn()
     {
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_BOARD_SPAWN]);
         LeanTween.moveY(rectTransform, originalPosition.y, 1f).setEase(LeanTweenType.easeOutBounce);
     }
+
+
 }
