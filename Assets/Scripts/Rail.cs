@@ -91,7 +91,7 @@ public class Rail : MonoBehaviour
     }
 
 
-    public RailWaypointLevel GetClosesWaypointLevel()
+    public RailWaypointLevel GetClosestWaypointLevel()
     {
         currentWaypointLevel = waypointLevels[0];
         foreach(var level in waypointLevels)
@@ -102,6 +102,13 @@ public class Rail : MonoBehaviour
             }
         }
 
+        if(currentWaypointLevel == waypointLevels[waypointLevels.Length - 1]){
+            isMovingUp = false;
+        }
+        else if(currentWaypointLevel == waypointLevels[0]){
+            isMovingUp = true;
+        }
+
         return currentWaypointLevel;
     }
 
@@ -109,7 +116,9 @@ public class Rail : MonoBehaviour
     {
         this.scenographyObject = scenographyObject;
         currentWaypoint = GetClosestWaypoint();
-        currentWaypointLevel = GetClosesWaypointLevel();
+        currentWaypointLevel = GetClosestWaypointLevel();
+        LeanTween.move(scenographyObject.gameObject, currentWaypoint.position, 0.1f);
+
     }
 
     public void TweenHorizontalToNextWaypoint(UnityAction callback = null)

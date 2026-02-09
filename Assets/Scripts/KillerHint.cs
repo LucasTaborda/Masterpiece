@@ -9,6 +9,8 @@ public class KillerHint : MonoBehaviour
         if(Game.isActorLiberated && Game.IsKnifeHooked) {
             hint.SetActive(true);
         }
-            
+        else{
+            hint.SetActive(false);
+        }
     }
 }
