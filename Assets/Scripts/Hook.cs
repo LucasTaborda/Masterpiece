@@ -8,6 +8,8 @@ public class Hook : MonoBehaviour
     public Sword sword;
     private bool hooked = false;
     private bool delivered = false;
+    public GameObject[] hideAfterHooked;
+    public GameObject[] hideAfterDelivered;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -26,6 +28,10 @@ public class Hook : MonoBehaviour
             sword.gameObject.SetActive(true);
             sword.isHooked = true;
             AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_SWORD_TAKE]);
+            foreach (GameObject obj in hideAfterHooked)
+            {
+                obj.SetActive(false);
+            }
         }
     }
 
@@ -45,6 +51,10 @@ public class Hook : MonoBehaviour
             receiverTarget.SwitchImageToDamaged();
             Game.actorHasKnife = true;
             AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_SWORD_GIVE]);
+            foreach (GameObject obj in hideAfterDelivered)
+            {
+                obj.SetActive(false);
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ public class Game : MonoBehaviour
     public static bool actorHasKnife = false;
     public static bool IsCrownBroken  { get; private set; }
     public static bool IsSunBroken    { get; private set; }    
-    public static bool IsKnifeHooked;
+    public static bool IsKnifeHooked = false;
     public static int RopeDamageLevel { get; private set; }
     private static int maxDamageLvl = 2;
     public CreditScreen creditScreen;
