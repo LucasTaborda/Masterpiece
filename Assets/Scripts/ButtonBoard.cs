@@ -74,12 +74,12 @@ public class ButtonBoard : MonoBehaviour
 
     public void PressHorizontalButton()
     {
-        CurrentRail.TweenHorizontalToNextWaypoint();
+        CurrentRail.TweenHorizontalToNextWaypoint(ActManager.Instance.AnalyzePhotography);
     }
 
     public void PressVerticalButton()
     {
-        CurrentRail.TweenVerticalToNextLevel();
+        CurrentRail.TweenVerticalToNextLevel(ActManager.Instance.AnalyzePhotography);
     }
 
     public void StopMoving()
@@ -97,7 +97,7 @@ public class ButtonBoard : MonoBehaviour
     public void ChangeSkin()
     {
         if(!isActive) return;
-        scenographyObjects[currentObject].ChangeSkin();
+        scenographyObjects[currentObject].ChangeSkin(ActManager.Instance.AnalyzePhotography);
     }
 
     public void SetInputActive(bool active)

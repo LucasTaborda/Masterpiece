@@ -188,39 +188,39 @@ public class ActManager : MonoBehaviour
 
     private void AnalyzeRetarded()
     {
-        Debug.Log("============");
-        Debug.Log("ANALYZE PHOTOGRAPHY");
-        Debug.Log("Analyze transforms:");
+        // Debug.Log("============");
+        // Debug.Log("ANALYZE PHOTOGRAPHY");
+        // Debug.Log("Analyze transforms:");
         var photo = acts[currentAct].scenes[currentScene].scenographyPosition;
         for(int i = 0; i < photo.transforms.Length; i++)
         {
             if(photo.transforms[i] == null) {
-                Debug.Log("photo.transforms[" + i + "] is null");
+                // Debug.Log("photo.transforms[" + i + "] is null");
                 continue;
             }
             if(i >= buttonBoard.scenographyObjects.Length || buttonBoard.scenographyObjects[i] == null) {
-                Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
+                // Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
                 continue;
             }
             if(Vector2.Distance(photo.transforms[i].position, buttonBoard.scenographyObjects[i].transform.position) > minDistanceScenography) {
-                Debug.Log("Distance too big");
+                // Debug.Log("Distance too big");
                 return;
             }
         }
-        Debug.Log("Analyze keys:");
+        // Debug.Log("Analyze keys:");
         for(int i = 0; i < photo.keys.Length; i++)
         {
             if(string.IsNullOrEmpty(photo.keys[i])) {
-                Debug.Log("photo.keys[" + i + "] is null");
+                // Debug.Log("photo.keys[" + i + "] is null");
                 continue;
             }
             if(i >= buttonBoard.scenographyObjects.Length || buttonBoard.scenographyObjects[i] == null) {
-                Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
+                // Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
                 continue;
             }
 
             if(photo.keys[i] != buttonBoard.scenographyObjects[i].GetKey()) {
-                Debug.Log("Key " + photo.keys[i] + " does not match " + buttonBoard.scenographyObjects[i].GetKey());
+                // Debug.Log("Key " + photo.keys[i] + " does not match " + buttonBoard.scenographyObjects[i].GetKey());
                 return;
             }
         }

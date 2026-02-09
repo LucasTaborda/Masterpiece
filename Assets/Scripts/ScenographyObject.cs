@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScenographyObject : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class ScenographyObject : MonoBehaviour
     public Rail rail;
     private Transform currentWaypoint;
     public bool isHuman = false;
-    
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -81,18 +82,51 @@ public class ScenographyObject : MonoBehaviour
         MoveVertical();
     }
 
-    public void ChangeSkin()
+    public void ChangeSkin(UnityAction callback = null)
     {
         if(currentSkinIndex == skins.Length -1 ) currentSkinIndex = 0;
         else currentSkinIndex++;
-
+        Sprite skin;
         if(Game.IsKeyInBrokenScenography(skins[currentSkinIndex].key))
-            spriteRenderer.sprite = skins[currentSkinIndex].damagedImage;
+            skin = skins[currentSkinIndex].damagedImage;
         else
-            spriteRenderer.sprite = skins[currentSkinIndex].image;
+            skin = skins[currentSkinIndex].image;
         
         if(sword != null && Game.IsKnifeHooked && skins[currentSkinIndex].key == "MOON") sword.gameObject.SetActive(true);
         else if (sword != null) sword.gameObject.SetActive(false);
+        Debug.Log("IS HUMAN: " + isHuman);
+        if(isHuman) {
+            Debug.Log("Voy a aplastarme porque soy humano");
+            Vector3 initialScale = transform.localScale; 
+            Vector3 impact = new Vector3(initialScale.x * 1.06f, 0.94f, 1f);
+            LeanTween.scale(gameObject, impact, 0.2f)
+                .setEase(LeanTweenType.easeOutQuad)
+                .setOnComplete(() =>
+                {
+                    spriteRenderer.sprite = skin;
+                    LeanTween.scale(gameObject, initialScale, 0.12f)
+                        .setEase(LeanTweenType.easeOutBack);
+                    callback?.Invoke();
+                });
+        }
+        else {
+            Debug.Log("Voy a rotar porque no soy humano");
+            LeanTween.value(gameObject, 0, 90, 0.2f)
+            .setOnUpdate((float val) => {
+                transform.rotation = Quaternion.Euler(0,val,0);
+            })
+            .setOnComplete(() => {
+                spriteRenderer.sprite = skin;
+                LeanTween.value(gameObject, 90, 0, 0.2f)
+                    .setOnUpdate((float val) => {
+                        transform.rotation = Quaternion.Euler(0,val,0);
+                    })
+                    .setOnComplete(() => {
+                        callback?.Invoke();
+                    });
+            });
+        }
+        
     }
 
     public string GetKey()

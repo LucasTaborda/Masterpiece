@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Rail : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Rail : MonoBehaviour
     public ScenographyObject scenographyObject;
     public LeanTweenType horizontalTweenType = LeanTweenType.linear;
     public LeanTweenType verticalTweenType = LeanTweenType.linear;
+
     public Transform GetClosestWaypoint()
     {
         Transform closest = waypointLevels[0].waypoints[0];
@@ -110,7 +112,7 @@ public class Rail : MonoBehaviour
         currentWaypointLevel = GetClosesWaypointLevel();
     }
 
-    public void TweenHorizontalToNextWaypoint()
+    public void TweenHorizontalToNextWaypoint(UnityAction callback = null)
     {
         var nextWaypoint = GetNextWaypoint(isMovingRight, currentWaypoint);
         Debug.Log("nextWaypoint: " + nextWaypoint);
@@ -124,6 +126,7 @@ public class Rail : MonoBehaviour
             else if(IsFirstWaypoint(currentWaypoint)){
                 isMovingRight = true;
             }
+            callback?.Invoke();
         });
     }
 
@@ -165,7 +168,7 @@ public class Rail : MonoBehaviour
         return closestIndex;
     }
 
-    public void TweenVerticalToNextLevel()
+    public void TweenVerticalToNextLevel(UnityAction callback = null)
     {
         var nextWaypointLevel = GetNextLevel();
 
@@ -180,6 +183,7 @@ public class Rail : MonoBehaviour
             else if(currentWaypointLevel == waypointLevels[0]){
                 isMovingUp = true;
             }
+            callback?.Invoke();
         });
     }
 }
