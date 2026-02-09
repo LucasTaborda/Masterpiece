@@ -226,7 +226,7 @@ public class ActManager : MonoBehaviour
         }
         for(var i = 0; i < photo.closeTop.Length; i++){
             if(photo.closeTop[i] == false) continue;
-            float margin = 0.5f;
+            float margin = 1f;
             var obj = buttonBoard.scenographyObjects[i];
             if (Mathf.Abs(obj.transform.position.y - obj.railLimit.topLimitTransform.position.y) > margin) return;
         }

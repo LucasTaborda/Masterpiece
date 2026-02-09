@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
@@ -14,6 +16,17 @@ public class Game : MonoBehaviour
     public CreditScreen creditScreen;
 
     public enum RopeDamager { Knife, Sun, Crown }
+    public static List<UnityAction> onRopeDamaged = new();
+
+    public static void AddRopeDamagedListener(UnityAction action)
+    {
+        onRopeDamaged.Add(action);
+    }
+
+    public static void RemoveRopeDamagedListener(UnityAction action)
+    {
+        onRopeDamaged.Remove(action);
+    }
 
     public static void DamageRope(RopeDamager damager)
     {
@@ -29,6 +42,8 @@ public class Game : MonoBehaviour
 
         if(RopeDamageLevel >= maxDamageLvl)
             isActorLiberated = true;
+        
+        onRopeDamaged.ForEach(x => x.Invoke());
         //AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_ROPE], 1f);
     }
 

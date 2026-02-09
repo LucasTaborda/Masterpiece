@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,6 +19,17 @@ public class ScenographyObject : MonoBehaviour
     public Rail rail;
     private Transform currentWaypoint;
     public bool isHuman = false;
+    private List<UnityAction> onChangeSkin = new ();
+
+    public void AddChangeSkinListener(UnityAction action)
+    {
+        onChangeSkin.Add(action);
+    }
+
+    public void RemoveChangeSkinListener(UnityAction action)
+    {
+        onChangeSkin.Remove(action);
+    }
 
     void Awake()
     {
@@ -126,7 +138,11 @@ public class ScenographyObject : MonoBehaviour
                     });
             });
         }
-        
+
+        foreach (var listener in onChangeSkin)
+        {
+            listener?.Invoke();
+        }
     }
 
     public string GetKey()
