@@ -20,6 +20,7 @@ public class ScenographyObject : MonoBehaviour
     private Transform currentWaypoint;
     public bool isHuman = false;
     private List<UnityAction> onChangeSkin = new ();
+    public int firstSceneIndex = 0;
 
     public void AddChangeSkinListener(UnityAction action)
     {
@@ -39,21 +40,11 @@ public class ScenographyObject : MonoBehaviour
 
     void OnEnable()
     {
-        if(rail != null) 
+        if(firstSceneIndex == 0){
             rail.SetScenographyObject(this);
-        else
-            Debug.LogWarning("Rail is null at " + name);
+        }
+        
     }
-
-    // public void MoveToFinalPos()
-    // {
-    //     LeanTween.move(gameObject, finalPos, moveSpeed);
-    // }
-
-    // public void MoveToInitialPos()
-    // {
-    //     LeanTween.move(gameObject, initialPos, moveSpeed);
-    // }
 
     public void MoveHorizontal()
     {

@@ -112,12 +112,12 @@ public class Rail : MonoBehaviour
         return currentWaypointLevel;
     }
 
-    public void SetScenographyObject(ScenographyObject scenographyObject)
+    public void SetScenographyObject(ScenographyObject scenographyObject, float time = 0.1f)
     {
         this.scenographyObject = scenographyObject;
         currentWaypoint = GetClosestWaypoint();
         currentWaypointLevel = GetClosestWaypointLevel();
-        LeanTween.move(scenographyObject.gameObject, currentWaypoint.position, 0.1f);
+        LeanTween.move(scenographyObject.gameObject, currentWaypoint.position, time);
 
     }
 

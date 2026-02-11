@@ -86,10 +86,26 @@ public class ActManager : MonoBehaviour
 
     private void StartScene()
     {
+        if(currentScene != 0) SpawnDynamicScenography();
         Debug.Log("Act:" + currentAct + " Scene:" + currentScene);
         var key = acts[currentAct].scenes[currentScene].dialogKey;
         var message = Dionysus.Instance.dialogs[key];
         DialogBox.Instance.WriteMessage(message, Dionysus.Instance.talkingSpeed, StartDecision);
+    }
+
+    private void SpawnDynamicScenography()
+    {
+        bool spawned = false;
+        foreach(var obj in acts[currentAct].scenographyObjects){
+            if(obj == null) continue;
+            if(obj.firstSceneIndex == currentScene) {
+                obj.gameObject.SetActive(true);
+                obj.rail.SetScenographyObject(obj, 1f);
+                spawned = true;
+            }
+        }
+        if(spawned)
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_RAIL_AUTO]);
     }
 
     public void NextScene()
@@ -147,8 +163,9 @@ public class ActManager : MonoBehaviour
         var currentScenography = acts[currentAct].scenographyObjects;
         for(int i = 0; i < currentScenography.Length; i++) {
             if(currentScenography[i] != null){
-                currentScenography[i].gameObject.SetActive(true);
                 buttonBoard.scenographyObjects[i] = currentScenography[i];
+                if(currentScenography[i].firstSceneIndex == 0)
+                    currentScenography[i].gameObject.SetActive(true);
             }
             else{
                 buttonBoard.scenographyObjects[i] = null;

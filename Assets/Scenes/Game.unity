@@ -211,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 11298019}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.82, y: -2.02, z: 0}
+  m_LocalPosition: {x: 9.84, y: -2.02, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -348,6 +348,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 125309484}
   isHuman: 1
+  firstSceneIndex: 1
 --- !u!114 &11298024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +459,7 @@ Transform:
   m_GameObject: {fileID: 13401612}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: -2.2, z: 0}
+  m_LocalPosition: {x: -4.02, y: -6.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -489,6 +490,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 449361488}
   isHuman: 0
+  firstSceneIndex: 1
 --- !u!212 &13401615
 SpriteRenderer:
   serializedVersion: 2
@@ -1221,6 +1223,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1577680939}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!212 &51350089
 SpriteRenderer:
   serializedVersion: 2
@@ -2950,6 +2953,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1874113877}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!212 &233222206
 SpriteRenderer:
   serializedVersion: 2
@@ -4361,6 +4365,7 @@ MonoBehaviour:
   sword: {fileID: 201355911}
   rail: {fileID: 1874113877}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!114 &327838686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5172,7 +5177,7 @@ Transform:
   m_GameObject: {fileID: 409665146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.84, y: -1.99, z: 0}
+  m_LocalPosition: {x: -9.55, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5308,6 +5313,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1248274653}
   isHuman: 1
+  firstSceneIndex: 1
 --- !u!1 &412327067
 GameObject:
   m_ObjectHideFlags: 0
@@ -5896,7 +5902,7 @@ Transform:
   m_GameObject: {fileID: 470300613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.54, y: -2.02, z: 0}
+  m_LocalPosition: {x: 10.59, y: -2.02, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5928,6 +5934,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 125309484}
   isHuman: 1
+  firstSceneIndex: 1
 --- !u!212 &470300616
 SpriteRenderer:
   serializedVersion: 2
@@ -5975,7 +5982,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1373835539
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 2
   m_Sprite: {fileID: -1311018314348410255, guid: 1c6360618906c4449a73a2570fd312a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7355,6 +7362,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1874113877}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!212 &577801553
 SpriteRenderer:
   serializedVersion: 2
@@ -7790,6 +7798,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1577680939}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!212 &600719363
 SpriteRenderer:
   serializedVersion: 2
@@ -7957,6 +7966,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1248274653}
   isHuman: 1
+  firstSceneIndex: 1
 --- !u!61 &606684771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8071,7 +8081,7 @@ Transform:
   m_GameObject: {fileID: 606684769}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.09, y: -1.99, z: 0}
+  m_LocalPosition: {x: -9.19, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8179,7 +8189,7 @@ Transform:
   m_GameObject: {fileID: 615756798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: 4.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12376,6 +12386,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 449361488}
   isHuman: 0
+  firstSceneIndex: 2
 --- !u!114 &971319832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12461,7 +12472,7 @@ Transform:
   m_GameObject: {fileID: 971319830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -2.92, z: 0}
+  m_LocalPosition: {x: 5, y: -6.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -12585,6 +12596,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 125309484}
   isHuman: 1
+  firstSceneIndex: 1
 --- !u!212 &975480377
 SpriteRenderer:
   serializedVersion: 2
@@ -12653,7 +12665,7 @@ Transform:
   m_GameObject: {fileID: 975480375}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.11, y: -2.02, z: 0}
+  m_LocalPosition: {x: 9.99, y: -2.02, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13912,6 +13924,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1248274653}
   isHuman: 1
+  firstSceneIndex: 1
 --- !u!61 &1107049919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14026,7 +14039,7 @@ Transform:
   m_GameObject: {fileID: 1107049917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.17, y: -1.99, z: 0}
+  m_LocalPosition: {x: -9.59, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -14286,6 +14299,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1577680939}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!1 &1123309322
 GameObject:
   m_ObjectHideFlags: 0
@@ -15401,6 +15415,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 449361488}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!212 &1240408961
 SpriteRenderer:
   serializedVersion: 2
@@ -16208,6 +16223,7 @@ MonoBehaviour:
   sword: {fileID: 772576475}
   rail: {fileID: 1874113877}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!1 &1319058262
 GameObject:
   m_ObjectHideFlags: 0
@@ -16486,7 +16502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.9529412, g: 0.9098039, b: 0.7058824, a: 0.03529412}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16665,6 +16681,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 34d2a5196a8364e259cd757cab85c387, type: 3}
   - {fileID: 8300000, guid: 1b111ab37094443db8d38bca1cfdb505, type: 3}
   - {fileID: 8300000, guid: cd8fedf8620c04a639b38c3cc8db9de3, type: 3}
+  - {fileID: 8300000, guid: 44253bf2c48f94d37a83395f710c7b1f, type: 3}
   musicClips:
   - {fileID: 8300000, guid: ad7fc7c81d7fc4d67ad17ea7beb7e2b9, type: 3}
   - {fileID: 8300000, guid: 9a840b0a60249429eb4e222defbc4408, type: 3}
@@ -17076,7 +17093,7 @@ Transform:
   m_GameObject: {fileID: 1431009473}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.19, y: -1.99, z: 0}
+  m_LocalPosition: {x: -8.84, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -17109,6 +17126,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1248274653}
   isHuman: 1
+  firstSceneIndex: 1
 --- !u!212 &1431009476
 SpriteRenderer:
   serializedVersion: 2
@@ -17156,7 +17174,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1373835539
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 2
   m_Sprite: {fileID: -2481336800995533365, guid: 878d7936dbc4f4abab084b897ccb7f9d, type: 3}
   m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
@@ -17561,8 +17579,8 @@ MonoBehaviour:
   minDistanceScenography: 2
   lastScene: {fileID: 307933935}
   endGameScreen: {fileID: 821844468}
-  initialAct: 0
-  runIntro: 1
+  initialAct: 1
+  runIntro: 0
   actTitle: {fileID: 148501109}
   actOffset: -1
 --- !u!4 &1470497251
@@ -17620,6 +17638,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1577680939}
   isHuman: 0
+  firstSceneIndex: 1
 --- !u!212 &1479393832
 SpriteRenderer:
   serializedVersion: 2
@@ -17688,7 +17707,7 @@ Transform:
   m_GameObject: {fileID: 1479393830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.9, y: -1.37, z: 0}
+  m_LocalPosition: {x: -8.94, y: -1.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -21646,6 +21665,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1577680939}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!212 &1789609686
 SpriteRenderer:
   serializedVersion: 2
@@ -23272,6 +23292,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 449361488}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!212 &1910626103
 SpriteRenderer:
   serializedVersion: 2
@@ -23439,6 +23460,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 125309484}
   isHuman: 1
+  firstSceneIndex: 1
 --- !u!212 &1935469836
 SpriteRenderer:
   serializedVersion: 2
@@ -23507,7 +23529,7 @@ Transform:
   m_GameObject: {fileID: 1935469834}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.23, y: -2.02, z: 0}
+  m_LocalPosition: {x: 9.86, y: -2.02, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23724,6 +23746,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1874113877}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!1 &1950251845
 GameObject:
   m_ObjectHideFlags: 0
@@ -24695,6 +24718,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 1874113877}
   isHuman: 0
+  firstSceneIndex: 0
 --- !u!50 &2047767567
 Rigidbody2D:
   serializedVersion: 5
@@ -25101,7 +25125,7 @@ Transform:
   m_GameObject: {fileID: 2067856909}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -4.48, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

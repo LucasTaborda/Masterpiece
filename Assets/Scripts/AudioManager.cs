@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour
     public const int SFX_RAIL_UP = 16;
     public const int SFX_GRUNT = 17;
     public const int SFX_CARDBOARD = 18;
+    public const int SFX_RAIL_AUTO = 19;
 
     public const int MUSIC_DEFAULT = 0;
     public const int MUSIC_CLIMAX = 1;

@@ -42,7 +42,7 @@ public class ButtonBoard : MonoBehaviour
         else
             targetSpriteRenderer.material.color = defaultColor;
     }
-
+    
     public void ChangeScenographyObjectSelected()
     {
         scenographyObjects[currentObject].spriteRenderer.material.color = defaultColor;
@@ -50,7 +50,7 @@ public class ButtonBoard : MonoBehaviour
             currentObject = 0;
         else{
             currentObject++;
-            while(scenographyObjects[currentObject] == null){
+            while(scenographyObjects[currentObject] == null || !scenographyObjects[currentObject].isActiveAndEnabled){
                 if(currentObject == scenographyObjects.Length - 1)
                     currentObject = 0;
                 else currentObject++;
