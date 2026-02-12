@@ -490,7 +490,7 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 449361488}
   isHuman: 0
-  firstSceneIndex: 1
+  firstSceneIndex: 2
 --- !u!212 &13401615
 SpriteRenderer:
   serializedVersion: 2
@@ -807,7 +807,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_3_SCENE_2
+  openingDialogKey: 
+  endingDialogKey: ACT_3_SCENE_2_ENDING
   scenographyPosition: {fileID: 628425}
+  turnOffLightsOnEnding: 0
   time: 100
 --- !u!4 &34300107
 Transform:
@@ -1591,7 +1594,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: TUTORIAL_1
+  openingDialogKey: 
+  endingDialogKey: 
   scenographyPosition: {fileID: 1232993418}
+  turnOffLightsOnEnding: 0
   time: -1
 --- !u!1 &93600794
 GameObject:
@@ -2076,7 +2082,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_4_SCENE_2
+  openingDialogKey: ACT_4_SCENE_2_OPENING
+  endingDialogKey: ACT_4_SCENE_2_ENDING
   scenographyPosition: {fileID: 1547860306}
+  turnOffLightsOnEnding: 1
   time: 100
 --- !u!1 &153184173
 GameObject:
@@ -2172,7 +2181,7 @@ Transform:
   m_GameObject: {fileID: 160520201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.51, y: -1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2758,7 +2767,6 @@ Transform:
   - {fileID: 2022187385}
   - {fileID: 945922627}
   - {fileID: 1337965021}
-  - {fileID: 1871001369}
   m_Father: {fileID: 964037564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &212913119
@@ -2784,7 +2792,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 945922627}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 854656381}
   closeTop: 0000000000
   closeBottom: 0000000000
 --- !u!1 &213702554
@@ -5009,7 +5017,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_1_SCENE_1
+  openingDialogKey: ACT_1_SCENE_1_OPENING
+  endingDialogKey: ACT_1_SCENE_1_ENDING
   scenographyPosition: {fileID: 563343028}
+  turnOffLightsOnEnding: 0
   time: 100
 --- !u!4 &402346457
 Transform:
@@ -7055,7 +7066,7 @@ MonoBehaviour:
   - 
   - 
   transforms:
-  - {fileID: 0}
+  - {fileID: 2002195505}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -7919,7 +7930,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_4_SCENE_3
+  openingDialogKey: 
+  endingDialogKey: ACT_4_SCENE_3_ENDING
   scenographyPosition: {fileID: 458733686}
+  turnOffLightsOnEnding: 1
   time: 100
 --- !u!1 &606684769
 GameObject:
@@ -8544,7 +8558,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_2_SCENE_1
+  openingDialogKey: ACT_2_SCENE_1_OPENING
+  endingDialogKey: 
   scenographyPosition: {fileID: 887540814}
+  turnOffLightsOnEnding: 0
   time: 100
 --- !u!4 &662410709
 Transform:
@@ -9332,7 +9349,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_2_SCENE_2
+  openingDialogKey: 
+  endingDialogKey: ACT_2_SCENE_2_ENDING
   scenographyPosition: {fileID: 1832577945}
+  turnOffLightsOnEnding: 1
   time: 100
 --- !u!4 &763306133
 Transform:
@@ -10573,7 +10593,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_3_SCENE_1
+  openingDialogKey: ACT_3_SCENE_1_OPENING
+  endingDialogKey: ACT_3_SCENE_1_ENDING
   scenographyPosition: {fileID: 563860623}
+  turnOffLightsOnEnding: 0
   time: 100
 --- !u!4 &839987327
 Transform:
@@ -11183,7 +11206,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_2_SCENE_3
+  openingDialogKey: ACT_2_SCENE_3_OPENING
+  endingDialogKey: ACT_2_SCENE_3_ENDING
   scenographyPosition: {fileID: 1848566524}
+  turnOffLightsOnEnding: 1
   time: 100
 --- !u!4 &894713640
 Transform:
@@ -12194,7 +12220,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_1_SCENE_3
+  openingDialogKey: 
+  endingDialogKey: ACT_1_SCENE_3_ENDING
   scenographyPosition: {fileID: 212913119}
+  turnOffLightsOnEnding: 1
   time: 100
 --- !u!1 &969033689
 GameObject:
@@ -17579,8 +17608,8 @@ MonoBehaviour:
   minDistanceScenography: 2
   lastScene: {fileID: 307933935}
   endGameScreen: {fileID: 821844468}
-  initialAct: 1
-  runIntro: 0
+  initialAct: 0
+  runIntro: 1
   actTitle: {fileID: 148501109}
   actOffset: -1
 --- !u!4 &1470497251
@@ -17738,7 +17767,7 @@ Transform:
   m_GameObject: {fileID: 1481128200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.95, y: -0.45, z: 0}
+  m_LocalPosition: {x: -4.96, y: -1.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18218,7 +18247,7 @@ Transform:
   m_GameObject: {fileID: 1506228824}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.69, y: 2.67, z: 0}
+  m_LocalPosition: {x: -4.03, y: 2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18978,7 +19007,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_3_SCENE_3
+  openingDialogKey: 
+  endingDialogKey: ACT_3_SCENE_3_ENDING
   scenographyPosition: {fileID: 1660167980}
+  turnOffLightsOnEnding: 1
   time: 100
 --- !u!4 &1565874203
 Transform:
@@ -19461,7 +19493,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_4_SCENE_1
+  openingDialogKey: ACT_4_SCENE_1_OPENING
+  endingDialogKey: 
   scenographyPosition: {fileID: 1336291220}
+  turnOffLightsOnEnding: 0
   time: 100
 --- !u!1 &1605644767
 GameObject:
@@ -19876,9 +19911,9 @@ MonoBehaviour:
   transforms:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 160520202}
+  - {fileID: 1991485739}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 854656381}
   closeTop: 0000000100
   closeBottom: 0000010000
 --- !u!4 &1614763347
@@ -19898,6 +19933,7 @@ Transform:
   - {fileID: 195975160}
   - {fileID: 160520202}
   - {fileID: 1991485739}
+  - {fileID: 1871001369}
   m_Father: {fileID: 1668094033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1645510578
@@ -20052,7 +20088,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: TUTORIAL_2
+  openingDialogKey: 
+  endingDialogKey: 
   scenographyPosition: {fileID: 1187268382}
+  turnOffLightsOnEnding: 0
   time: -1
 --- !u!4 &1648711191
 Transform:
@@ -20784,7 +20823,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: ACT_1_SCENE_2
+  openingDialogKey: 
+  endingDialogKey: ACT_1_SCENE_2_ENDING
   scenographyPosition: {fileID: 1614763346}
+  turnOffLightsOnEnding: 0
   time: 100
 --- !u!4 &1668094033
 Transform:
@@ -21944,7 +21986,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageScene
   dialogKey: TUTORIAL_3
+  openingDialogKey: 
+  endingDialogKey: 
   scenographyPosition: {fileID: 1209215353}
+  turnOffLightsOnEnding: 1
   time: -1
 --- !u!4 &1822703934
 Transform:
@@ -22031,7 +22076,7 @@ MonoBehaviour:
   transforms:
   - {fileID: 0}
   - {fileID: 1645510579}
-  - {fileID: 0}
+  - {fileID: 1481128201}
   - {fileID: 1282507440}
   - {fileID: 0}
   closeTop: 0000000100
@@ -22623,14 +22668,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
-  - 
-  - 
-  - 
+  - MOON
+  - BRIDGE
+  - POSTURE_1
   - POSTURE_3
-  - 
+  - FIRE
   transforms:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1506228825}
+  - {fileID: 1849026884}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 1319058263}
@@ -22680,7 +22725,7 @@ Transform:
   m_GameObject: {fileID: 1849026883}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.64, y: -0.76, z: 0}
+  m_LocalPosition: {x: 4.91, y: -1.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22937,12 +22982,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871001368}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212913118}
+  m_Father: {fileID: 1614763347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872102661
 GameObject:
@@ -24227,7 +24272,7 @@ Transform:
   m_GameObject: {fileID: 1991485738}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.51, y: -2.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24395,7 +24440,7 @@ Transform:
   m_GameObject: {fileID: 2002195504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 2.67, z: 0}
+  m_LocalPosition: {x: 0.03, y: 2.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24877,7 +24922,7 @@ Transform:
   m_GameObject: {fileID: 2047767565}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.67, y: 2.7, z: 0}
+  m_LocalPosition: {x: -3.92, y: 2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:

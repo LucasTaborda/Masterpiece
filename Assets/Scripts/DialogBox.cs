@@ -11,6 +11,7 @@ public class DialogBox : MonoBehaviour
     public bool subtitleBehaviour = false;
     public static DialogBox Instance { get; private set; }
     public bool hidePanelAfterMessage = false;
+
     private void Awake()
     {
         if (Instance == null)
@@ -21,7 +22,10 @@ public class DialogBox : MonoBehaviour
     
 
     bool endWriteFlag = false;
-    public void WriteMessage(string message, float timeInterval, UnityAction onMessageFinish = null) {
+    public void WriteMessage(string message, float timeInterval, UnityAction onMessageFinish = null, bool waitForReadingTime = false, Color color = default)
+    {
+        if(color == default) color = Color.white;
+        this.message.color = color;
         panel.SetActive(true);
         var caracterCount = message.Length;
         var readingTime = caracterCount / cpsReadingTime;
@@ -29,14 +33,15 @@ public class DialogBox : MonoBehaviour
             this.message.text = message;
         }
         else{
-            StartCoroutine(TypeMessage(message, timeInterval, onMessageFinish));
+            var time = waitForReadingTime ? 2 : 0;
+            StartCoroutine(TypeMessage(message, timeInterval, onMessageFinish, time));
         }
         if (hidePanelAfterMessage)
             Invoke("HidePanel", readingTime);
     }
 
     bool isWriting = false;
-    private IEnumerator TypeMessage(string text, float timeInterval, UnityAction onMessageFinish = null) {
+    private IEnumerator TypeMessage(string text, float timeInterval, UnityAction onMessageFinish = null, float readingTime = 0) {
         isWriting = true;
         message.text = "";
         foreach (char c in text.ToCharArray()) {
@@ -49,7 +54,17 @@ public class DialogBox : MonoBehaviour
             yield return new WaitForSeconds(timeInterval);
         }
         isWriting = false;
+        if(readingTime > 0)
+        {
+            yield return new WaitForSeconds(readingTime);
+        }
         onMessageFinish?.Invoke();
+        
+    }
+
+    public void Clean()
+    {
+        message.text = "";
     }
 
     public void HidePanel()

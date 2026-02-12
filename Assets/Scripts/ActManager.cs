@@ -18,6 +18,7 @@ public class ActManager : MonoBehaviour
     public bool runIntro = true;
     public ActTitle actTitle;
     public int actOffset;
+    public StageScene CurrentScene { get { return acts[currentAct].scenes[currentScene]; } }
 
     void Awake()
     {
@@ -71,7 +72,6 @@ public class ActManager : MonoBehaviour
 
     private void StartCronometer()
     {
-        Debug.Log("Cronometer Start?");
         var time = acts[currentAct].scenes[currentScene].time;
         if(time < 0) return;
         Cronometer.Instance.SetAndStart(time, LoseScene);
@@ -87,10 +87,17 @@ public class ActManager : MonoBehaviour
     private void StartScene()
     {
         if(currentScene != 0) SpawnDynamicScenography();
-        Debug.Log("Act:" + currentAct + " Scene:" + currentScene);
+        if(string.IsNullOrEmpty(CurrentScene.openingDialogKey)) StartSceneGame();
+        else
+            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[CurrentScene.openingDialogKey], Dionysus.Instance.talkingSpeed, StartSceneGame, true);
+    }
+
+    private void StartSceneGame()
+    {
+        Curtain.Instance.shadow.SetActive(false);
         var key = acts[currentAct].scenes[currentScene].dialogKey;
         var message = Dionysus.Instance.dialogs[key];
-        DialogBox.Instance.WriteMessage(message, Dionysus.Instance.talkingSpeed, StartDecision);
+        DialogBox.Instance.WriteMessage(message, Dionysus.Instance.talkingSpeed, StartDecision, false, Color.yellow);
     }
 
     private void SpawnDynamicScenography()
@@ -110,9 +117,6 @@ public class ActManager : MonoBehaviour
 
     public void NextScene()
     {
-        buttonBoard.SetInputActive(false);
-        buttonBoard.SetButtonsEnabled(false);
-        Cronometer.Instance.Stop();
         if(currentScene == acts[currentAct].scenes.Length - 1) NextAct();
         else{
             currentScene++;
@@ -120,10 +124,28 @@ public class ActManager : MonoBehaviour
         }
     }
 
+    private void EndScene()
+    {
+        buttonBoard.SetInputActive(false);
+        buttonBoard.SetButtonsEnabled(false);
+        Cronometer.Instance.Stop();
+        if(CurrentScene.turnOffLightsOnEnding) Curtain.Instance.shadow.SetActive(true);
+        Invoke("WaitForNextScene", 1f);
+    }
+
+    private void WaitForNextScene()
+    {
+        if(!string.IsNullOrEmpty(CurrentScene.endingDialogKey)){
+            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[CurrentScene.endingDialogKey], Dionysus.Instance.talkingSpeed, NextScene, true);
+        }
+        else NextScene();
+    }
+
+
     private void LoseScene()
     {
         Dionysus.Instance.MakeSad();
-        if(!interrupted) NextScene();
+        if(!interrupted) EndScene();
     }
 
     private void EndAct()
@@ -152,6 +174,7 @@ public class ActManager : MonoBehaviour
 
     private void NextAct()
     {
+        DialogBox.Instance.Clean();
         Curtain.Instance.Down(EndAct);
     }
 
@@ -202,6 +225,7 @@ public class ActManager : MonoBehaviour
         AnalyzeRetarded();
         // Invoke("AnalyzeRetarded", 1f);
     }
+
 
     private void AnalyzeRetarded()
     {
@@ -254,9 +278,11 @@ public class ActManager : MonoBehaviour
             if (Mathf.Abs(obj.transform.position.y - obj.railLimit.bottomLimitTransform.position.y) > margin) return;
         }
         Dionysus.Instance.MakeHappy();
-        NextScene();
+        EndScene();
 
     }
+
+
 
     public void Interrupt()
     {
