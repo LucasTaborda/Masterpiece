@@ -11,6 +11,7 @@ public class DialogBox : MonoBehaviour
     public bool subtitleBehaviour = false;
     public static DialogBox Instance { get; private set; }
     public bool hidePanelAfterMessage = false;
+    public GameObject nextArrow;
 
     private void Awake()
     {
@@ -22,7 +23,7 @@ public class DialogBox : MonoBehaviour
     
 
     bool endWriteFlag = false;
-    public void WriteMessage(string message, float timeInterval, UnityAction onMessageFinish = null, bool waitForReadingTime = false, Color color = default)
+    public void WriteMessage(string message, float timeInterval, UnityAction onMessageFinish = null, bool waitForReadingTime = false, Color color = default, bool mandatorySkip = false)
     {
         if(color == default) color = Color.white;
         this.message.color = color;
@@ -34,14 +35,14 @@ public class DialogBox : MonoBehaviour
         }
         else{
             var time = waitForReadingTime ? 2 : 0;
-            StartCoroutine(TypeMessage(message, timeInterval, onMessageFinish, time));
+            StartCoroutine(TypeMessage(message, timeInterval, onMessageFinish, time, mandatorySkip));
         }
         if (hidePanelAfterMessage)
             Invoke("HidePanel", readingTime);
     }
 
     bool isWriting = false;
-    private IEnumerator TypeMessage(string text, float timeInterval, UnityAction onMessageFinish = null, float readingTime = 0) {
+    private IEnumerator TypeMessage(string text, float timeInterval, UnityAction onMessageFinish = null, float readingTime = 0, bool mandatorySkip = false) {
         isWriting = true;
         message.text = "";
         foreach (char c in text.ToCharArray()) {
@@ -54,10 +55,14 @@ public class DialogBox : MonoBehaviour
             yield return new WaitForSeconds(timeInterval);
         }
         isWriting = false;
-        if(readingTime > 0)
-        {
-            yield return new WaitForSeconds(readingTime);
-        }
+        
+        yield return new WaitForSeconds(1);
+        
+        nextArrow.SetActive(mandatorySkip);
+        if(mandatorySkip)
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_UI_NEXT], 0.05f);
+        nextArrow.SetActive(false);
         onMessageFinish?.Invoke();
         
     }
@@ -75,8 +80,10 @@ public class DialogBox : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {
-            if (isWriting)
+            if (isWriting){
+                AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_UI_NEXT], 0.05f);
                 endWriteFlag = true;
+            }
         }
     }
 }

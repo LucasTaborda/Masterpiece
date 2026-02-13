@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     public static bool IsKnifeHooked = false;
     public static int RopeDamageLevel { get; private set; }
     private static int maxDamageLvl = 2;
+    public Stage stage;
     public CreditScreen creditScreen;
 
     public enum RopeDamager { Knife, Sun, Crown }
@@ -66,7 +67,6 @@ public class Game : MonoBehaviour
     public void Initialize()
     {
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_START]);
-        InitialScreen.Instance.Hide();
         Invoke("TurnOnLights", 2f);
         Invoke("SpawnTV", 3.5f);
     }
@@ -83,14 +83,16 @@ public class Game : MonoBehaviour
 
     private void TurnOnLights()
     {
-        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_SPOTLIGHT], 1f);
-        Curtain.Instance.TurnOnLights();
+        stage.TurnOnLights();
+        // AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_SPOTLIGHT], 1f);
+        // Curtain.Instance.TurnOnLights();
     }
 
     private void SpawnTV()
     {
-        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_TV_SWITCH], 1f);
-        Dionysus.Instance.SpawnTV();
+        stage.SpawnTV();
+        // AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_TV_SWITCH], 1f);
+        // Dionysus.Instance.SpawnTV();
     }
 
     public static bool IsKeyInBrokenScenography(string key)

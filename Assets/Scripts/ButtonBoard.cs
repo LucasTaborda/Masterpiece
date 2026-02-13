@@ -74,12 +74,20 @@ public class ButtonBoard : MonoBehaviour
 
     public void PressHorizontalButton()
     {
-        CurrentRail.TweenHorizontalToNextWaypoint(ActManager.Instance.AnalyzePhotography);
+        SetButtonsEnabled(false);
+        CurrentRail.TweenHorizontalToNextWaypoint(TweenFinishedCallback);
     }
 
     public void PressVerticalButton()
     {
-        CurrentRail.TweenVerticalToNextLevel(ActManager.Instance.AnalyzePhotography);
+        SetButtonsEnabled(false);
+        CurrentRail.TweenVerticalToNextLevel(TweenFinishedCallback);
+    }
+
+    private void TweenFinishedCallback()
+    {
+        SetButtonsEnabled(true);
+        ActManager.Instance.AnalyzePhotography();
     }
 
     public void StopMoving()
@@ -97,7 +105,8 @@ public class ButtonBoard : MonoBehaviour
     public void ChangeSkin()
     {
         if(!isActive) return;
-        scenographyObjects[currentObject].ChangeSkin(ActManager.Instance.AnalyzePhotography);
+        SetButtonsEnabled(false);
+        scenographyObjects[currentObject].ChangeSkin(TweenFinishedCallback);
     }
 
     public void SetInputActive(bool active)

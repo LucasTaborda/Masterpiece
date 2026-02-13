@@ -19,6 +19,7 @@ public class ActManager : MonoBehaviour
     public ActTitle actTitle;
     public int actOffset;
     public StageScene CurrentScene { get { return acts[currentAct].scenes[currentScene]; } }
+    public Stage stage;
 
     void Awake()
     {
@@ -32,7 +33,7 @@ public class ActManager : MonoBehaviour
 
     public void StartMasterPiece()
     {
-        Curtain.Instance.Up();
+        stage.RaiseCurtain();
         ButtonBoard.Instance.Spawn();
         StartAct();
     }
@@ -42,7 +43,7 @@ public class ActManager : MonoBehaviour
         ChangeScenography();
         ChangeNotPlayableScenography();
         ButtonBoard.Instance.ResetCurrentObject();
-        Curtain.Instance.Up();
+        stage.RaiseCurtain();
         actTitle.gameObject.SetActive(false);
         StartScene();
     }
@@ -53,7 +54,7 @@ public class ActManager : MonoBehaviour
             StartAct();
             return;
         }
-
+        DialogBox.Instance.Clean();
         var act = "Acto " + (currentAct + actOffset);
         actTitle.title.text = act + "\n" + acts[currentAct].title;
         actTitle.gameObject.SetActive(true);
@@ -89,12 +90,13 @@ public class ActManager : MonoBehaviour
         if(currentScene != 0) SpawnDynamicScenography();
         if(string.IsNullOrEmpty(CurrentScene.openingDialogKey)) StartSceneGame();
         else
-            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[CurrentScene.openingDialogKey], Dionysus.Instance.talkingSpeed, StartSceneGame, true);
+            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[CurrentScene.openingDialogKey], Dionysus.Instance.talkingSpeed, StartSceneGame, true, default, true);
     }
 
     private void StartSceneGame()
     {
-        Curtain.Instance.shadow.SetActive(false);
+        // Curtain.Instance.shadow.SetActive(false);
+        stage.TurnOnLights();
         var key = acts[currentAct].scenes[currentScene].dialogKey;
         var message = Dionysus.Instance.dialogs[key];
         DialogBox.Instance.WriteMessage(message, Dionysus.Instance.talkingSpeed, StartDecision, false, Color.yellow);
@@ -129,14 +131,14 @@ public class ActManager : MonoBehaviour
         buttonBoard.SetInputActive(false);
         buttonBoard.SetButtonsEnabled(false);
         Cronometer.Instance.Stop();
-        if(CurrentScene.turnOffLightsOnEnding) Curtain.Instance.shadow.SetActive(true);
+        if(CurrentScene.turnOffLightsOnEnding) stage.TurnOffLights();
         Invoke("WaitForNextScene", 1f);
     }
 
     private void WaitForNextScene()
     {
         if(!string.IsNullOrEmpty(CurrentScene.endingDialogKey)){
-            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[CurrentScene.endingDialogKey], Dionysus.Instance.talkingSpeed, NextScene, true);
+            DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[CurrentScene.endingDialogKey], Dionysus.Instance.talkingSpeed, NextScene, true, default, true);
         }
         else NextScene();
     }
@@ -175,7 +177,7 @@ public class ActManager : MonoBehaviour
     private void NextAct()
     {
         DialogBox.Instance.Clean();
-        Curtain.Instance.Down(EndAct);
+        stage.DropCurtain(EndAct);
     }
 
     private void ChangeScenography()
@@ -288,7 +290,7 @@ public class ActManager : MonoBehaviour
     {
         interrupted = true;
         buttonBoard.SetInputActive(false);
-        Curtain.Instance.Down(GameOverLine);
+        stage.DropCurtain(GameOverLine);
     }
 
     private void GameOverLine()
@@ -301,7 +303,7 @@ public class ActManager : MonoBehaviour
         RemoveScenography();
         Dionysus.Instance.HideTV();
         lastScene.SetActive(true);
-        Curtain.Instance.Up(SayEndMasterpiece);
+        stage.RaiseCurtain(SayEndMasterpiece);
         AudioManager.Instance.CrossFadeMusic(AudioManager.Instance.musicClips[AudioManager.MUSIC_CLIMAX]);
     }
 
@@ -312,9 +314,9 @@ public class ActManager : MonoBehaviour
 
     public void ChooseEnd()
     {
-        if(Game.isActorLiberated && !Game.actorHasKnife) Curtain.Instance.Down(EndWithExplosion);
-        else if(Game.isActorLiberated && Game.actorHasKnife) Curtain.Instance.Down(EndWithKnife);
-        else Curtain.Instance.Down(EndWithExplosion);
+        if(Game.isActorLiberated && !Game.actorHasKnife) stage.DropCurtain(EndWithExplosion);
+        else if(Game.isActorLiberated && Game.actorHasKnife) stage.DropCurtain(EndWithKnife);
+        else stage.DropCurtain(EndWithExplosion);
     }
 
     public void EndWithExplosion()

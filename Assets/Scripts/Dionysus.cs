@@ -51,7 +51,7 @@ public class Dionysus : MonoBehaviour
         dialogs.Add("ACT_2_SCENE_2", "El heredero cruzó el puente y divisó a su prometida a lo lejos. Subió a una roca para saludarla. Ella recogía, distraída, algo del suelo.");
         dialogs.Add("ACT_2_SCENE_2_ENDING", "Lo que ella recogía eran rosas que el príncipe no había regalado. Loco de celos por la presunta traición ordenó capturarla.");
         dialogs.Add("ACT_2_SCENE_3_OPENING", "Esa misma noche y en el mismo lugar donde presenció la infidelidad, el iracundo príncipe llevó a cabo su castigo.");
-        dialogs.Add("ACT_2_SCENE_3", "La ató en lo alto de una hoguera y ella erguida murió. La luna se empequeñecía al lado de la doncella. El príncipe desde el río, la señalaba por su traición.");
+        dialogs.Add("ACT_2_SCENE_3", "La ató en lo alto de una hoguera y ella erguida murió. La luna se empequeñecía detrás de la doncella. El príncipe desde el río, la señalaba por su traición.");
         dialogs.Add("ACT_2_SCENE_3_ENDING", "Y en ese momento se dio cuenta que no había amado a una mujer, sino a una falsa máscara de amor.");
         dialogs.Add("ACT_3_SCENE_1_OPENING", "Como última esperanza, el príncipe quiso encontrar en el arte consuelo para su alma dolida. Y se dirigió al bosque en búsqueda de musas que le dieran inspiración.");
         dialogs.Add("ACT_3_SCENE_1", "Las nubes se acercaban desde el este al bosque de las musas del oeste.");
@@ -79,6 +79,7 @@ public class Dionysus : MonoBehaviour
 
     public void MakeHappy()
     {
+        DecisionFeedback.Instance.SetFeedback(true);
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_SUCCESS]);
         happyEye.Shine();
         if(currentHappiness < maxHappiness)
@@ -87,6 +88,7 @@ public class Dionysus : MonoBehaviour
 
     public void MakeSad()
     {
+        DecisionFeedback.Instance.SetFeedback(false);
         AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_FAIL]);
         sadEye.Shine();
         if (currentHappiness > 0)
@@ -115,7 +117,7 @@ public class Dionysus : MonoBehaviour
 
     public void MakePresentation()
     {
-        dialogBox.WriteMessage(dialogs["PRESENTATION_1"], talkingSpeed, StartMasterpieceRetarded);
+        dialogBox.WriteMessage(dialogs["PRESENTATION_1"], talkingSpeed, StartMasterpiece, false, default, true);
     }
 
     private void StartMasterpieceRetarded()
