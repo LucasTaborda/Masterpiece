@@ -25,6 +25,7 @@ public class DialogBox : MonoBehaviour
     bool endWriteFlag = false;
     public void WriteMessage(string message, float timeInterval, UnityAction onMessageFinish = null, bool waitForReadingTime = false, Color color = default, bool mandatorySkip = false)
     {
+        AudioManager.Instance.PlayLoop(AudioManager.Instance.sfxClips[AudioManager.SFX_DIONYSUS_TALK]);
         if(color == default) color = Color.white;
         this.message.color = color;
         panel.SetActive(true);
@@ -54,14 +55,15 @@ public class DialogBox : MonoBehaviour
             message.text += c;
             yield return new WaitForSeconds(timeInterval);
         }
-        isWriting = false;
-        
+        isWriting = false; 
+        AudioManager.Instance.StopLoop();
         yield return new WaitForSeconds(1);
         
         nextArrow.SetActive(mandatorySkip);
-        if(mandatorySkip)
+        if(mandatorySkip){
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_UI_NEXT], 0.05f);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_UI_NEXT], 0.05f);
+        }
         nextArrow.SetActive(false);
         onMessageFinish?.Invoke();
         

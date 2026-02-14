@@ -314,7 +314,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: -2481336800995533365, guid: 878d7936dbc4f4abab084b897ccb7f9d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.58431375, g: 0.99215686, b: 0.5647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -337,10 +337,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: ada44841df6b0425dabf61c10742ae7f, type: 2}
-  - {fileID: 11400000, guid: 029454c784a27464c9562e504b7ee2a7, type: 2}
-  - {fileID: 11400000, guid: beab0abc14b3042c7b6a2363b0e8cc67, type: 2}
-  - {fileID: 11400000, guid: 8cfb44fbb669142b79e3ce9ce07f4352, type: 2}
+  - {fileID: 11400000, guid: d726a9df0f7b14dc7aeffeeebb97e3ef, type: 2}
+  - {fileID: 11400000, guid: d28398e03f53548fbb65341ebff3a4a3, type: 2}
+  - {fileID: 11400000, guid: 78047c93f4ec245828c9a7db7704b677, type: 2}
+  - {fileID: 11400000, guid: 8d3046ba91a734ac89b5ca3f75ec23a7, type: 2}
   railLimit: {fileID: 457597439}
   spriteRenderer: {fileID: 0}
   moveHorizontal: 0
@@ -349,6 +349,8 @@ MonoBehaviour:
   rail: {fileID: 125309484}
   isHuman: 1
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!114 &11298024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +493,8 @@ MonoBehaviour:
   rail: {fileID: 449361488}
   isHuman: 0
   firstSceneIndex: 2
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &13401615
 SpriteRenderer:
   serializedVersion: 2
@@ -811,7 +815,7 @@ MonoBehaviour:
   endingDialogKey: ACT_3_SCENE_2_ENDING
   scenographyPosition: {fileID: 628425}
   turnOffLightsOnEnding: 0
-  time: 80
+  time: 70
 --- !u!4 &34300107
 Transform:
   m_ObjectHideFlags: 0
@@ -945,8 +949,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4290985472
+  m_fontColor: {r: 0, g: 0.24186541, b: 0.764151, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1041,7 +1045,7 @@ Transform:
   m_GameObject: {fileID: 41609703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.69, y: -2.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1227,6 +1231,8 @@ MonoBehaviour:
   rail: {fileID: 1577680939}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &51350089
 SpriteRenderer:
   serializedVersion: 2
@@ -1477,8 +1483,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278218392
+  m_fontColor: {r: 0.5943396, g: 0.43171915, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2086,7 +2092,7 @@ MonoBehaviour:
   endingDialogKey: ACT_4_SCENE_2_ENDING
   scenographyPosition: {fileID: 1547860306}
   turnOffLightsOnEnding: 1
-  time: 80
+  time: 60
 --- !u!1 &153184173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2978,6 +2984,8 @@ MonoBehaviour:
   rail: {fileID: 1874113877}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: 1
+  isDisabled: 0
 --- !u!212 &233222206
 SpriteRenderer:
   serializedVersion: 2
@@ -3807,8 +3815,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4289543558
+  m_fontColor: {r: 0.52529687, g: 0.24029905, b: 0.6792453, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3935,7 +3943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xEDtico"
+  m_text: "Pr\xEDncipe"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4390,6 +4398,8 @@ MonoBehaviour:
   rail: {fileID: 1874113877}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!114 &327838686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4633,7 +4643,7 @@ Transform:
   m_GameObject: {fileID: 337464366}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.64, y: -0.76, z: 0}
+  m_LocalPosition: {x: -4.91, y: -0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5037,7 +5047,7 @@ MonoBehaviour:
   endingDialogKey: ACT_1_SCENE_1_ENDING
   scenographyPosition: {fileID: 563343028}
   turnOffLightsOnEnding: 0
-  time: 80
+  time: 90
 --- !u!4 &402346457
 Transform:
   m_ObjectHideFlags: 0
@@ -5207,7 +5217,8 @@ Transform:
   m_LocalPosition: {x: -9.55, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1567070990}
   m_Father: {fileID: 2120827097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &409665148
@@ -5306,7 +5317,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8117647, g: 0.6156863, b: 0.18039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5329,10 +5340,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScenographyObject
   moveSpeed: 5
   skins:
-  - {fileID: 11400000, guid: d726a9df0f7b14dc7aeffeeebb97e3ef, type: 2}
-  - {fileID: 11400000, guid: d28398e03f53548fbb65341ebff3a4a3, type: 2}
-  - {fileID: 11400000, guid: 78047c93f4ec245828c9a7db7704b677, type: 2}
-  - {fileID: 11400000, guid: 8d3046ba91a734ac89b5ca3f75ec23a7, type: 2}
+  - {fileID: 11400000, guid: ada44841df6b0425dabf61c10742ae7f, type: 2}
+  - {fileID: 11400000, guid: 029454c784a27464c9562e504b7ee2a7, type: 2}
+  - {fileID: 11400000, guid: beab0abc14b3042c7b6a2363b0e8cc67, type: 2}
+  - {fileID: 11400000, guid: 8cfb44fbb669142b79e3ce9ce07f4352, type: 2}
   railLimit: {fileID: 1650984985}
   spriteRenderer: {fileID: 0}
   moveHorizontal: 0
@@ -5341,6 +5352,8 @@ MonoBehaviour:
   rail: {fileID: 1248274653}
   isHuman: 1
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!1 &412327067
 GameObject:
   m_ObjectHideFlags: 0
@@ -5890,18 +5903,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
   - SUN
-  - 
-  - 
-  - KILLER_1
-  - 
+  - TOWER
+  - KILLER_4
+  - POSTURE_2
+  - FIRE
   transforms:
   - {fileID: 1098754716}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 337464367}
+  - {fileID: 1798989316}
   - {fileID: 1461828139}
   - {fileID: 0}
-  closeTop: 0000000000
-  closeBottom: 0000000000
+  closeTop: 0000010000
+  closeBottom: 0000000100
 --- !u!1 &470300613
 GameObject:
   m_ObjectHideFlags: 0
@@ -5962,6 +5975,8 @@ MonoBehaviour:
   rail: {fileID: 125309484}
   isHuman: 1
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &470300616
 SpriteRenderer:
   serializedVersion: 2
@@ -6012,7 +6027,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 2
   m_Sprite: {fileID: -1311018314348410255, guid: 1c6360618906c4449a73a2570fd312a1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.84699875, g: 0.53333336, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6838,7 +6853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Segismundo
+  m_text: "Pr\xF3spero"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6847,8 +6862,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278222081
+  m_fontColor: {r: 0.003921569, g: 0.49019608, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7392,6 +7407,8 @@ MonoBehaviour:
   rail: {fileID: 1874113877}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &577801553
 SpriteRenderer:
   serializedVersion: 2
@@ -7828,6 +7845,8 @@ MonoBehaviour:
   rail: {fileID: 1577680939}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: 1
+  isDisabled: 0
 --- !u!212 &600719363
 SpriteRenderer:
   serializedVersion: 2
@@ -7952,7 +7971,7 @@ MonoBehaviour:
   endingDialogKey: ACT_4_SCENE_3_ENDING
   scenographyPosition: {fileID: 458733686}
   turnOffLightsOnEnding: 1
-  time: 80
+  time: 60
 --- !u!1 &606684769
 GameObject:
   m_ObjectHideFlags: 0
@@ -7999,6 +8018,8 @@ MonoBehaviour:
   rail: {fileID: 1248274653}
   isHuman: 1
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!61 &606684771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8095,7 +8116,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: -7806010726052556300, guid: 5c309ff3f2dd94f559186322525a15b2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4481132, g: 0.63006, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9471,7 +9492,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: 21300000, guid: f38a1cb0b1bc1468fb61a7a78f86e861, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4481132, g: 0.62409204, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10443,7 +10464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d15e789862344cba23d0384968b84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DecisionFeedback
-  successColor: {r: 0.40392157, g: 0.83137256, b: 0.41960785, a: 1}
+  successColor: {r: 0.40392157, g: 0.83137256, b: 0.6392157, a: 1}
   failureColor: {r: 1, g: 0, b: 0, a: 1}
   feedbackImage: {fileID: 811521554}
   animator: {fileID: 811521553}
@@ -10731,7 +10752,7 @@ MonoBehaviour:
   endingDialogKey: ACT_3_SCENE_1_ENDING
   scenographyPosition: {fileID: 563860623}
   turnOffLightsOnEnding: 0
-  time: 80
+  time: 70
 --- !u!4 &839987327
 Transform:
   m_ObjectHideFlags: 0
@@ -12456,7 +12477,7 @@ MonoBehaviour:
   endingDialogKey: ACT_1_SCENE_3_ENDING
   scenographyPosition: {fileID: 212913119}
   turnOffLightsOnEnding: 1
-  time: 80
+  time: 90
 --- !u!1 &969033689
 GameObject:
   m_ObjectHideFlags: 0
@@ -12648,6 +12669,8 @@ MonoBehaviour:
   rail: {fileID: 449361488}
   isHuman: 0
   firstSceneIndex: 2
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!114 &971319832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12858,6 +12881,8 @@ MonoBehaviour:
   rail: {fileID: 125309484}
   isHuman: 1
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &975480377
 SpriteRenderer:
   serializedVersion: 2
@@ -12908,7 +12933,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.84705883, g: 0.53333336, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13066,7 +13091,7 @@ Transform:
   m_GameObject: {fileID: 991808992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 2.4, z: 0}
+  m_LocalPosition: {x: -0.01, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13586,7 +13611,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 2
   m_Sprite: {fileID: 21300000, guid: f38a1cb0b1bc1468fb61a7a78f86e861, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8117647, g: 0.6156863, b: 0.18039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14186,6 +14211,8 @@ MonoBehaviour:
   rail: {fileID: 1248274653}
   isHuman: 1
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!61 &1107049919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14222,10 +14249,10 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.24, y: 4.09}
   m_SpriteTilingProperty:
-    border: {x: 1.1999999, y: 1.1999999, z: 1.1999999, w: 1.1999999}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.49, y: 4.62}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.41941053, y: 0.2727777}
+    oldSize: {x: 2.83, y: 5.55}
+    newSize: {x: 2.83, y: 5.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -14281,15 +14308,15 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 2
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -2481336800995533365, guid: 878d7936dbc4f4abab084b897ccb7f9d, type: 3}
+  m_Color: {r: 0.5859089, g: 0.990566, b: 0.5653702, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.49, y: 4.62}
+  m_Size: {x: 2.83, y: 5.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &1107049921
 Transform:
@@ -14364,7 +14391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pr\xF3spero"
+  m_text: Segismundo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14373,8 +14400,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278218392
+  m_fontColor: {r: 0.59607846, g: 0.43137255, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14561,6 +14588,8 @@ MonoBehaviour:
   rail: {fileID: 1577680939}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: 1
+  isDisabled: 0
 --- !u!1 &1123309322
 GameObject:
   m_ObjectHideFlags: 0
@@ -14689,8 +14718,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278218392
+  m_fontColor: {r: 0.59607846, g: 0.43137255, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15085,8 +15114,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278222081
+  m_fontColor: {r: 0.00525098, g: 0.49056602, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15677,6 +15706,8 @@ MonoBehaviour:
   rail: {fileID: 449361488}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &1240408961
 SpriteRenderer:
   serializedVersion: 2
@@ -16306,7 +16337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Hook
   self: {fileID: 1298429582}
   senderTarget: {fileID: 0}
-  receiverTarget: {fileID: 11298023}
+  receiverTarget: {fileID: 409665150}
   sword: {fileID: 772576475}
   hideAfterHooked: []
   hideAfterDelivered:
@@ -16485,6 +16516,8 @@ MonoBehaviour:
   rail: {fileID: 1874113877}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!1 &1319058262
 GameObject:
   m_ObjectHideFlags: 0
@@ -16922,11 +16955,14 @@ MonoBehaviour:
   musicChannels:
   - {fileID: 0}
   - {fileID: 0}
+  loopChannels:
+  - {fileID: 0}
+  - {fileID: 0}
   sfxClips:
   - {fileID: 8300000, guid: 086faaf3012f44053a5dd63bbff09b06, type: 3}
   - {fileID: 8300000, guid: f385c965342094cc4893dc1c00bab5f1, type: 3}
   - {fileID: 8300000, guid: f404f2b2f5e334e2f9ae5ee90db44cee, type: 3}
-  - {fileID: 8300000, guid: 8897e2e1833fb480596be1f157f881ea, type: 3}
+  - {fileID: 8300000, guid: 4b3f69406d7014c4fa206d971a41d16e, type: 3}
   - {fileID: 8300000, guid: 9ab85fde12ff64a78a54b014657eaa09, type: 3}
   - {fileID: 8300000, guid: 41ee8eb5686f74ae4b79474a5c9f4f94, type: 3}
   - {fileID: 8300000, guid: 58820287604c14dae9a0b2ea6f489ef0, type: 3}
@@ -16945,6 +16981,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 44253bf2c48f94d37a83395f710c7b1f, type: 3}
   - {fileID: 8300000, guid: c806381e002c841ec9f8379ceb8407e7, type: 3}
   - {fileID: 8300000, guid: eb2d669f580e743e18e2b2774843ed2b, type: 3}
+  - {fileID: 8300000, guid: 72e53a66d7e0d40359ad1dda60f64ce3, type: 3}
+  - {fileID: 8300000, guid: 5dfb93a7028574fc6bc3465d1cc68ac4, type: 3}
   musicClips:
   - {fileID: 8300000, guid: ad7fc7c81d7fc4d67ad17ea7beb7e2b9, type: 3}
   - {fileID: 8300000, guid: 9a840b0a60249429eb4e222defbc4408, type: 3}
@@ -17124,7 +17162,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388577786}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17256,7 +17294,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: 21300000, guid: f38a1cb0b1bc1468fb61a7a78f86e861, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5705792, g: 0.9622642, b: 0.51290494, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17390,6 +17428,8 @@ MonoBehaviour:
   rail: {fileID: 1248274653}
   isHuman: 1
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &1431009476
 SpriteRenderer:
   serializedVersion: 2
@@ -17440,7 +17480,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 2
   m_Sprite: {fileID: -2481336800995533365, guid: 878d7936dbc4f4abab084b897ccb7f9d, type: 3}
-  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+  m_Color: {r: 0.8113208, g: 0.61399186, b: 0.17986828, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17796,7 +17836,7 @@ Transform:
   m_GameObject: {fileID: 1464883480}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.9799986, y: -1.1429, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17842,7 +17882,7 @@ MonoBehaviour:
   minDistanceScenography: 2
   lastScene: {fileID: 307933935}
   endGameScreen: {fileID: 821844468}
-  initialAct: 2
+  initialAct: 0
   runIntro: 1
   actTitle: {fileID: 148501109}
   actOffset: -1
@@ -17903,6 +17943,8 @@ MonoBehaviour:
   rail: {fileID: 1577680939}
   isHuman: 0
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &1479393832
 SpriteRenderer:
   serializedVersion: 2
@@ -18646,7 +18688,7 @@ Transform:
   m_GameObject: {fileID: 1514375766}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.64, y: -0.76, z: 0}
+  m_LocalPosition: {x: -4.96, y: -0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19183,7 +19225,6 @@ Transform:
   - {fileID: 1514375767}
   - {fileID: 1464883481}
   - {fileID: 1910692681}
-  - {fileID: 1567070990}
   m_Father: {fileID: 152003418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1547860306
@@ -19200,16 +19241,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Photography
   keys:
   - SUN
-  - 
-  - 
-  - KILLER_2
-  - 
+  - TOWER
+  - KILLER_1
+  - POSTURE_3
+  - CROWN
   transforms:
   - {fileID: 991808993}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1514375767}
+  - {fileID: 1464883481}
+  - {fileID: 1910692681}
+  - {fileID: 1567070990}
   closeTop: 0000010000
   closeBottom: 0000000100
 --- !u!1 &1565874201
@@ -19246,7 +19287,7 @@ MonoBehaviour:
   endingDialogKey: ACT_3_SCENE_3_ENDING
   scenographyPosition: {fileID: 1660167980}
   turnOffLightsOnEnding: 1
-  time: 80
+  time: 70
 --- !u!4 &1565874203
 Transform:
   m_ObjectHideFlags: 0
@@ -19287,12 +19328,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567070989}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.32999992, y: 3.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1547860305}
+  m_Father: {fileID: 409665147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1568493696
 GameObject:
@@ -19732,7 +19773,7 @@ MonoBehaviour:
   endingDialogKey: 
   scenographyPosition: {fileID: 1336291220}
   turnOffLightsOnEnding: 0
-  time: 80
+  time: 60
 --- !u!1 &1605644767
 GameObject:
   m_ObjectHideFlags: 0
@@ -20027,8 +20068,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4289543558
+  m_fontColor: {r: 0.5254902, g: 0.23921569, b: 0.6784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21062,7 +21103,7 @@ MonoBehaviour:
   endingDialogKey: ACT_1_SCENE_2_ENDING
   scenographyPosition: {fileID: 1614763346}
   turnOffLightsOnEnding: 0
-  time: 80
+  time: 90
 --- !u!4 &1668094033
 Transform:
   m_ObjectHideFlags: 0
@@ -21228,7 +21269,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6743295048550616457, guid: 1b9ec7f6ce2814f40b06715830cb5935, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8117647, g: 0.6156863, b: 0.18039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21844,7 +21885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pr\xEDncipe"
+  m_text: "Cr\xEDtico"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21967,6 +22008,8 @@ MonoBehaviour:
   rail: {fileID: 1577680939}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: 1
+  isDisabled: 0
 --- !u!212 &1789609686
 SpriteRenderer:
   serializedVersion: 2
@@ -22097,7 +22140,7 @@ Transform:
   m_GameObject: {fileID: 1798989315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.99, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23209,7 +23252,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: 21300000, guid: f38a1cb0b1bc1468fb61a7a78f86e861, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.82802546, g: 0.503827, b: 0.9622642, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23597,7 +23640,9 @@ MonoBehaviour:
   sword: {fileID: 0}
   rail: {fileID: 449361488}
   isHuman: 0
-  firstSceneIndex: 0
+  firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &1910626103
 SpriteRenderer:
   serializedVersion: 2
@@ -23666,7 +23711,7 @@ Transform:
   m_GameObject: {fileID: 1910626101}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.87, y: -2.86, z: 0}
+  m_LocalPosition: {x: 4.81, y: -5.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -23714,7 +23759,7 @@ Transform:
   m_GameObject: {fileID: 1910692680}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.76, y: -1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23766,6 +23811,8 @@ MonoBehaviour:
   rail: {fileID: 125309484}
   isHuman: 1
   firstSceneIndex: 1
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!212 &1935469836
 SpriteRenderer:
   serializedVersion: 2
@@ -23816,7 +23863,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: -2855402849170120947, guid: f71a87f2f7e4a4be0981c798a9014f11, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8117647, g: 0.6156863, b: 0.18039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -24052,6 +24099,8 @@ MonoBehaviour:
   rail: {fileID: 1874113877}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!1 &1950251845
 GameObject:
   m_ObjectHideFlags: 0
@@ -25025,6 +25074,8 @@ MonoBehaviour:
   rail: {fileID: 1874113877}
   isHuman: 0
   firstSceneIndex: 0
+  sceneWhenObjectIsDisabled: -1
+  isDisabled: 0
 --- !u!50 &2047767567
 Rigidbody2D:
   serializedVersion: 5
@@ -25980,7 +26031,7 @@ MonoBehaviour:
   - {fileID: 1112906593}
   - {fileID: 409665150}
   - {fileID: 11298023}
-  - {fileID: 0}
+  - {fileID: 1910626102}
   notPlayableScenography:
   - {fileID: 898922586}
   lastActDialogKey: 

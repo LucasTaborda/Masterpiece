@@ -5,6 +5,7 @@ public class AudioManager : MonoBehaviour
     public int channelCount = 5;
     public AudioSource[] sfxChannels;
     public AudioSource[] musicChannels = new AudioSource[2];
+    public AudioSource[] loopChannels = new AudioSource[2];
     public static AudioManager Instance { get; private set; }
     public AudioClip[] sfxClips;
     public AudioClip[] musicClips;
@@ -31,6 +32,8 @@ public class AudioManager : MonoBehaviour
     public const int SFX_RAIL_AUTO = 19;
     public const int SFX_LIGHT_SWITCH = 20;
     public const int SFX_UI_NEXT = 21;
+    public const int SFX_DIONYSUS_TALK = 22;
+    public const int SFX_ACT_START = 23;
 
     public const int MUSIC_DEFAULT = 0;
     public const int MUSIC_CLIMAX = 1;
@@ -50,6 +53,9 @@ public class AudioManager : MonoBehaviour
         }
         for(int i = 0; i < musicChannels.Length; i++){
             musicChannels[i] = gameObject.AddComponent<AudioSource>();
+        }
+        for(int i = 0; i < loopChannels.Length; i++){
+            loopChannels[i] = gameObject.AddComponent<AudioSource>();
         }
     }
 
@@ -117,5 +123,16 @@ public class AudioManager : MonoBehaviour
     public void StopMusic(){
         musicChannels[0].Stop();
         musicChannels[1].Stop();
+    }
+
+    public void PlayLoop(AudioClip clip, float volume = 0.5f) {
+        loopChannels[0].clip = clip;
+        loopChannels[0].volume = volume;
+        loopChannels[0].loop = true;
+        loopChannels[0].Play();
+    }
+
+    public void StopLoop(){
+        loopChannels[0].Stop();
     }
 }

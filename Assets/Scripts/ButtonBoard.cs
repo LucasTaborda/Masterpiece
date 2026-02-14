@@ -50,7 +50,7 @@ public class ButtonBoard : MonoBehaviour
             currentObject = 0;
         else{
             currentObject++;
-            while(scenographyObjects[currentObject] == null || !scenographyObjects[currentObject].isActiveAndEnabled){
+            while(scenographyObjects[currentObject] == null || !scenographyObjects[currentObject].isActiveAndEnabled || scenographyObjects[currentObject].isDisabled){
                 if(currentObject == scenographyObjects.Length - 1)
                     currentObject = 0;
                 else currentObject++;
@@ -112,7 +112,9 @@ public class ButtonBoard : MonoBehaviour
     public void SetInputActive(bool active)
     {
         isActive = active;
-        //if(active)ChangeScenographyObjectSelected();
+        if(active && scenographyObjects[currentObject].isDisabled) {
+            ChangeScenographyObjectSelected();
+        }
         if(active) targetSpriteRenderer = scenographyObjects[currentObject].GetComponent<SpriteRenderer>();
         target.gameObject.SetActive(active);
     }

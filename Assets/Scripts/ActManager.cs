@@ -59,6 +59,7 @@ public class ActManager : MonoBehaviour
         actTitle.title.text = act + "\n" + acts[currentAct].title;
         actTitle.gameObject.SetActive(true);
         actTitle.Show(WaitAndHideTitle);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.sfxClips[AudioManager.SFX_ACT_START]);
     }
 
     private void WaitAndHideTitle()
@@ -87,10 +88,23 @@ public class ActManager : MonoBehaviour
 
     private void StartScene()
     {
-        if(currentScene != 0) SpawnDynamicScenography();
+        if(currentScene != 0) {
+            SpawnDynamicScenography();
+            CheckDisabledScenography();
+        }
         if(string.IsNullOrEmpty(CurrentScene.openingDialogKey)) StartSceneGame();
         else
             DialogBox.Instance.WriteMessage(Dionysus.Instance.dialogs[CurrentScene.openingDialogKey], Dionysus.Instance.talkingSpeed, StartSceneGame, true, default, true);
+    }
+
+    private void CheckDisabledScenography()
+    {
+        foreach(var obj in acts[currentAct].scenographyObjects){
+            if(obj == null) continue;
+            if(obj.sceneWhenObjectIsDisabled == currentScene) {
+                obj.SetDisabled();
+            }
+        }
     }
 
     private void StartSceneGame()
@@ -231,39 +245,39 @@ public class ActManager : MonoBehaviour
 
     private void AnalyzeRetarded()
     {
-        // Debug.Log("============");
-        // Debug.Log("ANALYZE PHOTOGRAPHY");
-        // Debug.Log("Analyze transforms:");
+        Debug.Log("============");
+        Debug.Log("ANALYZE PHOTOGRAPHY");
+        Debug.Log("Analyze transforms:");
         var photo = acts[currentAct].scenes[currentScene].scenographyPosition;
         for(int i = 0; i < photo.transforms.Length; i++)
         {
             if(photo.transforms[i] == null) {
-                // Debug.Log("photo.transforms[" + i + "] is null");
+                Debug.Log("photo.transforms[" + i + "] is null");
                 continue;
             }
             if(i >= buttonBoard.scenographyObjects.Length || buttonBoard.scenographyObjects[i] == null) {
-                // Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
+                Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
                 continue;
             }
             if(Vector2.Distance(photo.transforms[i].position, buttonBoard.scenographyObjects[i].transform.position) > minDistanceScenography) {
-                // Debug.Log("Distance too big");
+                Debug.Log("Distance too big. Transform ID: " + i);
                 return;
             }
         }
-        // Debug.Log("Analyze keys:");
+        Debug.Log("Analyze keys:");
         for(int i = 0; i < photo.keys.Length; i++)
         {
             if(string.IsNullOrEmpty(photo.keys[i])) {
-                // Debug.Log("photo.keys[" + i + "] is null");
+                Debug.Log("photo.keys[" + i + "] is null");
                 continue;
             }
             if(i >= buttonBoard.scenographyObjects.Length || buttonBoard.scenographyObjects[i] == null) {
-                // Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
+                Debug.Log("buttonBoard.scenographyObjects[" + i + "] is null");
                 continue;
             }
 
             if(photo.keys[i] != buttonBoard.scenographyObjects[i].GetKey()) {
-                // Debug.Log("Key " + photo.keys[i] + " does not match " + buttonBoard.scenographyObjects[i].GetKey());
+                Debug.Log("Key " + photo.keys[i] + " does not match " + buttonBoard.scenographyObjects[i].GetKey());
                 return;
             }
         }

@@ -21,10 +21,18 @@ public class ScenographyObject : MonoBehaviour
     public bool isHuman = false;
     private List<UnityAction> onChangeSkin = new ();
     public int firstSceneIndex = 0;
+    public int sceneWhenObjectIsDisabled = -1;
+    public bool isDisabled = false;
 
     public void AddChangeSkinListener(UnityAction action)
     {
         onChangeSkin.Add(action);
+    }
+
+    public void SetDisabled()
+    {
+        isDisabled = true;
+        spriteRenderer.color = Color.gray;
     }
 
     public void RemoveChangeSkinListener(UnityAction action)
@@ -43,7 +51,6 @@ public class ScenographyObject : MonoBehaviour
         if(firstSceneIndex == 0){
             rail.SetScenographyObject(this);
         }
-        
     }
 
     public void MoveHorizontal()
